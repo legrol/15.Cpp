@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-02-06 14:49:22 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-02-06 14:49:22 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/02/06 14:49:22 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/02/06 21:07:33 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cctype>
 
 /**
  * The function "main" processes command-line arguments, converting them 
@@ -22,6 +23,10 @@
  *                              command-line arguments.
  * 
  * @return int                  Returns 0 upon successful execution. 
+ * 
+ * 
+ * <iostream>					for cout, cin ....
+ * <cctype> 					for toupper. tolower, isspace, islower....
  * 
  */
 
