@@ -43,7 +43,10 @@ IXXFLAGS			= -I${INCLUDES_DIR}
 
 # ══ Sources ═════════════════════════════════════════════════════════════════ #
 #    -------                                                                   #
-SRC 				= ${SRC_DIR}/phonebook.cpp
+SRC 				= ${SRC_DIR}/banner.cpp \
+						${SRC_DIR}/Contact.cpp \
+						${SRC_DIR}/main.cpp \
+						${SRC_DIR}/PhoneBook.cpp
 
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.c, ${OBJ_DIR}/%.o, ${SRC})
 

@@ -1,24 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 21:24:03 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/07 13:46:40 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/02/06 21:11:26 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/02/07 23:27:51 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "../includes/collection.hpp"
 
-class Phonebook
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+PhoneBook::PhoneBook(void)
+{
+	this->_index = 0;
+	std::cout << HI << std::endl;
+}
+
+PhoneBook::~PhoneBook(void)
+{
+	std::cout << BYE << std::endl;
+}
+
+void PhoneBook::add_contact(void)
 {
 
 
+}
+
+void PhoneBook::search_contact(void)
+{
 
 
-};
+}
 
-#endif
+void PhoneBook::print_contact(void)
+{
+
+
+}

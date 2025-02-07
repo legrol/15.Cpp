@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   collection.hpp                                     :+:      :+:    :+:   */
+/*   macros.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 13:42:33 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/07 23:32:47 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/02/07 22:23:12 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/02/07 22:37:12 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLLECTION_HPP
-# define COLLECTION_HPP
+#ifndef MACROS_HPP
+# define	MACROS_HPP
 
-# include <iostream>
-# include <string>
-// # include <cstring>
-// # include <cstdlib>
-// # include <iomanip>
-
-# include "../includes/PhoneBook.hpp"
-# include "../includes/Contact.hpp"
-# include "../includes/macros.hpp"
-# include "../includes/colors.hpp"
-
+# define HI		"Welcome! This is a phone book with capacity for up to 8 \
+contacts."
+# define BYE	"See you around!"
 
 
 # endif

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:49:22 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/06 21:07:33 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/07 21:24:10 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 {
 	if (argc == 1)
 	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std :: endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return 0;
 	}
 	else
@@ -43,11 +43,11 @@ int	main(int argc, char **argv)
 		{
 			for (int j = 0; argv[i][j]; ++j)
 			{
-				std :: cout << static_cast<char>(toupper(argv[i][j]));
+				std::cout << static_cast<char>(toupper(argv[i][j]));
 			}
-			std :: cout << " ";
+			std::cout << " ";
 		}
-		std :: cout << std :: endl;
+		std::cout << std::endl;
 	}
 	return 0;
 }

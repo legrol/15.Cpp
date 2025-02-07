@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   collection.hpp                                     :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 13:42:33 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/07 23:32:47 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/02/07 15:17:05 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/02/07 23:58:28 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLLECTION_HPP
-# define COLLECTION_HPP
+#include "../includes/collection.hpp"
 
-# include <iostream>
-# include <string>
-// # include <cstring>
-// # include <cstdlib>
-// # include <iomanip>
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 
-# include "../includes/PhoneBook.hpp"
-# include "../includes/Contact.hpp"
-# include "../includes/macros.hpp"
-# include "../includes/colors.hpp"
+Contact::Contact(void)
+{
+}
 
-
-
-# endif
+Contact::~Contact(void)
+{
+}
