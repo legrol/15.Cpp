@@ -6,24 +6,26 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 13:42:33 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/07 23:32:47 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/09 11:33:40 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLLECTION_HPP
 # define COLLECTION_HPP
 
-# include <iostream>
-# include <string>
-// # include <cstring>
-// # include <cstdlib>
-// # include <iomanip>
+// ============================================================================
+// Libraries
+// ============================================================================
+# include <iostream>			// std::cout, std::endl, ...
+# include <string>				// std::string
+# include <iomanip>				// std::setw, std::left, ...
 
-# include "../includes/PhoneBook.hpp"
-# include "../includes/Contact.hpp"
-# include "../includes/macros.hpp"
-# include "../includes/colors.hpp"
-
-
+// ============================================================================
+// Access to my libraries
+// ============================================================================
+# include "PhoneBook.hpp"
+# include "macros.hpp"
+# include "colors.hpp"
+# include "PhoneBook_tools.hpp"
 
 # endif

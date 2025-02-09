@@ -32,9 +32,10 @@ MKD					= mkdir -p
 
 # ══ Directories ═════════════════════════════════════════════════════════════ #
 #    -----------                                                               #
-SRC_DIR				= ./src
+INCLUDES_DIR		= ./includes
 OBJ_DIR				= ./obj
-INC_DIR				= ./includes
+SRC_DIR				= ./src
+UTILS_DIR			= ./utils
 
 # ══ Flags ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
@@ -43,24 +44,31 @@ IXXFLAGS			= -I${INCLUDES_DIR}
 
 # ══ Sources ═════════════════════════════════════════════════════════════════ #
 #    -------                                                                   #
-SRC 				= ${SRC_DIR}/banner.cpp \
-						${SRC_DIR}/Contact.cpp \
+SRC 				= ${SRC_DIR}/Contact.cpp \
 						${SRC_DIR}/main.cpp \
 						${SRC_DIR}/PhoneBook.cpp
 
-OBJ_SRC				= $(patsubst ${SRC_DIR}/%.c, ${OBJ_DIR}/%.o, ${SRC})
+UTL					= ${UTILS_DIR}/banner.cpp \
+						${UTILS_DIR}/PhoneBook_tools.cpp
+
+OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
+OBJ_UTL				= $(patsubst ${UTILS_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})
 
 # ═══ Rules ══════════════════════════════════════════════════════════════════ #
 #     -----                                                                    #
 all: ${NAME}
 
-${NAME}: ${OBJ_SRC} 
+${NAME}: ${OBJ_SRC} ${OBJ_UTL}
 									 
 	@echo "$(YELLOW)Compiling $(NAME) ...$(DEF_COLOR)"
-	@${CXX} ${CXXFLAGS} ${IXXFLAGS} -o ${NAME} ${OBJ_SRC}
+	@${CXX} ${CXXFLAGS} ${IXXFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_UTL}
 	@echo "$(GREEN) $(NAME) all created ✓$(DEF_COLOR)"
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.cpp
+	@${MKD} $(dir $@)
+	@$(CXX) ${CXXFLAGS} ${IXXFLAGS} -c $< -o $@
+
+${OBJ_DIR}/%.o: ${UTILS_DIR}/%.cpp
 	@${MKD} $(dir $@)
 	@$(CXX) ${CXXFLAGS} ${IXXFLAGS} -c $< -o $@
 

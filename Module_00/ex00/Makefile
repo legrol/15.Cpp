@@ -43,13 +43,13 @@ CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98
 #    -------                                                                   #
 SRC 				= ${SRC_DIR}/megaphone.cpp
 
-OBJ_SRC				= $(patsubst ${SRC_DIR}/%.c, ${OBJ_DIR}/%.o, ${SRC})
+OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
 
 # ═══ Rules ══════════════════════════════════════════════════════════════════ #
 #     -----                                                                    #
 all: ${NAME}
 
-${NAME}: ${OBJ_SRC} 
+${NAME}: ${OBJ_SRC}
 									 
 	@echo "$(YELLOW)Compiling $(NAME) ...$(DEF_COLOR)"
 	@${CXX} ${CXXFLAGS} -o ${NAME} ${OBJ_SRC}
