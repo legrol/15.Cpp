@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 21:11:56 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/09 21:17:24 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/09 21:37:10 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,93 @@
 #include "../includes/Account.hpp"
 
 /**
+ * Static members to track overall account data:
+ * - `_nbAccounts` tracks the total number of accounts created.
+ * - `_totalAmount` stores the total amount across all accounts.
+ * - `_totalNbDeposits` counts the total number of deposits made.
+ * - `_totalNbWithdrawals` counts the total number of withdrawals made.
+ * 
+ * Constructor "Account::Account" initializes an account with an initial 
+ * deposit.Updates static data members to track the number of accounts and 
+ * total amount. Displays a creation message.
+ *
+ * @param int initial_deposit   The initial deposit amount for the account.
+ *
+ * @return void                 No return value. Initializes account data.
  * 
  * 
+ * Destructor "Account::~Account" displays a message when an account is closed.
+ *
+ * @return void                 No return value. Cleans up account instance.
  * 
  * 
+ * Static method "Account::getNbAccounts" returns the total number of accounts.
+ *
+ * @return int                  The total number of accounts created.
+ * 
+ * 
+ * Static method "Account::getTotalAmount" returns the total amount across all 
+ * accounts.
+ *
+ * @return int                  The total amount held in all accounts.
+ * 
+ * 
+ * Static method "Account::getNbDeposits" returns the total number of deposits.
+ *
+ * @return int                  The total number of deposits across all 
+ * 								accounts.
+ * 
+ * 
+ * Static method "Account::getNbWithdrawals" returns the total number of 
+ * withdrawals.
+ *
+ * @return int                  The total number of withdrawals across all 
+ * 								accounts.
+ * 
+ * 
+ * Static method "Account::displayAccountsInfos" displays summary information
+ * about all accounts, including the number of accounts, total amount, 
+ * deposits, and withdrawals.
+ *
+ * @return void                 No return value. Outputs account information.
+ * 
+ * 
+ * Method "Account::makeDeposit" processes a deposit for the account.
+ * Updates the account balance and increments deposit counters.
+ * Displays deposit information.
+ *
+ * @param int deposit           The amount to deposit.
+ *
+ * @return void                 No return value. Updates the account balance.
+ * 
+ * 
+ * The method "Account::makeWithdrawal" attempts to withdraw an amount from 
+ * the account. If the balance is insufficient, the withdrawal is refused.
+ * 
+ * @param int withdrawal        The amount to withdraw from the account.
+ * 
+ * @return bool                 Returns true if the withdrawal is successful. 
+ *                              Returns false if the withdrawal is refused. 
+ * 
+ * 
+ * The method "Account::checkAmount" checks whether the account balance is 
+ * negative after a withdrawal.
+ * 
+ * @return int                  Returns 1 if the balance is negative. 
+ *                              Returns 0 otherwise. 
+ * 
+ * 
+ * The method "Account::displayStatus" logs the current status of the account, 
+ * including the balance, number of deposits, and number of withdrawals.
+ * 
+ * @return void                 No return value. Outputs the account's 
+ * 								current status.
+ * 
+ * 
+ * The static method "Account::_displayTimestamp" logs the current timestamp 
+ * in the format "[YYYYMMDD_HHMMSS]".
+ * 
+ * @return void                 No return value. Logs the timestamp.
  * 
  */
 
