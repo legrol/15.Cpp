@@ -6,17 +6,59 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 21:11:26 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/09 13:47:58 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/09 14:37:56 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/collection.hpp"
 
 /**
+ * Constructor "PhoneBook::PhoneBook" initializes a PhoneBook object, 
+ * setting the initial contact ID to 0 and displaying a welcome banner 
+ * and message.
+ * 
+ * @return void                 No return value. Initializes the PhoneBook 
+ *                              object and prints the welcome message.
  * 
  * 
  * 
+ * Destructor "PhoneBook::~PhoneBook" destroys the PhoneBook object 
+ * and displays a goodbye message upon termination.
  * 
+ * @return void                 No return value. Cleans up and prints 
+ *                              the goodbye message.
+ * 
+ * 
+ * 
+ * The function "PhoneBook::add_contact" adds a new contact to the PhoneBook. 
+ * If the PhoneBook already contains 8 contacts, it overwrites the oldest 
+ * one. It collects input for the contact's details (name, last name, 
+ * nickname, phone number, and darkest secret) and assigns them to the 
+ * contact.
+ * 
+ * @return void                 No return value. Adds a contact to the 
+ *                              PhoneBook and manages input interactively.
+ * 
+ * 
+ * The function "PhoneBook::search_contact" allows the user to search for a 
+ * contact in the PhoneBook by displaying the existing contacts and prompting 
+ * the user to select one. It validates user input and displays the contact's 
+ * details if a valid selection is made.
+ * 
+ * @return void                 No return value. Displays and searches 
+ *                              contacts interactively.
+ * 
+ * 
+ * 
+ * The function "PhoneBook::print_contact" prints the details of a specific 
+ * contact, including the name, last name, nickname, phone number, and 
+ * darkest secret. If the contact is empty, it displays an error message.
+ * 
+ * @param Contact contact       The contact whose details are to be displayed.
+ * 
+ * @return void                 No return value. Displays the contact's 
+ *                              information or an error message if the 
+ *                              contact is empty.
  * 
  */
 
@@ -40,8 +82,11 @@ void PhoneBook::add_contact(void)
 
 	str = "";
 	if (this->_id > 7)
-		std::cout << RED WARNING RESET << \
-		this->_list[this->_id % 8].get_name() << std::endl;
+	{
+		std::cout << RED WARNING RESET CYAN << \
+		this->_list[this->_id % 8].get_name() << RESET << std::endl;
+		std::cout << std::endl;
+	}
 	while (!std::cin.eof() && str == "")
 	{
 		if (this->_id > 7)
@@ -135,8 +180,3 @@ void PhoneBook::print_contact(Contact contact)
 	std::cout << YELLOW SECRET RESET << contact.get_secret() << std::endl;
 	std::cout << std::endl;
 }
-
-// Contact PhoneBook::get_contact(int id)
-// {
-// 	return (this->_list[id % 8]);
-// }

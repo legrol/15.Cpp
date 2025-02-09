@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 21:24:03 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/09 13:49:48 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/09 14:37:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class PhoneBook
 		~PhoneBook(void);
 		
 		void	add_contact(void);
-		// Contact	get_contact(int id);
 		void	print_contact(Contact contact);
 		void	print_banner(void);
 		void	search_contact(void);
