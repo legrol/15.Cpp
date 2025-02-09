@@ -32,33 +32,43 @@ MKD					= mkdir -p
 
 # ══ Directories ═════════════════════════════════════════════════════════════ #
 #    -----------                                                               #
-SRC_DIR				= ./src
+INCLUDES_DIR		= ./includes
 OBJ_DIR				= ./obj
+SRC_DIR				= ./src
+UTILS_DIR			= ./utils
 
 # ══ Flags ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
 CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98
+IXXFLAGS			= -I${INCLUDES_DIR}
 
 # ══ Sources ═════════════════════════════════════════════════════════════════ #
 #    -------                                                                   #
-SRC 				= ${SRC_DIR}/account.cpp
+SRC 				= ${SRC_DIR}/Account.cpp
 
-OBJ_SRC				= $(patsubst ${SRC_DIR}/%.c, ${OBJ_DIR}/%.o, ${SRC})
+UTL					= ${UTILS_DIR}/test.cpp
+
+OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
+OBJ_UTL				= $(patsubst ${UTILS_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})
 
 # ═══ Rules ══════════════════════════════════════════════════════════════════ #
 #     -----                                                                    #
 all: ${NAME}
 
-${NAME}: ${OBJ_SRC} 
+${NAME}: ${OBJ_SRC} ${OBJ_UTL}
 									 
 	@echo "$(YELLOW)Compiling $(NAME) ...$(DEF_COLOR)"
-	@${CXX} ${CXXFLAGS} -o ${NAME} ${OBJ_SRC}
+	@${CXX} ${CXXFLAGS} ${IXXFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_UTL}
 	@echo "$(GREEN) $(NAME) all created ✓$(DEF_COLOR)"
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.cpp
 	@${MKD} $(dir $@)
 	@$(CXX) ${CXXFLAGS} -c $< -o $@
 
+${OBJ_DIR}/%.o: ${UTILS_DIR}/%.cpp
+	@${MKD} $(dir $@)
+	@$(CXX) ${CXXFLAGS} ${IXXFLAGS} -c $< -o $@
+	
 clean:
 	@echo "$(YELLOW)Removing object files ...$(DEF_COLOR)"
 	@$(RM) ${OBJ_DIR}/*.o
