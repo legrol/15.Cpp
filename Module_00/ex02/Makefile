@@ -44,31 +44,25 @@ IXXFLAGS			= -I${INCLUDES_DIR}
 
 # ══ Sources ═════════════════════════════════════════════════════════════════ #
 #    -------                                                                   #
-SRC 				= ${SRC_DIR}/Account.cpp
-
-UTL					= ${UTILS_DIR}/test.cpp
+SRC 				= ${SRC_DIR}/Account.cpp \
+						${SRC_DIR}/tests.cpp
 
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
-OBJ_UTL				= $(patsubst ${UTILS_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})
 
 # ═══ Rules ══════════════════════════════════════════════════════════════════ #
 #     -----                                                                    #
 all: ${NAME}
 
-${NAME}: ${OBJ_SRC} ${OBJ_UTL}
+${NAME}: ${OBJ_SRC}
 									 
 	@echo "$(YELLOW)Compiling $(NAME) ...$(DEF_COLOR)"
-	@${CXX} ${CXXFLAGS} ${IXXFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_UTL}
+	@${CXX} ${CXXFLAGS} ${IXXFLAGS} -o ${NAME} ${OBJ_SRC}
 	@echo "$(GREEN) $(NAME) all created ✓$(DEF_COLOR)"
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.cpp
 	@${MKD} $(dir $@)
 	@$(CXX) ${CXXFLAGS} -c $< -o $@
 
-${OBJ_DIR}/%.o: ${UTILS_DIR}/%.cpp
-	@${MKD} $(dir $@)
-	@$(CXX) ${CXXFLAGS} ${IXXFLAGS} -c $< -o $@
-	
 clean:
 	@echo "$(YELLOW)Removing object files ...$(DEF_COLOR)"
 	@$(RM) ${OBJ_DIR}/*.o
