@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/collection.hpp"
+#include "../includes/Zombie.hpp"
 
 /**
  * The function "print_banner" generates the project start banner. 
  * 
  */
 
-void    PhoneBook::print_banner(void)
+void    Zombie::print_banner(void)
 {
 		std::cout << (RED 		"   ____    	      " RESET) << std::endl;
 		std::cout << (RED 		"  / ___|             " RESET) << std::endl;
