@@ -21,7 +21,10 @@
 
  Zombie* newZombie(std::string name )
 {
+	Zombie	zo1;
 
+	zo1.setName(name);
+	
 
 
 }

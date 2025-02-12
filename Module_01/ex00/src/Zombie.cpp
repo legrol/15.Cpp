@@ -36,9 +36,12 @@ Zombie::~Zombie(void)
 
 }
 
-void	announce(void)
+void	Zombie::announce(void) const
 {
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
 
-
-
+void	Zombie::setName(std::string name)
+{
+	this->name = name;
 }
