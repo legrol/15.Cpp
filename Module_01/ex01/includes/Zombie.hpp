@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 12:46:46 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/15 22:40:53 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/15 23:14:18 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <string>				// std::string
 # include <iomanip>				// std::setw, std::left, ...
 # include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
-
 # include <sstream>				// std::istringstream
 
 // ============================================================================
