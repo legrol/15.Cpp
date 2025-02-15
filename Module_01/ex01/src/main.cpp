@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 12:47:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/15 21:53:40 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/15 23:00:42 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@
  * @return int                      Returns `EXIT_SUCCESS` if the program runs 
  *                                  successfully, or `EXIT_FAILURE` if there 
  *                                  is an error.
+ * 
+ * NOTE: 							iss = input string stream.
  * 
  */
 
