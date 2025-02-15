@@ -34,41 +34,54 @@ MKD					= mkdir -p
 #    -----------                                                               #
 SRC_DIR				= ./src
 OBJ_DIR				= ./obj
+UTL_DIR				= ./utils
 
 # ══ Flags ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
 CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98
 
 # ══ Sources ═════════════════════════════════════════════════════════════════ #
-#    -------                                                                   #
+#    -------                                                       s            #
 SRC 				= ${SRC_DIR}/main.cpp \
-						${SRC_DIR}/zombie.cpp
+						${SRC_DIR}/Zombie.cpp
+
+UTL 				= ${UTL_DIR}/banner.cpp \
+						${UTL_DIR}/zombieHorde.cpp
 
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
+OBJ_UTL				= $(patsubst ${UTL_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})
 
 # ═══ Rules ══════════════════════════════════════════════════════════════════ #
 #     -----                                                                    #
 all: ${NAME}
 
-${NAME}: ${OBJ_SRC}
+${NAME}: ${OBJ_SRC} ${OBJ_UTL}
 									 
-	@echo "$(YELLOW)Compiling $(NAME) ...$(DEF_COLOR)"
-	@${CXX} ${CXXFLAGS} -o ${NAME} ${OBJ_SRC}
-	@echo "$(GREEN) $(NAME) all created ✓$(DEF_COLOR)"
+	@echo "$(YELLOW) Compiling $(NAME) ...$(DEF_COLOR)"
+	@${CXX} ${CXXFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_UTL}
+	@echo "$(WHITE) $(NAME) $(DEF_COLOR) $(GREEN)all created ✓$(DEF_COLOR)"
+	@echo ""
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.cpp
 	@${MKD} $(dir $@)
 	@$(CXX) ${CXXFLAGS} -c $< -o $@
 
+${OBJ_DIR}/%.o: ${UTL_DIR}/%.cpp
+	@${MKD} $(dir $@)
+	@$(CXX) ${CXXFLAGS} -c $< -o $@
+
 clean:
-	@echo "$(YELLOW)Removing object files ...$(DEF_COLOR)"
+	@echo ""
+	@echo "$(YELLOW) Removing object files ...$(DEF_COLOR)"
 	@$(RM) ${OBJ_DIR}/*.o
-	@echo "$(RED)Object files removed $(DEF_COLOR)"
+	@echo "$(RED)  Object files removed $(DEF_COLOR)"
+	@echo ""
 
 fclean:	clean
-	@echo "$(YELLOW)Removing binaries ...$(DEF_COLOR)"
+	@echo "$(YELLOW) Removing binaries ...$(DEF_COLOR)"
 	@${RM} ${NAME} ${NAME_BONUS}
-	@echo "$(RED)Binaries removed $(DEF_COLOR)"
+	@echo "$(RED)  Binaries removed $(DEF_COLOR)"
+	@echo ""
 
 re:	fclean all
 

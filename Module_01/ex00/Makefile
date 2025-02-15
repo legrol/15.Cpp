@@ -58,9 +58,10 @@ all: ${NAME}
 
 ${NAME}: ${OBJ_SRC} ${OBJ_UTL}
 									 
-	@echo "$(YELLOW)Compiling $(NAME) ...$(DEF_COLOR)"
+	@echo "$(YELLOW) Compiling $(NAME) ...$(DEF_COLOR)"
 	@${CXX} ${CXXFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_UTL}
-	@echo "$(GREEN) $(NAME) all created ✓$(DEF_COLOR)"
+	@echo "$(WHITE) $(NAME) $(DEF_COLOR) $(GREEN)all created ✓$(DEF_COLOR)"
+	@echo ""
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.cpp
 	@${MKD} $(dir $@)
@@ -71,14 +72,17 @@ ${OBJ_DIR}/%.o: ${UTL_DIR}/%.cpp
 	@$(CXX) ${CXXFLAGS} -c $< -o $@
 
 clean:
-	@echo "$(YELLOW)Removing object files ...$(DEF_COLOR)"
+	@echo ""
+	@echo "$(YELLOW) Removing object files ...$(DEF_COLOR)"
 	@$(RM) ${OBJ_DIR}/*.o
-	@echo "$(RED)Object files removed $(DEF_COLOR)"
+	@echo "$(RED)  Object files removed $(DEF_COLOR)"
+	@echo ""
 
 fclean:	clean
-	@echo "$(YELLOW)Removing binaries ...$(DEF_COLOR)"
+	@echo "$(YELLOW) Removing binaries ...$(DEF_COLOR)"
 	@${RM} ${NAME} ${NAME_BONUS}
-	@echo "$(RED)Binaries removed $(DEF_COLOR)"
+	@echo "$(RED)  Binaries removed $(DEF_COLOR)"
+	@echo ""
 
 re:	fclean all
 
