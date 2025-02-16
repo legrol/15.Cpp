@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:44:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/16 20:25:20 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/16 21:41:05 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int	main(void)
 
 	{
 		Weapon club = Weapon(CR_SP_CL);
+		
 		HumanB jim(J);
 		jim.setWeapon(club);
 		jim.attack();
