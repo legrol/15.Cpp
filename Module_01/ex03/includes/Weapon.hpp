@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:43:06 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/16 20:16:07 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/16 21:38:31 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <iostream>			// std::cout, std::endl, ...
 # include <string>				// std::string
 # include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
-// # include <iomanip>				// std::setw, std::left, ...
 
 // ============================================================================
 // Access to my libraries
