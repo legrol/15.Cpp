@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:49:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/16 20:23:43 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/16 22:06:51 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,11 @@
 Weapon::Weapon(std::string type)
 {
 	this->setType(type);
-	return ;
 }
 
 Weapon::~Weapon(void)
 {
-	return ;
+	
 }
 
 std::string const	&Weapon::getType(void)
