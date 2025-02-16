@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:55:14 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/16 18:27:00 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/16 22:02:52 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class HumanA
 	private:
 
 		std::string		_name;
-		Weapon			_weapon;
+		Weapon			&_weapon;
 
 	public:
 
