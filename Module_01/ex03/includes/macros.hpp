@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:44:38 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/16 19:56:58 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/16 21:12:01 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,9 @@
 # define J				"Jim"
 # define B				"Bob"
 # define ATTACK			" attacks with his "
+# define HUM_A			"HumanA "
+# define HUM_B			"HumanB "
+# define CREATED		" created with "
+# define DESTROYED		" destroyed."
 
 # endif

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:56:04 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/16 20:57:39 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/16 21:31:38 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,34 @@
 
 /**
  * Constructor for the `HumanA` class.
- * Initializes a `HumanA` object with a name and a reference to a `Weapon` 
- * object.
+ * Initializes a `HumanA` object with a given name and weapon reference.
  * 
- * @param std::string name   The name of the `HumanA` instance.
- * @param Weapon &weapon     A reference to the `Weapon` object associated with 
- *                           the `HumanA` instance.
+ * @param std::string name     The name of the `HumanA` object.
+ * @param Weapon &weapon       A reference to the weapon used by the `HumanA` 
+ * 							   object.
  * 
- * @return void              No return value.
+ * Example Usage:
+ * - Creates a `HumanA` object and immediately assigns it a weapon.
+ * 
+ * Outputs:
+ * - Logs a message indicating the creation of a `HumanA` object with the 
+ * 	 assigned weapon type.
  * 
  * 
  * Destructor for the `HumanA` class.
- * Cleans up resources associated with the `HumanA` object.
+ * Destroys the `HumanA` object and logs a message indicating its destruction.
  * 
- * @return void              No return value.
+ * Example Usage:
+ * - Automatically called when a `HumanA` object goes out of scope or is 
+ *   explicitly deleted.
+ * 
+ * Outputs:
+ * - Logs a message indicating the destruction of the `HumanA` object.
  * 
  * 
- * The function "attack" prints a message indicating that the `HumanA` instance
- * is attacking with their weapon. It retrieves the weapon's type using the 
- * `getType` function.
+ * The function "attack" prints a message indicating that the `HumanA` 
+ * instance is attacking with their weapon. It retrieves the weapon's type 
+ * using the `getType` function.
  * 
  * @return void              No return value.
  * 
@@ -42,14 +51,17 @@
  * 
  */
 
-HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
+HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), \
+_weapon(weapon)
 {
-	
+	std::cout << CYAN HUM_A << name << CREATED << weapon.getType() << RESET \
+	<< std::endl << std::endl;
 }
 
 HumanA::~HumanA(void)
 {
-		
+	std::cout << std::endl << BDRED HUM_A << this->_name << DESTROYED RESET \
+	<< std::endl;	
 }
 
 void	HumanA::attack(void)
