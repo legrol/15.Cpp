@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:56:28 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/16 20:18:08 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/16 20:57:30 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@
 
 HumanB::HumanB(std::string name) : _name(name)
 {
-	return ;
+	
 }
 
 HumanB::~HumanB(void)
 {
-	return ;	
+		
 }
 
 void	HumanB::attack(void)

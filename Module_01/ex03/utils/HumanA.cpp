@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:56:04 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/16 20:20:43 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/16 20:57:39 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@
 
 HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
 {
-	return ;
+	
 }
 
 HumanA::~HumanA(void)
 {
-	return ;	
+		
 }
 
 void	HumanA::attack(void)
