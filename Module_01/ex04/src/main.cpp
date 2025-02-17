@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:44:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/17 22:29:24 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/17 22:57:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,50 @@
 #include "../includes/macros.hpp"
 
 /**
+ * The function `my_replace` reads a string and replaces all occurrences of 
+ * a specified substring with another string, writing the modified content 
+ * to a new file with a `.replace` extension.
+ * 
+ * @param char **argv         A pointer to the command-line arguments:
+ *                            - argv[1]: Name of the input file.
+ *                            - argv[2]: Substring to be replaced.
+ *                            - argv[3]: Substring to replace with.
+ * @param std::string chain   The content of the input file stored as a string.
+ * 
+ * @return int                Returns EXIT_SUCCESS if the replacement process 
+ *                            completes successfully, or EXIT_FAILURE if an 
+ *                            error occurs while opening the output file.
+ * 
+ * Process:
+ * - Creates a new file with the name `<original_filename>.replace`.
+ * - Iterates through the input string and replaces occurrences of `argv[2]` 
+ *   with `argv[3]`.
+ * - Writes the modified content to the output file.
+ * - If `argv[2]` is found within `chain`, it is replaced without affecting 
+ *   overlapping occurrences.
  * 
  * 
+ * The function `main` serves as the entry point for the program. It reads a 
+ * text file, replaces occurrences of a specific substring with another 
+ * substring, and writes the modified content to a new file.
  * 
+ * @param int argc            The number of command-line arguments.
+ * @param char **argv         The command-line arguments:
+ *                            - argv[1]: Input file name.
+ *                            - argv[2]: Substring to find.
+ *                            - argv[3]: Substring to replace with.
  * 
+ * @return int                Returns EXIT_SUCCESS if the process completes 
+ *                            successfully, or EXIT_FAILURE if an error occurs 
+ *                            (such as an incorrect number of arguments or 
+ *                            inability to open the file).
  * 
+ * Process:
+ * - Validates that exactly three arguments are provided.
+ * - Ensures that `argv[2]` is not an empty string.
+ * - Opens and reads the input file, storing its content in a string.
+ * - Calls `my_replace` to perform the substring replacement and save the 
+ *   modified content to a new file.
  * 
  */
 
@@ -46,7 +85,7 @@ int	my_replace(char **argv, std::string chain)
 		if (place != std::string::npos && place == i)
 		{
 			fileFinal << ocurrenceSecond;
-			i += ocurrenceFirst.length() - 1;
+			i += (ocurrenceFirst.length() - 1);
 		}
 		else
 			fileFinal << chain[i];
