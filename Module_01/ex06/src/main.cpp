@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 08:48:09 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/18 20:01:33 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/18 20:04:51 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,21 @@
  * 							  levels. 
  * 
  * 
- * The function `processComplaint` processes and executes a complaint level 
- * by calling the corresponding `Harl::complain` method.
+ * The function `processComplaint` processes and executes multiple complaint 
+ * levels based on the provided level. It calls `Harl::complain` for the given 
+ * level and all subsequent levels of severity.
  * 
  * @param const char *lvl   A C-string containing the complaint level.
  * @param Harl &reply       A reference to a `Harl` object used to process 
- * 							the complaint.
+ * 							complaints.
  * 
  * @return void             No return value. Outputs the corresponding 
- * 							complaint message based on the provided level.
+ * 							complaint messages in increasing order of severity.
  * 
  * Process:
  * - Calls `getLevelIndex` to determine the complaint level index.
- * - Uses a `switch` statement to execute the corresponding `complain` method.
+ * - Uses a `switch` statement to execute the corresponding `complain` method
+ * 	 and all higher-severity complaints.
  * - If the level is unrecognized, prints an insignificant complaint message.
  * 
  * 
