@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 23:30:01 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/18 19:05:18 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/02/18 19:04:23 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/02/18 19:04:56 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+# include <iostream>					// std::cout, std::endl, ...
 
 #include "../includes/Harl.hpp"
 
@@ -28,6 +30,6 @@ void    print_banner(void)
 		std::cout << (RED		"      |_|   |_|  " RESET) << std::endl;
 		std::cout << std::endl;
 		std::cout << (RED" Welcome to " RESET BDBLUE"CPP Module 01 " RESET \
-		CYAN "ex05 " RESET RED"project by " GREEN "rdel-olm") << std::endl;
+		CYAN "ex06 " RESET RED"project by " GREEN "rdel-olm") << std::endl;
 		std::cout << std::endl;
 }
