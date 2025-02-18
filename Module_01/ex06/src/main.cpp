@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 08:48:09 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/18 19:53:20 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/18 20:01:33 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,18 +84,25 @@ void	processComplaint(const char *lvl, Harl &reply)
 	{
 		case 0:
 			reply.complain("DEBUG");
+			reply.complain("INFO");
+			reply.complain("WARNING");
+			reply.complain("ERROR");
 			break;
 		case 1:
 			reply.complain("INFO");
+			reply.complain("WARNING");
+			reply.complain("ERROR");
 			break;
 		case 2:
 			reply.complain("WARNING");
+			reply.complain("ERROR");
 			break;
 		case 3:
 			reply.complain("ERROR");
 			break;
 		default:
 			std::cout << GREEN INSIG RESET << std::endl << std::endl;
+			break;
 	}
 }
 
