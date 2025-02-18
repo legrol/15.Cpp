@@ -13,16 +13,20 @@
 #ifndef MACROS_HPP
 # define	MACROS_HPP
 
-# define ARG_ERR		"Startup parameters: (File to modify) (Word to search \
-for) (Replacement word)"
-# define ARG2_ERR		"Error: arg(Word to search for) is empty."
-# define OPEN_ERR		"Error: could not open file "
-# define VERIF_ERR		": Check the existence of the file or directory and \
-its permissions."
-
-// ============================================================================
-// Functions
-// ============================================================================
-void	print_banner();
+# define WRN		"[WARNING]"
+# define WRN1		"I think I deserve to have some extra bacon for free."
+# define WRN2		"I’ve been coming for years whereas you started working \
+here since last month."
+# define INF		"[INFO]"
+# define INF1		"I cannot believe adding extra bacon costs more money."
+# define INF2		"You didn’t put enough bacon in my burger!"
+# define INF3		"If you did, I wouldn’t be asking for more!"
+# define DBG		"[DEBUG]"
+# define DBG1		"I love having extra bacon for my \
+7XL-double-cheese-triple-pickle-specialketchup burger"
+# define DBG2		"I really do!"
+# define ERR		"[ERROR]"
+# define ERR1		"This is unacceptable!"
+# define ERR2		"I want to speak to the manager now."
 
 # endif

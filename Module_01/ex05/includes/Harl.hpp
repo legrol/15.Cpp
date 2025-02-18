@@ -37,14 +37,11 @@ class Harl
 
 	public:
 		
-		// Harl(std::string xxx);
 		Harl(void);
 		~Harl(void);
 
 		void complain(std::string level);
-
 };
-
 
 // ============================================================================
 // Functions
