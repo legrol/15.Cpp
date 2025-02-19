@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-02-19 11:32:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-02-19 11:32:31 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/02/19 11:32:31 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/02/19 23:08:11 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,18 @@ class Fixed
 {
 	private:
 
-		std::string	_store;
-		
+		int					nbr_value_fixed_point;
+		static const int	nbr_fractional_bits;
 
 	public:
 		
 		Fixed(void);
+		Fixed(const Fixed& copy);
+		Fixed &operator=(const Fixed &origin);
 		~Fixed(void);
-
-		int	getRawBits(void) const;
+		
+		int					getRawBits(void) const;
+		void				setRawBits(int const raw);
 };
 
 // ============================================================================
