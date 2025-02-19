@@ -38,7 +38,7 @@ class Fixed
 		Fixed(void);
 		~Fixed(void);
 
-		void		getRawBits(void);
+		int	getRawBits(void) const;
 };
 
 // ============================================================================

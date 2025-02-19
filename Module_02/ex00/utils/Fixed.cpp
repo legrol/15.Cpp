@@ -21,4 +21,24 @@
  * 
  */
 
- 
+Fixed::Fixed(void)
+{
+
+
+
+}
+
+Fixed::~Fixed(void)
+{
+
+
+
+
+}
+
+int	Fixed::getRawBits(void) const
+{
+
+
+	
+}
