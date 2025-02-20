@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 11:34:46 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/19 23:08:03 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/20 17:17:55 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,6 @@ Fixed::~Fixed(void)
 Fixed	&Fixed::operator=(const Fixed &origin)
 {
 	std::cout << GREEN OPRT_CPY RESET << std::endl;
-	// if (this != &origin)
-	// 	this->nbr_value_fixed_point = origin.getRawBits();
 	this->setRawBits(origin.getRawBits());
 	return *this;
 }
