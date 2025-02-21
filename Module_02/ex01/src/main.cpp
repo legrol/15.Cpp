@@ -6,14 +6,18 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:21:21 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/19 23:01:38 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/21 22:53:37 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Fixed.hpp"
 
 /**
- * The function `main` 
+ * The `main` function serves as the entry point for the program.
+ * It demonstrates the functionality of the `Fixed` class by creating and 
+ * manipulating `Fixed` objects with different values.
+ * 
+ * @return int  Returns `EXIT_SUCCESS` when execution completes successfully.
  * 
  */
 
