@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 11:34:46 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/22 22:25:36 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/22 20:47:08 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,6 +199,7 @@ Fixed::Fixed(const float floatToFixedPoint)
 
 Fixed::Fixed(const Fixed& copy)
 {
+
 	*this = copy;
 }
 
