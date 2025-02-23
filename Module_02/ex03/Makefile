@@ -45,7 +45,9 @@ CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98
 SRC 				= ${SRC_DIR}/main.cpp
 
 UTL 				= ${UTL_DIR}/banner.cpp \
-						${UTL_DIR}/Fixed.cpp
+						${UTL_DIR}/bsp.cpp \
+						${UTL_DIR}/Fixed.cpp \
+						${UTL_DIR}/Point.cpp
 						
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
 OBJ_UTL				= $(patsubst ${UTL_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})

@@ -6,18 +6,17 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:21:21 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/22 20:35:23 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/23 01:03:34 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Fixed.hpp"
+#include "../includes/Point.hpp"
 
 /**
- * The `main` function demonstrates the functionality of the `Fixed` class,
- * including arithmetic operations, increment operators, and the `max` 
- * function.
- * 
- * @return int  Returns `EXIT_SUCCESS` upon successful execution.
+ * The function `main` initializes and tests the `bsp` function by defining
+ * several points and checking if a given point is inside a triangle.
+ *
+ * @return int  Returns EXIT_SUCCESS upon successful execution.
  * 
  */
 
@@ -25,19 +24,46 @@ int	main(void)
 {
 	print_banner();
 
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	
-	std::cout << b << std::endl;
+	const Point a(0, 0);
+	const Point b(10, 0);
+	const Point c(0, 10);
+	const Point point(4, 4);
 
-	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << WHITE PTX RESET << point.getX() << WHITE PTY RESET << \
+	point.getY() << WHITE INS RESET << std::endl << std::endl;
+	std::cout << CYAN CH_A RESET << a.getX() << CYAN PTY RESET<< a.getY() \
+	<< CYAN PC RESET << std::endl;
+	std::cout << CYAN CH_B RESET << b.getX() << CYAN PTY RESET<< b.getY() \
+	<< CYAN PC RESET << std::endl;
+	std::cout << CYAN CH_C RESET << c.getX() << CYAN PTY RESET << c.getY() \
+	<< CYAN PC RESET << std::endl;
 	
+	if (bsp(a, b, c, point) == true)
+		std::cout << std::endl << GREEN OK RESET << std::endl;
+	else
+		std::cout << std::endl << RED NOK RESET << std::endl;
+
+	std::cout << std::endl << YELLOW SPL RESET << std::endl << std::endl;
+
+	Point d(10, 0);
+	Point e(0, 10);
+	Point f(0, 0);
+	Point point2(15, 15);
+
+	std::cout << WHITE PTX RESET << point2.getX() << WHITE PTY RESET << \
+	point2.getY() << WHITE OUS RESET << std::endl << std::endl;
+	std::cout << CYAN CH_D RESET << d.getX() << CYAN PTY RESET << d.getY() \
+	<< CYAN PC RESET << std::endl;
+	std::cout << CYAN CH_E RESET << e.getX() << CYAN PTY RESET << e.getY() \
+	<< CYAN PC RESET << std::endl;
+	std::cout << CYAN CH_F RESET << f.getX() << CYAN PTY RESET << f.getY() \
+	<< CYAN PC RESET << std::endl;
+
+	if (bsp(d, e, f, point2) == true)
+		std::cout << std::endl << GREEN OK RESET << std::endl;
+	else
+		std::cout << std::endl << RED NOK RESET << std::endl;
+
 	std::cout << std::endl;
 	return (EXIT_SUCCESS);	
 }
