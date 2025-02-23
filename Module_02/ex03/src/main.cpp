@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:21:21 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/23 01:03:34 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/23 22:19:48 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	main(void)
 	print_banner();
 
 	const Point a(0, 0);
-	const Point b(10, 0);
-	const Point c(0, 10);
-	const Point point(4, 4);
+	const Point b(8, 0);
+	const Point c(0, 8);
+	const Point point(3, 3);
 
 	std::cout << WHITE PTX RESET << point.getX() << WHITE PTY RESET << \
 	point.getY() << WHITE INS RESET << std::endl << std::endl;
@@ -45,10 +45,10 @@ int	main(void)
 
 	std::cout << std::endl << YELLOW SPL RESET << std::endl << std::endl;
 
-	Point d(10, 0);
-	Point e(0, 10);
+	Point d(6, 0);
+	Point e(0, 6);
 	Point f(0, 0);
-	Point point2(15, 15);
+	Point point2(9, 9);
 
 	std::cout << WHITE PTX RESET << point2.getX() << WHITE PTY RESET << \
 	point2.getY() << WHITE OUS RESET << std::endl << std::endl;
