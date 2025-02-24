@@ -23,7 +23,8 @@
  * 
  */
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void): _name("anonymus"), _hit_points(10), \
+_energy_points(10), _attack_damage(0)
 {
 	std::cout << CYAN XXX RESET << std::endl;
 }

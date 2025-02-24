@@ -19,7 +19,6 @@
 # include <iostream>			// std::cout, std::endl, ...
 # include <string>				// std::string
 # include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
-# include <cmath>				// roundf
 
 // ============================================================================
 // Access to my libraries
@@ -31,18 +30,18 @@ class ClapTrap
 {
 	private:
 
-		char	_name;
-		int		_hit_points;
-		int		_energy_points;
-		int		_attack_damage;
+		std::string	_name;
+		int			_hit_points;
+		int			_energy_points;
+		int			_attack_damage;
 
 	public:
 
 		ClapTrap(void);
 		ClapTrap(const ClapTrap& copy);
+		ClapTrap(const std::string& name);
 		ClapTrap &operator=(const ClapTrap &origin);	
 		~ClapTrap(void);
-
 
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
@@ -53,6 +52,5 @@ class ClapTrap
 // Functions
 // ============================================================================
 void			print_banner();
-std::ostream 	&operator<<(std::ostream &stream, const ClapTrap &nbr);
 
 #endif
