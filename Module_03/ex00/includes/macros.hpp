@@ -13,7 +13,8 @@
 #ifndef MACROS_HPP
 # define	MACROS_HPP
 
-# define XXX		""
-
+# define APP_NAME	"ClapTrap "
+# define BLT_OK		" has been built correctly ..."
+# define DBLT_OK	" has been correctly deconstructed ..."
 
 # endif

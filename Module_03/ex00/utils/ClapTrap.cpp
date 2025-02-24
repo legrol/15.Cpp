@@ -21,19 +21,35 @@
  * 
  * 
  * 
+ * 
+ * 
  */
 
 ClapTrap::ClapTrap(void): _name("anonymus"), _hit_points(10), \
 _energy_points(10), _attack_damage(0)
 {
-	std::cout << CYAN XXX RESET << std::endl;
+	std::cout << CYAN APP_NAME RESET << this->_name << CYAN BLT_OK RESET \
+	<< std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& copy)
+{
+	*this = copy;
+	std::cout << CYAN APP_NAME RESET << this->_name << CYAN BLT_OK RESET \
+	<< std::endl;
+}
+ClapTrap::ClapTrap(const std::string& name): _name(name), _hit_points(10), \
+_energy_points(10), _attack_damage(0)
+{
+	std::cout << CYAN APP_NAME RESET << this->_name << CYAN BLT_OK RESET \
+	<< std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << CYAN XXX RESET << std::endl;
+	std::cout << CYAN APP_NAME RESET << this->_name << CYAN DBLT_OK RESET \
+	<< std::endl;
 }
-
 
 void ClapTrap::attack(const std::string& target)
 {
@@ -53,6 +69,12 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 
 
+
+
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &origin)
+{
 
 
 }

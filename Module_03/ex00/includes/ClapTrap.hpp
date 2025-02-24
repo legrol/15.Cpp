@@ -40,7 +40,7 @@ class ClapTrap
 		ClapTrap(void);
 		ClapTrap(const ClapTrap& copy);
 		ClapTrap(const std::string& name);
-		ClapTrap &operator=(const ClapTrap &origin);	
+		ClapTrap &operator=(const ClapTrap &origin);
 		~ClapTrap(void);
 
 		void attack(const std::string& target);
