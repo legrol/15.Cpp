@@ -54,8 +54,8 @@ ClapTrap::~ClapTrap(void)
 void ClapTrap::attack(const std::string& target)
 {
 
-
-
+	std::cout << YELLOW APP_NAME RESET << this->_name << YELLOW ATTACK RESET \
+	<< xxxx << YELLOW CAU RESET <<  yyyyy << YELLOW PT_DMG RESET << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)

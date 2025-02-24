@@ -16,5 +16,9 @@
 # define APP_NAME	"ClapTrap "
 # define BLT_OK		" has been built correctly ..."
 # define DBLT_OK	" has been correctly deconstructed ..."
+# define ATTACK		" attacks "
+# define CAU		", causing "
+# define PT_DMG		" points of damage!"
+
 
 # endif
