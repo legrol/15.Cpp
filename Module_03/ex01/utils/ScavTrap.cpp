@@ -6,17 +6,63 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 16:36:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 21:45:02 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/27 21:59:32 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ScavTrap.hpp"
 
 /**
+ * The `ScavTrap` class represents an advanced version of `ClapTrap` with 
+ * additional capabilities such as `Gatekeeper Mode`. This file implements 
+ * the constructors, destructor, and member functions for `ScavTrap`.
+ *
+ * 
+ * Default constructor for the `ScavTrap` class.
+ * Initializes hit points, energy points, and attack damage specific to 
+ * `ScavTrap`. Sets `gateKeeperMode` to false.
  * 
  * 
+ * Parameterized constructor for the `ScavTrap` class.
+ * Assigns a custom name while setting `gateKeeperMode` to false. 
+ * Initializes hit points, energy points, and attack damage.
+ * 
+ * @param name  The name of the `ScavTrap` instance.
  * 
  * 
+ * Copy constructor for the `ScavTrap` class.
+ * Copies attributes from an existing `ScavTrap` object.
+ * 
+ * @param copy  The `ScavTrap` object to copy.
+ * 
+ * 
+ * Destructor for the `ScavTrap` class.
+ * Displays a message when the object is destroyed.
+ * 
+ * 
+ * Overloaded assignment operator for the `ScavTrap` class.
+ * Copies the attributes of an existing `ScavTrap` object to another.
+ * 
+ * @param origin  The `ScavTrap` object whose values are being assigned.
+ * @return ScavTrap&  A reference to the updated `ScavTrap` instance.
+ * 
+ * 
+ * The `guardGate` function enables or disables Gatekeeper Mode.
+ * If energy points are zero, the function prevents activation.
+ * 
+ * 
+ * The `attack` function allows `ScavTrap` to attack a target.
+ * The attack is only possible if `Gatekeeper Mode` is active.
+ * 
+ * @param target  The target being attacked.
+ * 
+ * 
+ * The `getEnergyPoints` function displays the current energy points of 
+ * the `ScavTrap`.
+ * 
+ * 
+ * The `getHitPoints` function displays the current hit points of 
+ * the `ScavTrap`.
  * 
  */
 
