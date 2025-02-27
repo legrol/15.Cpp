@@ -41,7 +41,7 @@ UTL_DIR				= ./utils
 CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98
 
 # ══ Sources ═════════════════════════════════════════════════════════════════ #
-#    -------                                                       s            #
+#    -------                                                                   #
 SRC 				= ${SRC_DIR}/main.cpp \
 						${SRC_DIR}/Zombie.cpp
 

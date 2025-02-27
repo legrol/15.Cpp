@@ -1,6 +1,6 @@
 # ══ Names ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
-NAME 				= harlFilter
+NAME 				= claptrap
 
 # ══ Colors ══════════════════════════════════════════════════════════════════ #
 #    ------                                                                    #
@@ -45,7 +45,8 @@ CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98
 SRC 				= ${SRC_DIR}/main.cpp
 
 UTL 				= ${UTL_DIR}/banner.cpp \
-						${UTL_DIR}/Harl.cpp
+						${UTL_DIR}/ClapTrap.cpp \
+						${UTL_DIR}/ScavTrap.cpp
 						
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
 OBJ_UTL				= $(patsubst ${UTL_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})
