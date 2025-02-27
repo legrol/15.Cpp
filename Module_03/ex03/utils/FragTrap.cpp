@@ -6,62 +6,18 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 22:08:29 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 23:22:23 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/27 23:10:37 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/FragTrap.hpp"
 
 /**
- * The `FragTrap` class is a specialized version of `ClapTrap`, 
- * inheriting its attributes and behaviors while adding unique abilities 
- * like `highFivesGuys`.
- *
- * 
- * Default constructor for the `FragTrap` class.
- * Initializes hit points, energy points, and attack damage to higher values.
  * 
  * 
- * Parameterized constructor for the `FragTrap` class.
- * Assigns a custom name while setting hit points, energy points, and 
- * attack damage specific to `FragTrap`.
- * 
- * @param name  The name of the `FragTrap` instance.
  * 
  * 
- * Copy constructor for the `FragTrap` class.
- * Copies attributes from an existing `FragTrap` object.
  * 
- * @param copy  The `FragTrap` object to copy.
- * 
- * 
- * Destructor for the `FragTrap` class.
- * Displays a message when the object is destroyed.
- * 
- * 
- * Overloaded assignment operator for the `FragTrap` class.
- * Copies the attributes of an existing `FragTrap` object to another.
- * 
- * @param origin  The `FragTrap` object whose values are being assigned.
- * @return FragTrap&  A reference to the updated `FragTrap` instance.
- * 
- * 
- * The `attack` function allows `FragTrap` to attack a target.
- * 
- * @param target  The target being attacked.
- * 
- * 
- * The `highFivesGuys` function allows `FragTrap` to request high fives 
- * from its teammates.
- * Displays a message when activated.
- * 
- * 
- * The `getEnergyPoints` function displays the current energy points of the 
- * `FragTrap`.
- * 
- * 
- * The `getHitPoints` function displays the current hit points of the 
- * `FragTrap`.
  * 
  */
 

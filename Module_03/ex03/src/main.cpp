@@ -6,18 +6,20 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:50:57 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 23:24:09 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/27 23:09:16 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/FragTrap.hpp"
 
 /**
- * The `main` function initializes a `FragTrap` instance and tests its
- * abilities such as attacking and requesting high fives.
- * It also displays the character's health and energy levels after each action.
+ * The `main` function serves as the entry point of the program. It 
+ * initializes a `ScavTrap` object named "Wall-e" and demonstrates its various 
+ * functionalities.
+ * The program prints the banner, calls different ScavTrap methods, and 
+ * displays `hit points` and `energy points` at different stages.
  * 
- * @return int  Returns `EXIT_SUCCESS` upon successful execution.
+ * @return int  Returns `EXIT_SUCCESS` after executing all operations.
  * 
  */
 
