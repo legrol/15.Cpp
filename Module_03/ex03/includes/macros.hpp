@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:44:38 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 19:06:19 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 22:46:09 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@
 # define FIVGUY		" says: Hey, high five machine!!!"
 # define MYNAME		"My name is "
 # define NM_CLTR	" and my name ClapTrap is "
+# define SPACES		" *************************************************** "
 
 # endif

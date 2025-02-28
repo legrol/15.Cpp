@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 16:36:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 20:38:13 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 22:05:31 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,6 @@
  * 
  * 
  * The `getEnergyPoints` function displays the current energy points of 
- * the `ScavTrap`.
- * 
- * 
- * The `getHitPoints` function displays the current hit points of 
  * the `ScavTrap`.
  * 
  */
@@ -162,14 +158,4 @@ void ScavTrap::attack(const std::string& target)
 int	ScavTrap::getEnergyPoints(void)
 {
 	return (this->_energy_points);
-}
-
-int	ScavTrap::getHitPoints(void)
-{
-	return (this->_energy_points);
-}
-
-int	ScavTrap::getAttackDamage(void)
-{
-	return (this->_attack_damage);
 }

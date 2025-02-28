@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 22:07:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 20:43:41 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 23:27:48 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,8 @@ class FragTrap : virtual public ClapTrap
 		FragTrap &operator=(const FragTrap &origin);
 
 		void highFivesGuys(void);
-		void attack(const std::string& target);
-		int getEnergyPoints(void);
 		int getHitPoints(void);
 		int getAttackDamage(void);
-
 };
 
 #endif

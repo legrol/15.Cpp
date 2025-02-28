@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 23:13:38 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 21:07:42 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 23:27:56 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ class DiamondTrap : public ScavTrap, public FragTrap
 
 		DiamondTrap &operator=(const DiamondTrap &origin);
 
-		void attack(const std::string& target);
-		void whoAmI(void);
-	
+		void whoAmI(void);	
 };

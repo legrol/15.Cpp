@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 23:14:32 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 21:04:23 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 23:26:14 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,8 @@
  * 
  * @param origin  Reference to the `DiamondTrap` object being copied.
  * @return DiamondTrap&  A reference to the assigned object.
- * 
- * 
- * The `attack` function allows the `DiamondTrap` to attack a target.
- * If the character has no energy or is already at 0 HP, the function 
- * prevents the attack and prints a message accordingly.
- * Otherwise, it calls `FragTrap::attack()`.
- * 
- * @param target  The target being attacked.
- * 
- * 
+ *
+ *  
  * The `whoAmI` function prints the name of the `DiamondTrap` instance 
  * along with its `ClapTrap` name.
  * If the instance has no energy or is already at 0 HP, it prevents 
@@ -69,16 +61,17 @@ DiamondTrap::DiamondTrap(void) : ClapTrap("anonymus_clap_name"), \
 }
 
 DiamondTrap::DiamondTrap(const std::string& name): ClapTrap(name + \
-"_clap_name"), _name("anonymus")
+"_clap_name"), _name(name)
 {
 	this->_hit_points = FragTrap::getHitPoints();
 	this->_energy_points = ScavTrap::getEnergyPoints();
 	this->_attack_damage = FragTrap::getAttackDamage();
-	std::cout << CYAN APP3_NAME RESET << this->_name << CYAN BLT_OK RESET \
+	std::cout << CYAN APP4_NAME RESET << this->_name << CYAN BLT_OK RESET \
 	<< std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& copy): ClapTrap(copy)
+DiamondTrap::DiamondTrap(const DiamondTrap& copy):  ClapTrap(copy), \
+ScavTrap(copy), FragTrap(copy), _name(copy._name)
 {
 	std::cout << CYAN APP4_NAME RESET << this->_name << CYAN BLT3_OK RESET \
 	<< std::endl << std::endl;
@@ -103,22 +96,6 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &origin)
 	return (*this);
 }
 
-void DiamondTrap::attack(const std::string& target)
-{
-	if (this->_hit_points == 0)
-	{
-		std::cout << std::endl << this->_name << RED DEATH1 RESET << std::endl;
-		return ;
-	}
-	else if (this->_energy_points == 0)
-	{
-		std::cout << std::endl << this->_name << RED WT1_EP RESET << std::endl;
-		return ;
-	}
-	else
-		FragTrap::attack(target);	
-}
-
 void DiamondTrap::whoAmI(void)
 {
 	if (this->_hit_points == 0)
@@ -133,7 +110,7 @@ void DiamondTrap::whoAmI(void)
 	}
 	else
 	{
-		std::cout << CYAN MYNAME RESET << this->_name << CYAN NM_CLTR RESET \
-		<< this->ClapTrap::_name << std::endl;
+		std::cout << MAGENTA MYNAME RESET << this->_name << MAGENTA NM_CLTR \
+		RESET << this->ClapTrap::_name << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:48:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 19:23:43 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 23:27:37 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ class ClapTrap
 		ClapTrap &operator=(const ClapTrap &origin);
 		virtual ~ClapTrap();
 
-		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 };

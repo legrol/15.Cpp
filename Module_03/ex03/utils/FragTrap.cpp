@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 22:08:29 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 21:01:20 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 23:26:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,9 @@
  * @return FragTrap&  A reference to the assigned object.
  * 
  * 
- * The `attack` function allows the `FragTrap` to attack a target.
- * If the character has no energy or is already at 0 HP, the function 
- * prevents the attack and prints a message accordingly.
- * 
- * @param target  The target being attacked.
- * 
- * 
  * The `highFivesGuys` function requests a high five from teammates.
  * If the character has no energy or is already at 0 HP, it prevents 
  * the action and prints a message accordingly.
- * 
- * 
- * The `getEnergyPoints` function retrieves the current energy points 
- * of the `FragTrap`.
- * 
- * @return int  The current energy points.
  * 
  * 
  * The `getHitPoints` function retrieves the current hit points of 
@@ -114,24 +101,6 @@ FragTrap &FragTrap::operator=(const FragTrap &origin)
 	return (*this);
 }
 
-void FragTrap::attack(const std::string& target)
-{
-	if (this->_hit_points == 0)
-	{
-		std::cout << std::endl << this->_name << RED DEATH1 RESET << std::endl;
-		return ;
-	}
-	if (this->_energy_points == 0)
-	{
-		std::cout << std::endl << this->_name << RED WT1_EP RESET << std::endl;
-		return ;
-	}
-	std::cout << std::endl << GREEN APP3_NAME RESET << this->_name << YELLOW \
-	ATTACK RESET << target << YELLOW CAU RESET <<  this->_attack_damage <<  \
-	YELLOW PT_DMG RESET << std::endl;
-	this->_energy_points -= 1;
-}
-
 void FragTrap::highFivesGuys(void)
 {
 	if (this->_hit_points == 0)
@@ -146,11 +115,6 @@ void FragTrap::highFivesGuys(void)
 	}
 	std::cout << std::endl << this->_name << GREEN FIVGUY RESET << std::endl;
 
-}
-
-int	FragTrap::getEnergyPoints(void)
-{
-	return (this->_energy_points);
 }
 
 int	FragTrap::getHitPoints(void)

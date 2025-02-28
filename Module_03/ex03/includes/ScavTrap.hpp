@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 16:33:40 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 20:06:31 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 22:03:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ class ScavTrap : virtual public ClapTrap
 		void guardGate();
 		void attack(const std::string& target);
 		int getEnergyPoints(void);		
-		int getHitPoints(void);
-		int getAttackDamage(void);
 };
 
 #endif

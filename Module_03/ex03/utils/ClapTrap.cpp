@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:49:40 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 19:02:13 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 23:27:30 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,6 @@
  * 
  * The destructor `ClapTrap::~ClapTrap(void)` handles object cleanup when a 
  * `ClapTrap` instance goes out of scope.
- * 
- * 
- * The `attack` function reduces the `energy_points` of the `ClapTrap` and 
- * displays an attack message.
- *
- * @param target  			The name of the target being attacked.
  * 
  * 
  * The `takeDamage` function decreases the `hit_points` of the `ClapTrap` when 
@@ -86,24 +80,6 @@ ClapTrap::~ClapTrap(void)
 {
 	std::cout  << CYAN APP_NAME RESET << this->_name << CYAN \
 	DBLT_OK RESET << std::endl << std::endl;
-}
-
-void ClapTrap::attack(const std::string& target)
-{
-	if (this->_hit_points == 0)
-	{
-		std::cout << std::endl << this->_name << RED DEATH1 RESET << std::endl;
-		return ;
-	}
-	if (this->_energy_points == 0)
-	{
-		std::cout << std::endl << this->_name << RED WT_EP RESET << std::endl;
-		return ;
-	}
-	std::cout << GREEN APP_NAME RESET << this->_name << YELLOW ATTACK RESET \
-	<< target << YELLOW CAU RESET <<  this->_attack_damage << YELLOW PT_DMG \
-	RESET << std::endl;
-	this->_energy_points -= 1;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
