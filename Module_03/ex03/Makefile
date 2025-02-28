@@ -38,7 +38,7 @@ UTL_DIR				= ./utils
 
 # ══ Flags ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
-CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98
+CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98 -Wshadow
 
 # ══ Sources ═════════════════════════════════════════════════════════════════ #
 #    -------                                                                   #
