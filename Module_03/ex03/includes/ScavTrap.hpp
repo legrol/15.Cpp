@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 16:33:40 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 22:13:15 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 20:06:31 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 
-	private:
+	protected:
 
 		bool gateKeeperMode;
 
@@ -32,8 +32,9 @@ class ScavTrap : public ClapTrap
 	
 		void guardGate();
 		void attack(const std::string& target);
-		void getEnergyPoints(void);
-		void getHitPoints(void);
+		int getEnergyPoints(void);		
+		int getHitPoints(void);
+		int getAttackDamage(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 16:36:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 23:01:38 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 20:38:13 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,9 @@
 
 ScavTrap::ScavTrap(void): ClapTrap(), gateKeeperMode(false)
 {
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_hit_points = MAX_HP_ST;
+	this->_energy_points = MAX_EP_ST;
+	this->_attack_damage = MIN_AD_ST;
 	std::cout << CYAN APP2_NAME RESET << this->_name << CYAN BLT2_OK RESET \
 	<< std::endl;
 }
@@ -78,17 +78,16 @@ ScavTrap::ScavTrap(void): ClapTrap(), gateKeeperMode(false)
 ScavTrap::ScavTrap(const std::string& name): ClapTrap(name), \
 gateKeeperMode(false)
 {
+	this->_hit_points = MAX_HP_ST;
+	this->_energy_points = MAX_EP_ST;
+	this->_attack_damage = MIN_AD_ST;
 	std::cout << CYAN APP2_NAME RESET << this->_name << CYAN BLT_OK RESET \
 	<< std::endl;
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;	
 }
 
 ScavTrap::ScavTrap(const ScavTrap& copy): ClapTrap(copy), \
 gateKeeperMode(copy.gateKeeperMode)
 {
-	*this = copy;
 	std::cout << CYAN APP2_NAME RESET << this->_name << CYAN BLT3_OK RESET \
 	<< std::endl << std::endl;
 }
@@ -160,13 +159,17 @@ void ScavTrap::attack(const std::string& target)
 	this->_energy_points -= 1;
 }
 
-void	ScavTrap::getEnergyPoints(void)
+int	ScavTrap::getEnergyPoints(void)
 {
-	std::cout << YELLOW GET_EP RESET << this->_energy_points << std::endl;
+	return (this->_energy_points);
 }
 
-void	ScavTrap::getHitPoints(void)
+int	ScavTrap::getHitPoints(void)
 {
-	std::cout << std::endl << YELLOW GET_HP RESET << this->_hit_points \
-	<< std::endl;
+	return (this->_energy_points);
+}
+
+int	ScavTrap::getAttackDamage(void)
+{
+	return (this->_attack_damage);
 }

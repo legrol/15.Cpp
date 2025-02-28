@@ -46,6 +46,7 @@ SRC 				= ${SRC_DIR}/main.cpp
 
 UTL 				= ${UTL_DIR}/banner.cpp \
 						${UTL_DIR}/ClapTrap.cpp \
+						${UTL_DIR}/DiamondTrap.cpp \
 						${UTL_DIR}/FragTrap.cpp \
 						${UTL_DIR}/ScavTrap.cpp
 						

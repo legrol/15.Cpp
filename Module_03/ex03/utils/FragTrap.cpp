@@ -6,42 +6,94 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 22:08:29 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 23:10:37 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 21:01:20 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/FragTrap.hpp"
 
 /**
+ * The `FragTrap` default constructor initializes an instance of `FragTrap`
+ * with predefined maximum hit points, energy points, and attack damage.
+ * It also prints a message confirming the creation of the object.
  * 
  * 
+ * The `FragTrap` parameterized constructor initializes an instance of 
+ * `FragTrap` with a given name and predefined maximum attributes.
+ * It prints a message confirming the creation of the object.
+ * 
+ * @param name  A string representing the name of the `FragTrap`.
  * 
  * 
+ * The `FragTrap` copy constructor creates a new `FragTrap` object as a 
+ * copy of an existing one. It retains the attributes of the original object.
  * 
+ * @param copy  Reference to the `FragTrap` object to be copied.
+ * 
+ * 
+ * The `FragTrap` destructor prints a message confirming that the object 
+ * is being destroyed.
+ * 
+ * 
+ * The `operator=` overload assigns the attributes of one `FragTrap` 
+ * instance to another. It ensures that the new object retains the values 
+ * of the original.
+ * 
+ * @param origin  Reference to the `FragTrap` object being copied.
+ * @return FragTrap&  A reference to the assigned object.
+ * 
+ * 
+ * The `attack` function allows the `FragTrap` to attack a target.
+ * If the character has no energy or is already at 0 HP, the function 
+ * prevents the attack and prints a message accordingly.
+ * 
+ * @param target  The target being attacked.
+ * 
+ * 
+ * The `highFivesGuys` function requests a high five from teammates.
+ * If the character has no energy or is already at 0 HP, it prevents 
+ * the action and prints a message accordingly.
+ * 
+ * 
+ * The `getEnergyPoints` function retrieves the current energy points 
+ * of the `FragTrap`.
+ * 
+ * @return int  The current energy points.
+ * 
+ * 
+ * The `getHitPoints` function retrieves the current hit points of 
+ * the `FragTrap`.
+ * 
+ * @return int  The current hit points.
+ * 
+ * 
+ * The `getAttackDamage` function retrieves the current attack damage 
+ * value of the `FragTrap`.
+ * 
+ * @return int  The attack damage.
  * 
  */
 
 FragTrap::FragTrap(void): ClapTrap()
 {
-	this->_hit_points = 100;
-	this->_energy_points = 100;
-	this->_attack_damage = 30;
+	this->_hit_points = MAX_HP_FT;
+	this->_energy_points = MAX_EP_FT;
+	this->_attack_damage = MIN_AD_FT;
 	std::cout << CYAN APP3_NAME RESET << this->_name << CYAN BLT2_OK RESET \
 	<< std::endl;
 }
 
 FragTrap::FragTrap(const std::string& name): ClapTrap(name)
 {
-	this->_hit_points = 100;
-	this->_energy_points = 100;
-	this->_attack_damage = 30;
+	this->_hit_points = MAX_HP_FT;
+	this->_energy_points = MAX_EP_FT;
+	this->_attack_damage = MIN_AD_FT;
 	std::cout << CYAN APP3_NAME RESET << this->_name << CYAN BLT_OK RESET \
 	<< std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& copy): ClapTrap(copy)
 {
-	*this = copy;
 	std::cout << CYAN APP3_NAME RESET << this->_name << CYAN BLT3_OK RESET \
 	<< std::endl << std::endl;
 }
@@ -96,13 +148,17 @@ void FragTrap::highFivesGuys(void)
 
 }
 
-void	FragTrap::getEnergyPoints(void)
+int	FragTrap::getEnergyPoints(void)
 {
-	std::cout << YELLOW GET_EP RESET << this->_energy_points << std::endl;
+	return (this->_energy_points);
 }
 
-void	FragTrap::getHitPoints(void)
+int	FragTrap::getHitPoints(void)
 {
-	std::cout << std::endl << YELLOW GET_HP RESET << this->_hit_points \
-	<< std::endl;
+	return (this->_hit_points);
+}
+
+int	FragTrap::getAttackDamage(void)
+{
+	return (this->_attack_damage);
 }

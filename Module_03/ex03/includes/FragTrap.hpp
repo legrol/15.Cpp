@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 22:07:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 23:00:05 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 20:43:41 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	private:
 
@@ -31,9 +31,10 @@ class FragTrap : public ClapTrap
 
 		void highFivesGuys(void);
 		void attack(const std::string& target);
-		void getEnergyPoints(void);
-		void getHitPoints(void);
+		int getEnergyPoints(void);
+		int getHitPoints(void);
+		int getAttackDamage(void);
 
-	};
+};
 
 #endif

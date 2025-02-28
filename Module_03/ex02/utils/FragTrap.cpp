@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 22:08:29 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 23:22:23 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 20:38:19 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ FragTrap::FragTrap(const std::string& name): ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap& copy): ClapTrap(copy)
 {
-	*this = copy;
 	std::cout << CYAN APP3_NAME RESET << this->_name << CYAN BLT3_OK RESET \
 	<< std::endl << std::endl;
 }

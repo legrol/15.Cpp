@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:49:40 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 21:26:43 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 19:02:13 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,8 @@
  * 
  */
 
-ClapTrap::ClapTrap(void): _name("anonymus"), _hit_points(10), \
-_energy_points(10), _attack_damage(0)
+ClapTrap::ClapTrap(void): _name("anonymus"), _hit_points(MAX_HP_CT), \
+_energy_points(MAX_EP_CT), _attack_damage(MIN_AD_CT)
 {
 	std::cout << CYAN APP_NAME RESET << this->_name << CYAN BLT_OK RESET \
 	<< std::endl;
@@ -75,8 +75,8 @@ ClapTrap::ClapTrap(const ClapTrap& copy)
 	std::cout << CYAN APP_NAME RESET << this->_name << CYAN BLT_OK RESET \
 	<< std::endl;
 }
-ClapTrap::ClapTrap(const std::string& name): _name(name), _hit_points(10), \
-_energy_points(10), _attack_damage(0)
+ClapTrap::ClapTrap(const std::string& name): _name(name), \
+_hit_points(MAX_HP_CT), _energy_points(MAX_EP_CT), _attack_damage(MIN_AD_CT)
 {
 	std::cout << CYAN APP_NAME RESET << this->_name << \
 	CYAN BLT_OK RESET << std::endl;
@@ -143,9 +143,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 	std::cout << BLUE APP_NAME RESET << this->_name << YELLOW SF_RPR RESET \
 	<< amount << YELLOW POINTS RESET << std::endl;
 	this->_hit_points += amount;
-	if (this->_hit_points > MAX_HP)
+	if (this->_hit_points > MAX_HP_CT)
 	{
-		this->_hit_points = MAX_HP;
+		this->_hit_points = MAX_HP_CT;
 		std::cout << MAGENTA APP_NAME RESET << this->_name << MAGENTA PT_MAX \
 		RESET << std::endl;
 	}

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 16:36:27 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 23:01:38 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 20:38:44 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,6 @@ gateKeeperMode(false)
 ScavTrap::ScavTrap(const ScavTrap& copy): ClapTrap(copy), \
 gateKeeperMode(copy.gateKeeperMode)
 {
-	*this = copy;
 	std::cout << CYAN APP2_NAME RESET << this->_name << CYAN BLT3_OK RESET \
 	<< std::endl << std::endl;
 }

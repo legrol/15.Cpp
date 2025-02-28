@@ -6,20 +6,27 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:44:38 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/27 23:07:29 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/28 19:06:19 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MACROS_HPP
 # define	MACROS_HPP
 
-# define MAX_HP		10
-# define MAX_EP		10
-# define MIN_AD		0
+# define MAX_HP_CT	10
+# define MAX_EP_CT	10
+# define MIN_AD_CT	0
+# define MAX_HP_ST	100
+# define MAX_EP_ST	50
+# define MIN_AD_ST	20
+# define MAX_HP_FT	100
+# define MAX_EP_FT	100
+# define MIN_AD_FT	30
 
 # define APP_NAME	"ClapTrap "
 # define APP2_NAME	"ScavTrap "
 # define APP3_NAME	"FragTrap "
+# define APP4_NAME	"DiamondTrap "
 # define BLT_OK		" has been built correctly ..."
 # define BLT2_OK	" has been built by default correctly ..."
 # define BLT3_OK	" has been built by copy correctly ..."
@@ -43,5 +50,7 @@
 # define GET_EP		"Energy Points of ScavTrap: "
 # define GET_HP		"Hit Points of ScavTrap: "
 # define FIVGUY		" says: Hey, high five machine!!!"
+# define MYNAME		"My name is "
+# define NM_CLTR	" and my name ClapTrap is "
 
 # endif
