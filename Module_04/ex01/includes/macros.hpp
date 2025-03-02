@@ -5,53 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/16 16:44:38 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/28 22:46:09 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/02 19:41:24 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MACROS_HPP
 # define	MACROS_HPP
 
-# define MAX_HP_CT	10
-# define MAX_EP_CT	10
-# define MIN_AD_CT	0
-# define MAX_HP_ST	100
-# define MAX_EP_ST	50
-# define MIN_AD_ST	20
-# define MAX_HP_FT	100
-# define MAX_EP_FT	100
-# define MIN_AD_FT	30
-
-# define APP_NAME	"ClapTrap "
-# define APP2_NAME	"ScavTrap "
-# define APP3_NAME	"FragTrap "
-# define APP4_NAME	"DiamondTrap "
-# define BLT_OK		" has been built correctly ..."
-# define BLT2_OK	" has been built by default correctly ..."
-# define BLT3_OK	" has been built by copy correctly ..."
-# define DBLT_OK	" has been correctly deconstructed ..."
-# define ATTACK		" attacks "
-# define CAU		", causing "
-# define PT_DMG		" points of damage!"
-# define SF_RPR		" has sel-repaired in the amount of "
-# define POINTS		" points!"
-# define PT_MAX		" has gained more than 10 HP. Reset to max. 10 hit points!"
-# define RCV_DMG	" has received "
-# define RCV_DMG1	" point of damage!"
-# define RCV_DMG2	" points of damage!"
-# define DEATH		" has been destroyed!"
-# define DEATH1		" is destroyed!"
-# define WT_EP		" has 0 energy points! Impossible repair!!"
-# define WT1_EP		" has 0 energy points!"
-# define GKM_FLS	" isn't in Gate Keeper Mode!!!"
-# define GKM_TR		" has entered in Gate Keeper Mode!!!"
-# define GKM_EXTR	" has exited from Gate Keeper Mode!!!"
-# define GET_EP		"Energy Points of ScavTrap: "
-# define GET_HP		"Hit Points of ScavTrap: "
-# define FIVGUY		" says: Hey, high five machine!!!"
-# define MYNAME		"My name is "
-# define NM_CLTR	" and my name ClapTrap is "
-# define SPACES		" *************************************************** "
+# define APP_NAME	"Animal"
+# define APP1_NAME	"Dog"
+# define APP2_NAME 	"Cat"
+# define DFLT_INI	"The default constructor of "
+# define DFLT_POS	" is called..."
+# define DFLT_CAT	"😺"
+# define DFLT_DOG	"🐶"
+# define DFLT_ANI	"🦄"
+# define DFLT_WAN	"🐫"
+# define DFLT_CAT2	"🦝"
+# define DFLT_CPY	"'s copy constructor is called..."
+# define DFLT_DST	"The default destructor of "
+# define WOSOUND	"This animal doesn't make any sound."
+# define RRSOUND	"This animal makes a very strange sound."
+# define CAT_SOUND	"Meow, meow and remeow..."
+# define DOG_SOUND	"Woof, woof and rewoof..."
+# define CONSTR		"  ·  ·  ·  Constructors ·  ·  ·  "
+# define CONSTR1	"  ·  ·  ·  Constructor wrong animal ·  ·  ·  "
+# define TYP		"  ·  ·  ·  Types ·  ·  ·  "
+# define TYP1		"  ·  ·  ·  Type wrong animal ·  ·  ·  "
+# define SND		"  ·  ·  ·  Sounds ·  ·  ·  "
+# define SND1		"  ·  ·  ·  Sound wrong animal ·  ·  ·  "
+# define DESTR		"  ·  ·  ·  Destructors ·  ·  ·  "
+# define DESTR1		"  ·  ·  ·  Destructor wrong animal ·  ·  ·  "
+# define TEST		"  ·  ·  ·  Test wrong animal ·  ·  ·  "
+# define OTHERSAN	"🐪🐆🐴🐙🦬🦁🦣🦓​🦬​🐧​🐑​🦧​🦩​🦚​🦜​🐌​🦈​🐠​🦋"
 
 # endif

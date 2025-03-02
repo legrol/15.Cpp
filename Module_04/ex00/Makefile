@@ -48,8 +48,8 @@ UTL 				= ${UTL_DIR}/Animal.cpp \
 						${UTL_DIR}/banner.cpp \
 						${UTL_DIR}/Cat.cpp \
 						${UTL_DIR}/Dog.cpp \
-						# ${UTL_DIR}/WrongAnimal.cpp \
-						# ${UTL_DIR}/WrongCat.cpp
+						${UTL_DIR}/WrongAnimal.cpp \
+						${UTL_DIR}/WrongCat.cpp
 						
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
 OBJ_UTL				= $(patsubst ${UTL_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})
