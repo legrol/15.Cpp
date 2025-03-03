@@ -22,8 +22,8 @@
 
 Brain::Brain(void)
 {
-	this->type = "xxxxx";
-	std::cout << MAGENTA DFLT_INI RESET << this->type << MAGENTA DFLT_POS \
+	// this->type = "xxxxx";
+	std::cout << MAGENTA DFLT_INI RESET << xxx << MAGENTA DFLT_POS \
 	RESET << DFLT_DOG << std::endl;
 }
 
@@ -44,6 +44,6 @@ Brain &Brain::operator=(const Brain &origin)
 
 Brain::~Brain(void)
 {
-	std::cout << MAGENTA DFLT_DST RESET << this->type << MAGENTA DFLT_POS \
+	std::cout << MAGENTA DFLT_DST RESET << xxx << MAGENTA DFLT_POS \
 	RESET << DFLT_DOG << std::endl;
 }

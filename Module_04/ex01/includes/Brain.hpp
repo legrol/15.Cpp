@@ -13,22 +13,34 @@
 #ifndef BRAIN_HPPs
 # define BRAIN_HPP
 
-# include "Dog.hpp"
-# include "Cat.hpp"
+// ============================================================================
+// Libraries
+// ============================================================================
+# include <iostream>			// std::cout, std::endl, ...
+# include <string>				// std::string
+# include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
 
-class Brain : public Dog, public Cat
+// ============================================================================
+// Access to my libraries
+// ============================================================================
+#include "macros.hpp"
+#include "colors.hpp"
+
+class Brain
 {
 	private:
 
-		std::string ideas;
+		std::string ideas[100];
 
 	public:
 	
 		Brain(void);
 		Brain(const Brain& copy);
 		Brain &operator=(const Brain &origin);
-		virtual ~Brain();
+		~Brain(void );
 
+		//get
+		//set
 
 };
 

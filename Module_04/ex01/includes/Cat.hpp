@@ -15,11 +15,11 @@
 
 # include "Animal.hpp"
 
-class Cat : virtual public Animal
+class Cat : public Animal
 {
-	protected:
+	private:
 
-		std::string ideas;
+		Brain* brain;
 
 	public:
 
@@ -28,7 +28,11 @@ class Cat : virtual public Animal
 		Cat &operator=(const Cat &origin);
 		~Cat();
 
-		virtual void makeSound() const;
+		void makeSound() const;
+		//build
+		//get
+		//brain *
+
 };
 
 #endif

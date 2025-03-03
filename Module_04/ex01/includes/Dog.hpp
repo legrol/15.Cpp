@@ -15,11 +15,11 @@
 
 # include "Animal.hpp"
 
-class Dog : virtual public Animal
+class Dog : public Animal
 {
-	protected:
+	private:
 
-	
+		Brain* brain;
 	
 	public:
 
@@ -28,7 +28,10 @@ class Dog : virtual public Animal
 		Dog &operator=(const Dog &origin);
 		~Dog(void);
 
-		virtual void makeSound() const;
+		void makeSound() const;
+		//build
+		//get
+		//brain *
 };
 
 #endif

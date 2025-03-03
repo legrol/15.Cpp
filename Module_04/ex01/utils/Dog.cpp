@@ -55,6 +55,12 @@
 Dog::Dog(void): Animal()
 {
 	this->type = "Dog";
+	this->brain = new Brain();
+
+
+
+
+
 	std::cout << MAGENTA DFLT_INI RESET << this->type << MAGENTA DFLT_POS \
 	RESET << DFLT_DOG << std::endl;
 }
@@ -62,6 +68,9 @@ Dog::Dog(void): Animal()
 Dog::Dog(const Dog& copy): Animal(copy)
 {
 	this->type = copy.type;
+	this->brain = new Brain();
+
+	
 	std::cout << MAGENTA DFLT_CPY RESET << this->type << MAGENTA DFLT_POS \
 	RESET << DFLT_DOG << std::endl;	
 }
@@ -76,6 +85,7 @@ Dog &Dog::operator=(const Dog &origin)
 
 Dog::~Dog(void)
 {
+	delete this->brain;	
 	std::cout << MAGENTA DFLT_DST RESET << this->type << MAGENTA DFLT_POS \
 	RESET << DFLT_DOG << std::endl;
 }

@@ -56,6 +56,11 @@
 Cat::Cat(void): Animal() 
 {
 	this->type = "Cat";
+	this->brain = new Brain();
+
+
+
+
 	std::cout << MAGENTA DFLT_INI RESET << this->type << MAGENTA DFLT_POS \
 	RESET << DFLT_CAT << std::endl;
 }
@@ -63,6 +68,8 @@ Cat::Cat(void): Animal()
 Cat::Cat(const Cat& copy): Animal(copy)
 {
 	this->type = copy.type;
+	this->brain = new Brain();
+	
 	std::cout << MAGENTA DFLT_CPY RESET << this->type << MAGENTA DFLT_POS \
 	RESET << DFLT_CAT << std::endl;	 
 }
@@ -77,6 +84,7 @@ Cat &Cat::operator=(const Cat &origin)
 
 Cat::~Cat(void)
 {
+	delete this->brain;	
 	std::cout << MAGENTA DFLT_DST RESET << this->type << MAGENTA DFLT_POS \
 	RESET << DFLT_CAT << std::endl; 
 }
