@@ -69,6 +69,7 @@ WrongCat::WrongCat(const WrongCat& copy): WrongAnimal(copy)
  
 WrongCat &WrongCat::operator=(const WrongCat &origin)
 {
+	WrongAnimal::operator=(origin);
 	if (this != &origin)
 		this->type = origin.type;
 	return (*this); 

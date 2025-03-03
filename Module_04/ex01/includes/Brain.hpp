@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/01 01:08:20 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/02 21:14:04 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025-03-03 14:25:32 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025-03-03 14:25:32 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPPs
+# define BRAIN_HPP
 
-# include "Animal.hpp"
+# include "Dog.hpp"
+# include "Cat.hpp"
 
-class Cat : virtual public Animal
+class Brain : public Dog, public Cat
 {
-	protected:
+	private:
 
 		std::string ideas;
 
 	public:
+	
+		Brain(void);
+		Brain(const Brain& copy);
+		Brain &operator=(const Brain &origin);
+		virtual ~Brain();
 
-		Cat(void);
-		Cat(const Cat& copy);
-		Cat &operator=(const Cat &origin);
-		~Cat();
 
-		virtual void makeSound() const;
 };
 
 #endif

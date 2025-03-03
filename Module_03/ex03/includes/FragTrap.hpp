@@ -17,7 +17,7 @@
 
 class FragTrap : virtual public ClapTrap
 {
-	private:
+	protected:
 
 
 	public:

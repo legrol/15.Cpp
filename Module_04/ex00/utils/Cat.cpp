@@ -69,6 +69,7 @@ Cat::Cat(const Cat& copy): Animal(copy)
 
 Cat &Cat::operator=(const Cat &origin)
 {
+	Animal::operator=(origin);
 	if (this != &origin)
 		this->type = origin.type;
 	return (*this); 

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ClapTrap.hpp"
+#include "../includes/Animal.hpp"
 
 /**
  * The function "print_banner" generates sthe project start banner. 

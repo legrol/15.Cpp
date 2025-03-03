@@ -33,23 +33,23 @@
 
 int main()
 {
-	std::cout << std::endl << GRAY CONSTR RESET << std::endl << std::endl;	
+	std::cout << std::endl << RED CONSTR RESET << std::endl << std::endl;	
 	const Animal* meta = new Animal();
 	std::cout << std::endl;
 	const Animal* j = new Dog();
 	std::cout << std::endl;
 	const Animal* i = new Cat();
 
-	std::cout << std::endl << GRAY TYP RESET << std::endl << std::endl;
+	std::cout << std::endl << RED TYP RESET << std::endl << std::endl;
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
 
-	std::cout << std::endl << GRAY SND RESET << std::endl << std::endl;
+	std::cout << std::endl << RED SND RESET << std::endl << std::endl;
 	i->makeSound();
 	j->makeSound();
 	meta->makeSound();
 	
-	std::cout << std::endl << GRAY DESTR RESET << std::endl << std::endl;
+	std::cout << std::endl << RED DESTR RESET << std::endl << std::endl;
 	delete i;
 	std::cout << std::endl;
 	delete j;
@@ -57,22 +57,22 @@ int main()
 	delete meta;
 
 	std::cout << std::endl << BDBLUE TEST RESET << std::endl;
-	std::cout << GRAY CONSTR1 RESET << std::endl << std::endl;	
+	std::cout << RED CONSTR1 RESET << std::endl << std::endl;	
 	const WrongAnimal* lambda = new WrongAnimal();	
 	std::cout << std::endl;
 	const WrongAnimal* zeta = new WrongCat();
 	std::cout << std::endl;
 	const WrongCat* k = new WrongCat();	
 
-	std::cout << std::endl << GRAY TYP1 RESET << std::endl << std::endl;
+	std::cout << std::endl << RED TYP1 RESET << std::endl << std::endl;
 	std::cout << k->getType() << " " << std::endl;
 
-	std::cout << std::endl << GRAY SND1 RESET << std::endl << std::endl;
+	std::cout << std::endl << RED SND1 RESET << std::endl << std::endl;
 	lambda->makeSound();
 	zeta->makeSound();
 	k->makeSound();	
 	
-	std::cout << std::endl << GRAY DESTR1 RESET << std::endl << std::endl;
+	std::cout << std::endl << RED DESTR1 RESET << std::endl << std::endl;
 	delete k;
 	std::cout << std::endl;
 	delete zeta;

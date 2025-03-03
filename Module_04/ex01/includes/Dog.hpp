@@ -17,7 +17,7 @@
 
 class Dog : virtual public Animal
 {
-	private:
+	protected:
 
 	
 	
@@ -28,7 +28,7 @@ class Dog : virtual public Animal
 		Dog &operator=(const Dog &origin);
 		~Dog(void);
 
-		void makeSound() const;
+		virtual void makeSound() const;
 };
 
 #endif

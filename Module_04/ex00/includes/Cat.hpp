@@ -15,7 +15,7 @@
 
 # include "Animal.hpp"
 
-class Cat : virtual public Animal
+class Cat : public Animal
 {
 	private:
 
