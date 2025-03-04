@@ -42,8 +42,7 @@ class Animal
 
 		std::string getType(void) const;
 		virtual void makeSound() const;
-
-		//get
+		virtual Brain *getBrain() const = 0;
 };
 
 // ============================================================================

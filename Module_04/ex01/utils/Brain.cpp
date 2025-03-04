@@ -29,18 +29,15 @@ Brain::Brain(void)
 Brain::Brain(const Brain& copy)
 {
 	*this = copy;
-	std::cout << MAGENTA DFLT_CPY RESET << this->type << MAGENTA DFLT_POS \
-	RESET << DFLT_DOG << std::endl;	
-
-
-
+	std::cout<< APP3_NAME << MAGENTA DFLT_CPY RESET << DFLT_DOG << std::endl;
 }
 
-Brain const &Brain::operator=(const Brain &origin)
+Brain &Brain::operator=(const Brain &origin)
 {
-
-
-
+	std::copy(origin.ideas, origin.ideas + 100, this->ideas);
+	std::cout << MAGENTA DFLT_OPE RESET << APP3_NAME << MAGENTA DFLT_POS \
+	RESET << DFLT_BRN << std::endl;
+	return (*this); 
 }
 
 Brain::~Brain(void)
@@ -51,14 +48,13 @@ Brain::~Brain(void)
 
 std::string const Brain::getIdeas(int const &index) const
 {
-
-
-
+	if (index >= 0 && index < 100)
+	return (this->ideas[index]);
+	return (this->ideas[0]);
 }
 
 void Brain::setIdeas(std::string const &idea, int const index)
 {
-
-
-
+	if (index >= 0 && index < 100)
+		this->ideas[index] = idea;
 }

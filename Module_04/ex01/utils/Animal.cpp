@@ -13,47 +13,9 @@
 #include "../includes/Animal.hpp"
 
 /**
- * @brief Default constructor for the `Animal` class.
- *
- * This constructor initializes an `Animal` object with a default type 
- * `"Animal"`.
- * It prints a message indicating the creation of an `Animal` instance.
  * 
  * 
- * @brief Copy constructor for the `Animal` class.
- *
- * This constructor creates a new `Animal` object as a copy of an existing one.
- * The copied object retains the same type as the original.
- *
- * @param copy Reference to the `Animal` object to be copied.
  * 
- * 
- * @brief Overloaded assignment operator for the `Animal` class.
- *
- * Copies the attributes of one `Animal` object to another.
- * If the assigned object is not the same as the source, it updates its type.
- *
- * @param origin Reference to the `Animal` object being assigned.
- * @return Animal& Reference to the assigned object.
- * 
- * 
- * @brief Destructor for the `Animal` class.
- *
- * This function is called when an `Animal` object goes out of scope.
- * It prints a message confirming the destruction of the object.
- * 
- * 
- * @brief Retrieves the type of the `Animal`.
- *
- * This function returns the `type` attribute of the `Animal` instance.
- *
- * @return std::string The type of the animal.
- * 
- * 
- * @brief Makes a generic animal sound.
- *
- * This function prints a default message indicating that the `Animal`
- * class does not have a specific sound.
  * 
  */
 

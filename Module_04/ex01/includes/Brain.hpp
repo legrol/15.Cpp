@@ -36,12 +36,11 @@ class Brain
 	
 		Brain(void);
 		Brain(const Brain& copy);
-		Brain const &operator=(const Brain &origin);
+		Brain &operator=(const Brain &origin);
 		~Brain(void);
 
 		std::string const getIdeas(int const &index) const;
 		void setIdeas(std::string const &idea, int const index);
-
 };
 
 #endif

@@ -27,6 +27,7 @@
 # define DFLT_BRN	"🧠"
 # define DFLT_CPY	"'s copy constructor is called..."
 # define DFLT_DST	"The default destructor of "
+# define DFLT_OPE	"The assignment operator for "
 # define WOSOUND	"This animal doesn't make any sound."
 # define RRSOUND	"This animal makes a very strange sound."
 # define CAT_SOUND	"Meow, meow and remeow..."
@@ -41,5 +42,6 @@
 # define DESTR1		"  ·  ·  ·  Destructor wrong animal ·  ·  ·  "
 # define TEST		"  ·  ·  ·  Test wrong animal ·  ·  ·  "
 # define OTHERSAN	"🐪🐆🐴🐙🦬🦁🦣🦓​🦬​🐧​🐑​🦧​🦩​🦚​🦜​🐌​🦈​🐠​🦋"
+# define SPACES		" *************************************************** "
 
 # endif

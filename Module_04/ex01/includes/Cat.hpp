@@ -30,9 +30,8 @@ class Cat : public Animal
 
 		void makeSound() const;
 		Brain *getBrain(void) const;
-		//create
-		//get
-
+		void createCatIdeas(std::string const &idea, int const index);
+		void getCatIdeas(int const &index);
 };
 
 #endif

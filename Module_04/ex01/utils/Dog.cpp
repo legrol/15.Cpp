@@ -86,9 +86,13 @@ Dog::Dog(const Dog& copy): Animal(copy)
 
 Dog &Dog::operator=(const Dog &origin)
 {
-	Animal::operator=(origin);
 	if (this != &origin)
+	{
+		Animal::operator=(origin);
+		delete(this->brain);
+		this->brain = new Brain(*origin.brain);
 		this->type = origin.type;
+	}		
 	return (*this);
 }
 
@@ -107,4 +111,14 @@ void Dog::makeSound() const
 Brain *Dog::getBrain(void) const
 {
 	return (this->brain);
+}
+
+void Dog::createDogIdeas(std::string const &idea, int const index)
+{
+	this->brain->setIdeas(idea, index);
+}
+
+void Dog::getDogIdeas(int const &index)
+{
+	std::cout << this->brain->getIdeas(index) << std::endl;
 }

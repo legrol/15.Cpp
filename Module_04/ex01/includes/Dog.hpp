@@ -30,9 +30,8 @@ class Dog : public Animal
 
 		void makeSound() const;
 		Brain *getBrain(void) const;
-		//create
-		//get
-
+		void createDogIdeas(std::string const &idea, int const index);
+		void getDogIdeas(int const &index);
 };
 
 #endif

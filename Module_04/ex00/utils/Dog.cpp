@@ -67,9 +67,11 @@ Dog::Dog(const Dog& copy): Animal(copy)
 
 Dog &Dog::operator=(const Dog &origin)
 {
-	Animal::operator=(origin);
 	if (this != &origin)
+	{
+		Animal::operator=(origin);
 		this->type = origin.type;
+	}		
 	return (*this);
 }
 

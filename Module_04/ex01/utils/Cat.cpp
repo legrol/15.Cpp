@@ -88,10 +88,14 @@ Cat::Cat(const Cat& copy): Animal(copy)
 
 Cat &Cat::operator=(const Cat &origin)
 {
-	Animal::operator=(origin);
 	if (this != &origin)
+	{
+		Animal::operator=(origin);
+		delete(this->brain);
+		this->brain = new Brain(*origin.brain);
 		this->type = origin.type;
-	return (*this); 
+	}		
+	return (*this);
 }
 
 Cat::~Cat(void)
@@ -109,4 +113,14 @@ void Cat::makeSound() const
 Brain *Cat::getBrain(void) const
 {
 	return (this->brain);
+}
+
+void Cat::createCatIdeas(std::string const &idea, int const index)
+{
+	this->brain->setIdeas(idea, index);
+}
+
+void Cat::getCatIdeas(int const &index)
+{
+	std::cout << this->brain->getIdeas(index) << std::endl;
 }
