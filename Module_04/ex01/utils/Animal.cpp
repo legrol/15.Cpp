@@ -67,8 +67,7 @@ Animal::Animal(void) : type("Animal")
 Animal::Animal(const Animal& copy)
 {
 	this->type = copy.type;
-	std::cout << CYAN DFLT_CPY RESET << this->type << CYAN DFLT_POS RESET \
-	<< DFLT_ANI << std::endl;
+	std::cout << this->type  << CYAN DFLT_CPY RESET << DFLT_ANI << std::endl;
 }
 
 Animal &Animal::operator=(const Animal &origin)

@@ -51,6 +51,19 @@
  * Unlike the `Cat` class, this function does not override the `makeSound`
  * method in the `Animal` class due to the lack of `virtual` in `WrongAnimal`.
  * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * CAT*******************
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 
 Cat::Cat(void): Animal() 
@@ -70,8 +83,7 @@ Cat::Cat(const Cat& copy): Animal(copy)
 	this->type = copy.type;
 	this->brain = new Brain();
 	
-	std::cout << MAGENTA DFLT_CPY RESET << this->type << MAGENTA DFLT_POS \
-	RESET << DFLT_CAT << std::endl;	 
+	std::cout << this->type << MAGENTA DFLT_CPY RESET << DFLT_CAT << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &origin)
@@ -92,4 +104,9 @@ Cat::~Cat(void)
 void Cat::makeSound() const
 {
 	std::cout << YELLOW CAT_SOUND RESET << std::endl;
+}
+
+Brain *Cat::getBrain(void) const
+{
+	return (this->brain);
 }

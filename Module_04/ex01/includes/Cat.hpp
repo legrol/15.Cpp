@@ -29,9 +29,9 @@ class Cat : public Animal
 		~Cat();
 
 		void makeSound() const;
-		//build
+		Brain *getBrain(void) const;
+		//create
 		//get
-		//brain *
 
 };
 

@@ -62,8 +62,7 @@ Dog::Dog(void): Animal()
 Dog::Dog(const Dog& copy): Animal(copy)
 {
 	this->type = copy.type;
-	std::cout << MAGENTA DFLT_CPY RESET << this->type << MAGENTA DFLT_POS \
-	RESET << DFLT_DOG << std::endl;	
+	std::cout << this->type << MAGENTA DFLT_CPY RESET << DFLT_DOG << std::endl;	
 }
 
 Dog &Dog::operator=(const Dog &origin)

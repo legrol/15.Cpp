@@ -29,9 +29,10 @@ class Dog : public Animal
 		~Dog(void);
 
 		void makeSound() const;
-		//build
+		Brain *getBrain(void) const;
+		//create
 		//get
-		//brain *
+
 };
 
 #endif

@@ -63,8 +63,7 @@ WrongAnimal::WrongAnimal(void) : type("WrongAnimal")
 WrongAnimal::WrongAnimal(const WrongAnimal& copy)
 {
 	this->type = copy.type;
-	std::cout << CYAN DFLT_CPY RESET << this->type << CYAN DFLT_POS RESET \
-	<< DFLT_WAN << std::endl;
+	std::cout << this->type << CYAN DFLT_CPY RESET << DFLT_WAN << std::endl;
 }
  
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &origin)

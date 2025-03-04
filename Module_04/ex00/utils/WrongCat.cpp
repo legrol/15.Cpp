@@ -63,8 +63,7 @@ WrongCat::WrongCat(void): WrongAnimal()
 WrongCat::WrongCat(const WrongCat& copy): WrongAnimal(copy)
 {
 	this->type = copy.type;
-	std::cout << MAGENTA DFLT_CPY RESET << this->type << MAGENTA DFLT_POS \
-	RESET << DFLT_CAT2 << std::endl;	 
+	std::cout << this->type << MAGENTA DFLT_CPY RESET << DFLT_CAT2 << std::endl;
 }
  
 WrongCat &WrongCat::operator=(const WrongCat &origin)

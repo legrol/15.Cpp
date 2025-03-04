@@ -50,6 +50,16 @@
  * Since `makeSound()` is a virtual function, it overrides the base class 
  * implementation in `Animal`, ensuring polymorphic behavior.
  * 
+ * 
+ * 
+ * 
+ * 
+ * DOG*******************
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 
 Dog::Dog(void): Animal()
@@ -71,8 +81,7 @@ Dog::Dog(const Dog& copy): Animal(copy)
 	this->brain = new Brain();
 
 	
-	std::cout << MAGENTA DFLT_CPY RESET << this->type << MAGENTA DFLT_POS \
-	RESET << DFLT_DOG << std::endl;	
+	std::cout << this->type << MAGENTA DFLT_CPY RESET << DFLT_DOG << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &origin)
@@ -93,4 +102,9 @@ Dog::~Dog(void)
 void Dog::makeSound() const
 {
 	std::cout << YELLOW DOG_SOUND RESET << std::endl;
+}
+
+Brain *Dog::getBrain(void) const
+{
+	return (this->brain);
 }

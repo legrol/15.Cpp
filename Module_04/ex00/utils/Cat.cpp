@@ -63,8 +63,7 @@ Cat::Cat(void): Animal()
 Cat::Cat(const Cat& copy): Animal(copy)
 {
 	this->type = copy.type;
-	std::cout << MAGENTA DFLT_CPY RESET << this->type << MAGENTA DFLT_POS \
-	RESET << DFLT_CAT << std::endl;	 
+	std::cout << this->type << MAGENTA DFLT_CPY RESET << DFLT_CAT << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &origin)

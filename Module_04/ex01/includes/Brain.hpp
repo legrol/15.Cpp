@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPPs
+#ifndef BRAIN_HPP
 # define BRAIN_HPP
 
 // ============================================================================
@@ -36,11 +36,11 @@ class Brain
 	
 		Brain(void);
 		Brain(const Brain& copy);
-		Brain &operator=(const Brain &origin);
-		~Brain(void );
+		Brain const &operator=(const Brain &origin);
+		~Brain(void);
 
-		//get
-		//set
+		std::string const getIdeas(int const &index) const;
+		void setIdeas(std::string const &idea, int const index);
 
 };
 

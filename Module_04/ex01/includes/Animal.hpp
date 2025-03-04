@@ -25,6 +25,7 @@
 // ============================================================================
 #include "macros.hpp"
 #include "colors.hpp"
+#include "Brain.hpp"
 
 class Animal
 {
