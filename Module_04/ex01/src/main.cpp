@@ -10,15 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Animal.hpp"
 #include "../includes/Dog.hpp"
 #include "../includes/Cat.hpp"
-#include "../includes/Brain.hpp"
 
 /**
+ * @brief Creates and tests an array of `Animal` objects.
+ *
+ * `void test_base()`
+ *
+ * This function creates an array of `Animal` objects, initializing the first 
+ * half as `Cat` objects and the second half as `Dog` objects.
+ * It then prints the types of all created animals, retrieves and prints 
+ * specific brain ideas, and finally deallocates memory.
  * 
  * 
+ * @brief Tests the copy constructor of `Cat` and `Dog` classes.
+ *
+ * `void test_copy_constructor()`
+ *
+ * This function creates instances of `Cat` and `Dog` using the copy 
+ * constructor.
+ * It prints information before and after deleting each object to verify 
+ * correct deep copying.
  * 
+ * 
+ * @brief Tests the assignment operator overload for `Cat` and `Dog` classes.
+ *
+ * `void test_overload_operator()`
+ *
+ * This function creates two instances of `Cat` and assigns one to the other.
+ * The same process is repeated for `Dog`. Memory deallocation is verified.
  * 
  */
 
