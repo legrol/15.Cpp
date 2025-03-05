@@ -13,6 +13,8 @@
 #ifndef MACROS_HPP
 # define	MACROS_HPP
 
+# define NBR_ANIM	8
+
 # define APP_NAME	"Animal"
 # define APP1_NAME	"Dog"
 # define APP2_NAME 	"Cat"
@@ -43,5 +45,16 @@
 # define TEST		"  ·  ·  ·  Test wrong animal ·  ·  ·  "
 # define OTHERSAN	"🐪🐆🐴🐙🦬🦁🦣🦓​🦬​🐧​🐑​🦧​🦩​🦚​🦜​🐌​🦈​🐠​🦋"
 # define SPACES		" *************************************************** "
+# define FSTIDDG	"A dog's first thought is '"
+# define FSTIDCT	"A cat's first thought is '"
+# define SGQUOTE	"'"
+# define TGHRDDG	"Random thought of a dog: "
+# define TGHRDCT	"Random thought of a cat: "
+# define OTTGHRDDG	"Other random thought of a dog: "
+# define OTTGHRDCT	"Other random thought of a cat: "
+# define VRFDCCLCT	"Check deep copy of Cat class using copy constructor: "
+# define VRFDCCLDG	"Check deep copy of Dog class using copy constructor: "
+# define VRDCOVOPC	"Check deep copy of Cat class using assign_oper overload: "
+# define VRDCOVOPD	"Check deep copy of Dog class using assign_oper overload: "
 
 # endif
