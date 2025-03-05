@@ -106,7 +106,7 @@ Brain::~Brain(void)
 std::string const Brain::getIdeas(int const &index) const
 {
 	if (index >= 0 && index < 100)
-	return (this->ideas[index]);
+		return (this->ideas[index]);
 	return (this->ideas[0]);
 }
 

@@ -72,7 +72,6 @@
 
 Animal::Animal(void) : type("Animal")
 {
-	// this->type = "Animal";
 	std::cout << CYAN DFLT_INI RESET << this->type << CYAN DFLT_POS RESET \
 	<< DFLT_ANI << std::endl;
 }
