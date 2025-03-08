@@ -1,6 +1,6 @@
 # ══ Names ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
-NAME 				= animal
+NAME 				= amateria
 
 # ══ Colors ══════════════════════════════════════════════════════════════════ #
 #    ------                                                                    #
@@ -44,11 +44,14 @@ CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98 -Wshadow
 #    -------                                                                   #
 SRC 				= ${SRC_DIR}/main.cpp
 
-UTL 				= ${UTL_DIR}/Animal.cpp \
+UTL 				= ${UTL_DIR}/AMateria.cpp \
 						${UTL_DIR}/banner.cpp \
-						${UTL_DIR}/Brain.cpp \
-						${UTL_DIR}/Cat.cpp \
-						${UTL_DIR}/Dog.cpp
+						${UTL_DIR}/Character.cpp \
+						${UTL_DIR}/Cure.cpp \
+						${UTL_DIR}/Ice.cpp \
+						${UTL_DIR}/ICharacter.cpp \
+						${UTL_DIR}/IMateriaSource.cpp \
+						${UTL_DIR}/MateriaSource.cpp
 						
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
 OBJ_UTL				= $(patsubst ${UTL_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})

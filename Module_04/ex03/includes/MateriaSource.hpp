@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/01 01:08:20 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/02 21:13:59 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/06 22:21:55 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/08 21:55:22 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#pragma once
 
-# include "Animal.hpp"
+# include "IMateriaSource.hpp"
 
-class Dog : public Animal
+class MateriaSource : public IMateriaSource
 {
 	private:
 
-		Brain* brain;
-	
+		AMateria *materias[4];
+
 	public:
 
-		Dog(void);
-		Dog(const Dog& copy);
-		Dog &operator=(const Dog &origin);
-		~Dog(void);
+		MateriaSource(void);
+		MateriaSource(const MateriaSource &copy);
+		MateriaSource & operator=(const MateriaSource &origin);
+		~MateriaSource(void);
 
-		void makeSound() const;
-		Brain *getBrain(void) const;
-		void createDogIdeas(std::string const &idea, int const index);
-		void getDogIdeas(int const &index);
+		void learnMateria(AMateria* m);
+		AMateria* createMateria(std::string const & type);
+
+		bool lookForLearnMateria(AMateria* m);
 };
-
-#endif

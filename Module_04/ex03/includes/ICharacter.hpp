@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-03-03 14:25:32 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-03-03 14:25:32 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/06 16:40:53 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/08 21:59:14 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#pragma once
 
 // ============================================================================
 // Libraries
@@ -26,21 +25,24 @@
 #include "macros.hpp"
 #include "colors.hpp"
 
-class Brain
-{
-	private:
+class AMateria;
 
-		std::string ideas[100];
+class ICharacter
+{
+	private :
+
+
 
 	public:
-	
-		Brain(void);
-		Brain(const Brain& copy);
-		Brain &operator=(const Brain &origin);
-		~Brain(void);
 
-		std::string const getIdeas(int const &index) const;
-		void setIdeas(std::string const &idea, int const index);
+		ICharacter(void);
+		ICharacter (ICharacter const &copy);
+		ICharacter const &operator=(ICharacter const &origin);
+		virtual ~ICharacter(void);
+		
+		virtual std::string const & getName() const = 0;
+		virtual void equip(AMateria* m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
+
 };
-
-#endif

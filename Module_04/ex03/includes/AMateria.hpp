@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/01 00:57:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/02 17:25:29 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/06 16:12:49 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/07 21:30:27 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#pragma once
 
 // ============================================================================
 // Libraries
@@ -25,29 +24,23 @@
 // ============================================================================
 #include "macros.hpp"
 #include "colors.hpp"
-#include "Brain.hpp"
 
-class Animal
+class ICharacter;
+
+class AMateria
 {
 	protected:
 
 		std::string type;
 
 	public:
-
-		Animal(void);
-		Animal(const Animal& copy);
-		Animal &operator=(const Animal &origin);
-		virtual ~Animal();
-
-		std::string getType(void) const;
-		virtual void makeSound() const = 0;
-		virtual Brain *getBrain() const = 0;
+	
+		AMateria(std::string const & type);
+		AMateria(const AMateria &copy);
+		AMateria const &operator=(AMateria const &origin);
+		virtual ~AMateria(void);
+		
+		std::string const & getType() const;
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target) = 0;
 };
-
-// ============================================================================
-// Functions
-// ============================================================================
-void			print_banner();
-
-#endif
