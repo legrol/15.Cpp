@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 00:52:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/09 15:52:47 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 21:03:35 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,22 +107,22 @@ void test_own()
 	
 	std::cout  << std::endl << GREEN NB_TWO RESET << ORANGE TXT_NTW RESET \
 	<< std::endl << std::endl;
-	Character *dur0 = new Character("Tyro");
-	ICharacter *dur1 = new Character(*dur0);
-	delete dur0;
-	delete dur1;
+	Character *hero0 = new Character("Tyro");
+	ICharacter *hero1 = new Character(*hero0);
+	delete hero0;
+	delete hero1;
 	std::cout << std::endl;
 
 	std::cout  << std::endl << GREEN NB_THR RESET << ORANGE TXT_NTH RESET \
 	<< std::endl << std::endl;
 	AMateria* tmp;
-	ICharacter *dur2 = new Character("Lenna");
+	ICharacter *hero2 = new Character("Lenna");
 	tmp = src->createMateria("ice");
-	dur2->equip(tmp);
+	hero2->equip(tmp);
 	tmp = src->createMateria("cure");
-	dur2->equip(tmp);
+	hero2->equip(tmp);
 	tmp = src->createMateria("ray");
-	dur2->equip(tmp);
+	hero2->equip(tmp);
 	delete src;
 	std::cout << std::endl;
 
@@ -130,28 +130,28 @@ void test_own()
 	<< std::endl << std::endl;
 	AMateria *cure = new Cure();
 	AMateria *ice = new Ice();
-	dur2->equip(cure);
-	dur2->equip(cure);
-	dur2->equip(ice);
-	dur2->unequip(2);
-	dur2->unequip(2);
-	dur2->unequip(6);
+	hero2->equip(cure);
+	hero2->equip(cure);
+	hero2->equip(ice);
+	hero2->unequip(2);
+	hero2->unequip(2);
+	hero2->unequip(6);
 	std::cout << std::endl;
 
 	
 	std::cout  << std::endl << GREEN NB_FIV RESET << ORANGE TXT_FIV RESET \
 	<< std::endl << std::endl;
 	ICharacter* sefi = new Character("Sefirot");
-	dur2->use(0, *sefi);
-	dur2->use(1, *sefi);
-	dur2->use(2, *sefi);
-	dur2->use(6, *sefi);
-	dur2->use(-4, *sefi);
-	dur2->use(3, *sefi);
+	hero2->use(0, *sefi);
+	hero2->use(1, *sefi);
+	hero2->use(2, *sefi);
+	hero2->use(6, *sefi);
+	hero2->use(-4, *sefi);
+	hero2->use(3, *sefi);
 	delete sefi;
 	std::cout << std::endl;
 
-	delete dur2;
+	delete hero2;
 }
 
 int main()
