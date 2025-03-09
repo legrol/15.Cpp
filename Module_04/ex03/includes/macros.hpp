@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/09 15:02:02 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 21:14:52 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class."
 # define SLTIN			"Slot "
 # define ISEMP			" is empty."
 # define INSLNB			"Incorrect slot number."
-# define CNLINM			"Cannot learn invalid materia"
+# define CNLINM			"Cannot learn, invalid materia"
 # define ISLSL			" is learned in slot "
 # define LMMFL			"Learn memory is full"
 # define CNCRM			"Cannot create materia, "

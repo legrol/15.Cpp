@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 16:44:06 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/08 23:13:53 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 21:33:38 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,7 +202,7 @@ void Character::equip(AMateria* m)
 	if (this->lookingForMateria(m))
 	{
 		std::cout << CYAN MAEQU RESET << std::endl;
-		return;
+		return ;
 	}
 	for (int i = 0; i < 4; i++)
 	{
