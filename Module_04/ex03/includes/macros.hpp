@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/09 21:14:52 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 22:10:59 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,17 @@
 # define OB_CR_DFB		" object created with base class default constructor."
 # define OB_CR_DFD		" object created with default constructor of derived \
 class."
-# define OB_CR_PR		" object created with parameterized constructor."
+# define CR_PR			" created with parameterized constructor."
 # define OBJ_CP			" object copied."
+# define OB_CP_DFB		" object copied with base class."
+# define OB_CP_DER		" object copied with derived class."
 # define OBJ_DT			" object deconstructed."
+# define OBJ_DT_CB		" object deconstructed with base class."
+# define OBJ_DT_CD		" object deconstructed with derived class."
 # define OPR_ASG		" assignment operator called"
-# define NM_CH			"Character"
+# define OPR_ASG_CB		" assignment operator called with base class."
+# define OPR_ASG_CD		" assignment operator called with derived class."
+# define NM_CH			"Character "
 # define NM_MS			"MateriaSource"
 # define INV_MA			"Invalid materia!"
 # define EQ_SL			" is equiped in slot "
@@ -56,6 +62,8 @@ maximum too):"
 materias):"
 # define TXT_FOU		"Check maximum equipped too:"
 # define TXT_FIV		"Use materias on new character:"
+# define SPACES			"   **********************************************   "
+# define TEST_OWN		"                     TEST OWN        "
 
 
 # endif

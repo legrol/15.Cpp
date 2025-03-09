@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 00:52:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/09 21:03:35 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 22:22:07 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void test_subject()
 
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
-	std::cout << std::endl;
 	me->equip(tmp);
 	
 	std::cout << std::endl;
@@ -91,21 +90,29 @@ void test_subject()
 
 void test_own()
 {
-
-	std::cout  << std::endl << GREEN NB_ONE RESET << ORANGE TXT_NO RESET \
+	std::cout << std::endl << WHITE SPACES RESET << std::endl;
+	std::cout << BLUE TEST_OWN RESET << std::endl;
+	std::cout << std::endl << GREEN NB_ONE RESET << ORANGE TXT_NO RESET \
 	<< std::endl << std::endl;
 	IMateriaSource *src = new MateriaSource();
+
+	std::cout << std::endl;
 	src->learnMateria(new Ice());
+	std::cout << std::endl;
 	src->learnMateria(new Cure());
+	std::cout << std::endl;
 	src->learnMateria(new Ice());
+	std::cout << std::endl;
 	src->learnMateria(new Cure());
-	AMateria *m = new Cure();
-	src->learnMateria(m);
-	delete m;
-	
 	std::cout << std::endl;
 	
-	std::cout  << std::endl << GREEN NB_TWO RESET << ORANGE TXT_NTW RESET \
+	AMateria *m = new Cure();
+	src->learnMateria(m);
+
+	std::cout << std::endl;
+	delete m;
+	
+	std::cout << std::endl << GREEN NB_TWO RESET << ORANGE TXT_NTW RESET \
 	<< std::endl << std::endl;
 	Character *hero0 = new Character("Tyro");
 	ICharacter *hero1 = new Character(*hero0);
@@ -113,7 +120,7 @@ void test_own()
 	delete hero1;
 	std::cout << std::endl;
 
-	std::cout  << std::endl << GREEN NB_THR RESET << ORANGE TXT_NTH RESET \
+	std::cout << std::endl << GREEN NB_THR RESET << ORANGE TXT_NTH RESET \
 	<< std::endl << std::endl;
 	AMateria* tmp;
 	ICharacter *hero2 = new Character("Lenna");
@@ -121,12 +128,12 @@ void test_own()
 	hero2->equip(tmp);
 	tmp = src->createMateria("cure");
 	hero2->equip(tmp);
-	tmp = src->createMateria("ray");
+	tmp = src->createMateria("poison");
 	hero2->equip(tmp);
 	delete src;
 	std::cout << std::endl;
 
-	std::cout  << std::endl << GREEN NB_FOU RESET << ORANGE TXT_FOU RESET \
+	std::cout << std::endl << GREEN NB_FOU RESET << ORANGE TXT_FOU RESET \
 	<< std::endl << std::endl;
 	AMateria *cure = new Cure();
 	AMateria *ice = new Ice();
@@ -139,7 +146,7 @@ void test_own()
 	std::cout << std::endl;
 
 	
-	std::cout  << std::endl << GREEN NB_FIV RESET << ORANGE TXT_FIV RESET \
+	std::cout << std::endl << GREEN NB_FIV RESET << ORANGE TXT_FIV RESET \
 	<< std::endl << std::endl;
 	ICharacter* sefi = new Character("Sefirot");
 	hero2->use(0, *sefi);

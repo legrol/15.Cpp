@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 16:19:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/08 23:00:51 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 21:45:17 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,19 +74,19 @@ Cure::Cure(void): AMateria("cure")
 
 Cure::Cure(const Cure &copy): AMateria(copy)
 {
-	std::cout << this->type << CYAN OBJ_CP RESET << std::endl;
+	std::cout << this->type << CYAN OB_CP_DER RESET << std::endl;
 }
 
 Cure &Cure::operator=(const Cure &origin)
 {
 	this->type = origin.type;
-	std::cout << this->type << CYAN OPR_ASG RESET << std::endl;
+	std::cout << this->type << CYAN OPR_ASG_CD RESET << std::endl;
 	return (*this);
 }
 
 Cure::~Cure(void)
 {
-	std::cout << this->type << CYAN OBJ_DT RESET << std::endl;
+	std::cout << this->type << CYAN OBJ_DT_CD RESET << std::endl;
 }
 
 AMateria* Cure::clone() const

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 16:44:06 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/09 21:33:38 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 21:55:36 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ inventory()
 	for (int i = 0; i < MAX_DROPPED; i++)
 		this->dropped[i] = NULL;
 	droppedCount = 0;
-	std::cout << YELLOW NM_CH RESET << CYAN OB_CR_PR RESET << std::endl \
+	std::cout << YELLOW NM_CH RESET << this->name << CYAN CR_PR RESET << std::endl \
 	<< std::endl;
 }
 

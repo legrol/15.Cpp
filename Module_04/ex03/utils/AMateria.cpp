@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 16:21:12 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/08 23:00:59 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 21:42:35 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,19 +67,19 @@ AMateria::AMateria(std::string const & _type): type(_type)
 
 AMateria::AMateria(const AMateria &copy): type(copy.type)
 {
-	std::cout << this->type << CYAN OBJ_CP RESET << std::endl;
+	std::cout << this->type << CYAN OB_CP_DFB RESET << std::endl;
 }
 
 AMateria const &AMateria::operator=(AMateria const &origin)
 {
 	this->type = origin.type;
-	std::cout << this->type << CYAN OPR_ASG RESET << std::endl;
+	std::cout << this->type << CYAN OPR_ASG_CB RESET << std::endl;
 	return (*this);
 }
 
 AMateria::~AMateria(void)
 {
-	std::cout << this->type << CYAN OBJ_DT RESET << std::endl;
+	std::cout << this->type << CYAN OBJ_DT_CB RESET << std::endl;
 }
 
 std::string const & AMateria::getType() const

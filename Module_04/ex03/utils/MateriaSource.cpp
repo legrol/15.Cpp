@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 20:19:37 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/08 23:26:15 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 22:19:08 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ void MateriaSource::learnMateria(AMateria* m)
 			return ;
 		}
 	}
-	std::cout << CYAN LMMFL RESET << std::endl;
+	std::cout << WHITE LMMFL RESET << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
