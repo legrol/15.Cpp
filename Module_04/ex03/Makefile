@@ -49,8 +49,6 @@ UTL 				= ${UTL_DIR}/AMateria.cpp \
 						${UTL_DIR}/Character.cpp \
 						${UTL_DIR}/Cure.cpp \
 						${UTL_DIR}/Ice.cpp \
-						${UTL_DIR}/ICharacter.cpp \
-						${UTL_DIR}/IMateriaSource.cpp \
 						${UTL_DIR}/MateriaSource.cpp
 						
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})

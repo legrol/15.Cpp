@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 20:17:50 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/08 21:55:12 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 14:52:07 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ class IMateriaSource
 	
 	public:
 
-		IMateriaSource();
-		IMateriaSource(IMateriaSource const &copy);
-		IMateriaSource const &operator=(IMateriaSource const &origin);
-		virtual ~IMateriaSource();
+		virtual ~IMateriaSource() {}
 		
 		virtual void learnMateria(AMateria* m) = 0;
 		virtual AMateria* createMateria(std::string const & type) = 0;

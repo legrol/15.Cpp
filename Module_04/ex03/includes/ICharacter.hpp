@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 16:40:53 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/08 21:59:14 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 14:52:15 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,7 @@ class ICharacter
 
 	public:
 
-		ICharacter(void);
-		ICharacter (ICharacter const &copy);
-		ICharacter const &operator=(ICharacter const &origin);
-		virtual ~ICharacter(void);
+		virtual ~ICharacter(void) {}
 		
 		virtual std::string const & getName() const = 0;
 		virtual void equip(AMateria* m) = 0;

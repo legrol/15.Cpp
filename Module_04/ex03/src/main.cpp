@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 00:52:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/08 23:01:03 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/09 15:52:47 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,8 @@ void test_subject()
 void test_own()
 {
 
-	std::cout  << std::endl << "1. Create new MateriaSource and learn materias (check maximum too):" << std::endl;
+	std::cout  << std::endl << GREEN NB_ONE RESET << ORANGE TXT_NO RESET \
+	<< std::endl << std::endl;
 	IMateriaSource *src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -104,26 +105,29 @@ void test_own()
 	
 	std::cout << std::endl;
 	
-	std::cout << "2. Create 2 new characters and test deep copy:" << std::endl;
-	Character *dur0 = new Character("Alice");
+	std::cout  << std::endl << GREEN NB_TWO RESET << ORANGE TXT_NTW RESET \
+	<< std::endl << std::endl;
+	Character *dur0 = new Character("Tyro");
 	ICharacter *dur1 = new Character(*dur0);
 	delete dur0;
 	delete dur1;
 	std::cout << std::endl;
 
-	std::cout << "3. Create materias and equip them (also check unknown materias):" << std::endl;
+	std::cout  << std::endl << GREEN NB_THR RESET << ORANGE TXT_NTH RESET \
+	<< std::endl << std::endl;
 	AMateria* tmp;
-	ICharacter *dur2 = new Character("Alice");
+	ICharacter *dur2 = new Character("Lenna");
 	tmp = src->createMateria("ice");
 	dur2->equip(tmp);
 	tmp = src->createMateria("cure");
 	dur2->equip(tmp);
-	tmp = src->createMateria("hi");
+	tmp = src->createMateria("ray");
 	dur2->equip(tmp);
 	delete src;
 	std::cout << std::endl;
 
-	std::cout << "4. Check maximum equipped too:" << std::endl;
+	std::cout  << std::endl << GREEN NB_FOU RESET << ORANGE TXT_FOU RESET \
+	<< std::endl << std::endl;
 	AMateria *cure = new Cure();
 	AMateria *ice = new Ice();
 	dur2->equip(cure);
@@ -134,15 +138,17 @@ void test_own()
 	dur2->unequip(6);
 	std::cout << std::endl;
 
-	std::cout << "5. Use materias on new chacarter:" << std::endl;
-	ICharacter* bob = new Character("Bob");
-	dur2->use(0, *bob);
-	dur2->use(1, *bob);
-	dur2->use(2, *bob);
-	dur2->use(6, *bob);
-	dur2->use(-4, *bob);
-	dur2->use(3, *bob);
-	delete bob;
+	
+	std::cout  << std::endl << GREEN NB_FIV RESET << ORANGE TXT_FIV RESET \
+	<< std::endl << std::endl;
+	ICharacter* sefi = new Character("Sefirot");
+	dur2->use(0, *sefi);
+	dur2->use(1, *sefi);
+	dur2->use(2, *sefi);
+	dur2->use(6, *sefi);
+	dur2->use(-4, *sefi);
+	dur2->use(3, *sefi);
+	delete sefi;
 	std::cout << std::endl;
 
 	delete dur2;
