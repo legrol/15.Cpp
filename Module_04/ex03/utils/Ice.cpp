@@ -70,24 +70,24 @@
 
 Ice::Ice(void): AMateria("ice")
 {
-	std::cout << this->type << CYAN OB_CR_DFD RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OB_CR_DFD RESET << std::endl;
 }
 
 Ice::Ice(const Ice &copy): AMateria(copy)
 {
-	std::cout << this->type << CYAN OB_CP_DER RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OB_CP_DER RESET << std::endl;
 }
 
 Ice &Ice::operator=(const Ice &origin)
 {
 	this->type = origin.type;
-	std::cout << this->type << CYAN OPR_ASG_CD RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OPR_ASG_CD RESET << std::endl;
 	return (*this);
 }
 
 Ice::~Ice(void)
 {
-	std::cout << this->type << CYAN OBJ_DT_CD RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OBJ_DT_CD RESET << std::endl;
 }
 
 AMateria* Ice::clone() const
@@ -97,5 +97,5 @@ AMateria* Ice::clone() const
 
 void Ice::use(ICharacter& target)
 {
-	std::cout << ICE_INIT << target.getName() << ICE_FNL << std::endl;
+	std::cout << WHITE ICE_INIT << target.getName() << ICE_FNL RESET << std::endl;
 }

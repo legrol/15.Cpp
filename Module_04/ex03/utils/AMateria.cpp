@@ -62,24 +62,24 @@
 
 AMateria::AMateria(std::string const & _type): type(_type)
 {
-	std::cout << this->type << CYAN OB_CR_DFB RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OB_CR_DFB RESET << std::endl;
 }
 
 AMateria::AMateria(const AMateria &copy): type(copy.type)
 {
-	std::cout << this->type << CYAN OB_CP_DFB RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OB_CP_DFB RESET << std::endl;
 }
 
 AMateria const &AMateria::operator=(AMateria const &origin)
 {
 	this->type = origin.type;
-	std::cout << this->type << CYAN OPR_ASG_CB RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OPR_ASG_CB RESET << std::endl;
 	return (*this);
 }
 
 AMateria::~AMateria(void)
 {
-	std::cout << this->type << CYAN OBJ_DT_CB RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OBJ_DT_CB RESET << std::endl;
 }
 
 std::string const & AMateria::getType() const

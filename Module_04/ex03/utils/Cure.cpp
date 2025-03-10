@@ -69,24 +69,24 @@
 
 Cure::Cure(void): AMateria("cure")
 {
-	std::cout << this->type << CYAN OB_CR_DFD RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OB_CR_DFD RESET << std::endl;
 }
 
 Cure::Cure(const Cure &copy): AMateria(copy)
 {
-	std::cout << this->type << CYAN OB_CP_DER RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OB_CP_DER RESET << std::endl;
 }
 
 Cure &Cure::operator=(const Cure &origin)
 {
 	this->type = origin.type;
-	std::cout << this->type << CYAN OPR_ASG_CD RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OPR_ASG_CD RESET << std::endl;
 	return (*this);
 }
 
 Cure::~Cure(void)
 {
-	std::cout << this->type << CYAN OBJ_DT_CD RESET << std::endl;
+	std::cout << RED << this->type << RESET CYAN OBJ_DT_CD RESET << std::endl;
 }
 
 AMateria* Cure::clone() const
@@ -96,5 +96,5 @@ AMateria* Cure::clone() const
 
 void Cure::use(ICharacter& target)
 {
-	std::cout << CURE_INIT << target.getName() << CURE_FNL << std::endl;
+	std::cout << WHITE CURE_INIT << target.getName() << CURE_FNL RESET << std::endl;
 }

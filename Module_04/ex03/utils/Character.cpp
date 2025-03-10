@@ -118,8 +118,8 @@ inventory()
 	for (int i = 0; i < MAX_DROPPED; i++)
 		this->dropped[i] = NULL;
 	droppedCount = 0;
-	std::cout << YELLOW NM_CH RESET << this->name << CYAN CR_PR RESET << std::endl \
-	<< std::endl;
+	std::cout << YELLOW NM_CH RESET WHITE << this->name << RESET CYAN CR_PR \
+	RESET << std::endl << std::endl;
 }
 
 Character::Character(const Character &copy): ICharacter(copy), \
@@ -135,7 +135,7 @@ name(copy.name), inventory()
 	for (int i = 0; i < MAX_DROPPED; i++)
 		this->dropped[i] = NULL;
 	droppedCount = 0;
-	std::cout << YELLOW NM_CH RESET << CYAN OBJ_CP RESET << std::endl;
+	std::cout << YELLOW NM_CH RESET << CYAN OB_CP_DEE RESET << std::endl;
 }
 
 Character & Character::operator=(const Character &origin)
@@ -168,7 +168,7 @@ Character & Character::operator=(const Character &origin)
 				this->inventory[i] = NULL;
 		}
 	}
-	std::cout << YELLOW NM_CH RESET << CYAN OPR_ASG RESET << std::endl;
+	std::cout << YELLOW NM_CH RESET << CYAN OPR_ASG_DE RESET << std::endl;
 	return (*this);
 }
 
@@ -184,7 +184,7 @@ Character::~Character()
 		if (this->dropped[i])
 			delete this->dropped[i];
 	}
-	std::cout << YELLOW NM_CH RESET << CYAN OBJ_DT RESET << std::endl;
+	std::cout << YELLOW NM_CH RESET << CYAN OBJ_DT_CC RESET << std::endl;
 }
 
 std::string const & Character::getName() const
@@ -209,7 +209,8 @@ void Character::equip(AMateria* m)
 		if (this->inventory[i] == NULL)
 		{
 			this->inventory[i] = m;
-			std::cout << m->getType() << CYAN EQ_SL RESET << i + 1 << std::endl;
+			std::cout << RED << m->getType() << RESET CYAN EQ_SL RESET RED << \
+			i + 1 << RESET << std::endl;
 			return ;
 		}		
 	}
@@ -220,13 +221,14 @@ void Character::unequip(int idx)
 {
 	if (idx >= 4 || idx < 0)
 	{
-		std::cout << CYAN INC_SL RESET << std::endl;
+		std::cout << CYAN INC_SL NB_PARAM RESET RED << idx << RESET CYAN \
+		NB_PM_FN RESET << std::endl;
 		return ;
 	}
 	if (this->inventory[idx])
 	{
-		std::cout << this->inventory[idx]->getType() << CYAN REMV RESET << \
-		idx + 1 << CYAN SLTFN RESET << std::endl;
+		std::cout << RED << this->inventory[idx]->getType() <<RESET CYAN REMV \
+		RESET RED << idx + 1 << CYAN SLTFN RESET << std::endl;
 		if (droppedCount < MAX_DROPPED)
 			this->dropped[droppedCount++] = this->inventory[idx];
 		else
@@ -234,21 +236,23 @@ void Character::unequip(int idx)
 		this->inventory[idx] = NULL;
 	}
 	else
-		std::cout << CYAN SLTIN RESET << idx << CYAN ISEMP RESET << std::endl;
+		std::cout << CYAN SLTIN RESET RED << idx + 1 << RESET CYAN ISEMP \
+		RESET << std::endl;
 }
 
 void Character::use(int idx, ICharacter& target)
 {
 	if (idx >= 4 || idx < 0)
 	{
-		std::cout << CYAN INSLNB RESET << std::endl;
+		std::cout << CYAN INSLNB NB_PARAM RESET RED << idx << RESET CYAN \
+		NB_PM_FN RESET << std::endl;
 		return ;
 	}
 	if (this->inventory[idx])
 		this->inventory[idx]->use(target);
 	else
-		std::cout << CYAN SLTIN RESET << idx + 1 << CYAN ISEMP RESET << \
-		std::endl;
+		std::cout << CYAN SLTIN RESET RED << idx + 1 << RESET CYAN ISEMP \
+		RESET << std::endl;
 }
 
 bool Character::lookingForMateria(AMateria *m)

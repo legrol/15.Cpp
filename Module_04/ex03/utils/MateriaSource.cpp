@@ -111,7 +111,7 @@ MateriaSource::~MateriaSource(void)
 		if (this->materias[i])
 			delete (this->materias[i]);
 	}
-	std::cout << YELLOW NM_MS RESET << CYAN OBJ_DT RESET << std::endl;
+	std::cout << YELLOW NM_MS RESET << CYAN OBJ_DT_CM RESET << std::endl;
 }
 
 void MateriaSource::learnMateria(AMateria* m)
@@ -126,7 +126,8 @@ void MateriaSource::learnMateria(AMateria* m)
 		if (!this->materias[i])
 		{
 			this->materias[i] = m;
-			std::cout << m->getType() << CYAN ISLSL RESET << i + 1 << std::endl;
+			std::cout << RED << m->getType() << RESET CYAN ISLSL RESET RED << \
+			i + 1 << RESET << std::endl;
 			return ;
 		}
 	}
@@ -140,7 +141,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 		if (this->materias[i] && this->materias[i]->getType() == type)
 			return (this->materias[i]->clone());
 	}
-	std::cout << CYAN CNCRM RESET << type << CYAN ISINV RESET << std::endl;
+	std::cout << CYAN CNCRM RESET RED << type << RESET CYAN ISINV RESET << std::endl;
 	return (EXIT_SUCCESS);
 }
 
