@@ -33,6 +33,7 @@
 
 int main()
 {
+	print_banner();
 	std::cout << std::endl << RED CONSTR RESET << std::endl << std::endl;	
 	const Animal* meta = new Animal();
 	std::cout << std::endl;

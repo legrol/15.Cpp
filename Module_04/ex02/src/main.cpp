@@ -36,6 +36,8 @@
 
 int main()
 {
+	print_banner();
+	
 	std::cout << std::endl;
 	Animal *doggy = new Dog();
 	std::cout << std::endl;

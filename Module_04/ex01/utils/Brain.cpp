@@ -86,7 +86,7 @@ Brain::Brain(void)
 Brain::Brain(const Brain& copy)
 {
 	*this = copy;
-	std::cout<< APP3_NAME << MAGENTA DFLT_CPY RESET << DFLT_DOG << std::endl;
+	std::cout<< APP3_NAME << MAGENTA DFLT_CPY RESET << DFLT_BRN << std::endl;
 }
 
 Brain &Brain::operator=(const Brain &origin)

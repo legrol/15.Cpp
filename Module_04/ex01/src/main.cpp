@@ -151,6 +151,8 @@ void test_overload_operator()
 
 int main()
 {
+	print_banner();
+
 	test_base();
 	std::cout << std::endl << YELLOW SPACES RESET << std::endl << std::endl;
 	test_copy_constructor();
