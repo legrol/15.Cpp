@@ -181,6 +181,8 @@ void test_own()
 
 int main()
 {
+	print_banner();
+	
 	test_subject();
 	test_own();
 	
