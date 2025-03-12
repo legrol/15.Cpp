@@ -1,6 +1,6 @@
 # ══ Names ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
-NAME 				= xxx
+NAME 				= bureaucrat
 
 # ══ Colors ══════════════════════════════════════════════════════════════════ #
 #    ------                                                                    #
@@ -44,9 +44,8 @@ CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98 -Wshadow
 #    -------                                                                   #
 SRC 				= ${SRC_DIR}/main.cpp
 
-UTL 				= ${UTL_DIR}/xxx.cpp \
-						${UTL_DIR}/banner.cpp \
-						
+UTL 				= ${UTL_DIR}/banner.cpp \
+						${UTL_DIR}/Bureaucrat.cpp \						
 						
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
 OBJ_UTL				= $(patsubst ${UTL_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})

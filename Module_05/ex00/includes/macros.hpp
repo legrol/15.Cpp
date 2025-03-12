@@ -13,7 +13,7 @@
 #ifndef MACROS_HPP
 # define	MACROS_HPP
 
-# define xxx	""
+# define MSG_EXC	", bureaucrat grade "
 
 
 # endif
