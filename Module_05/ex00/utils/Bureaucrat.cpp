@@ -65,7 +65,7 @@ unsigned int Bureaucrat::decrementGrade(void)
 
 }
 
-std::ostream	&Bureaucrat::operator<<(std::ostream &str, const Bureaucrat &bureacreat)
+std::ostream	&operator<<(std::ostream &str, const Bureaucrat &bureacreat)
 {
 
 
