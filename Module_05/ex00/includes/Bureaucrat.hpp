@@ -50,5 +50,6 @@ class Bureaucrat
 // Functions
 // ============================================================================
 void			print_banner();
+std::ostream	&operator<<(std::ostream &str, const Bureaucrat &bureacreat);
 
 #endif
