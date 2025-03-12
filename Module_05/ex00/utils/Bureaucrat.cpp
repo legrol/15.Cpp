@@ -20,23 +20,21 @@
  * 
  */
 
-Bureaucrat::Bureaucrat(void)
+Bureaucrat::Bureaucrat(void): _name(NM_ANON), _grade(0)
 {
-
-
 
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 {
-
-
+	*this = copy;
 }
 
 Bureaucrat & Bureaucrat::operator=(const Bureaucrat &origin)
 {
-
-
+	this->_name = origin._name;
+	this->_grade = origin._grade;
+	return (*this);
 }
 
 Bureaucrat::~Bureaucrat(void)
@@ -47,24 +45,21 @@ Bureaucrat::~Bureaucrat(void)
 
 std::string const Bureaucrat::getName(void) const
 {
-
-
-
+	return (this->_name);
 }
 
-int Bureaucrat::getGrade(void) const
+unsigned int Bureaucrat::getGrade(void) const
+{
+	return (this->_grade);
+}
+
+unsigned int Bureaucrat::incrementGrade(void)
 {
 
 
 }
 
-int Bureaucrat::incrementGrade(void)
-{
-
-
-}
-
-int Bureaucrat::decrementGrade(void)
+unsigned int Bureaucrat::decrementGrade(void)
 {
 
 

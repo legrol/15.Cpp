@@ -14,6 +14,7 @@
 # define	MACROS_HPP
 
 # define MSG_EXC	", bureaucrat grade "
+# define NM_ANON	"anonymus"
 
 
 # endif

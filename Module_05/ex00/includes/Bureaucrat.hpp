@@ -31,7 +31,7 @@ class Bureaucrat
 	private:
 
 		std::string const	_name;
-		int					_grade;
+		unsigned int		_grade;
 
 	public:
 
@@ -41,9 +41,9 @@ class Bureaucrat
 		~Bureaucrat(void);
 
 		std::string const getName(void) const;
-		int getGrade(void) const;
-		int incrementGrade(void);
-		int decrementGrade(void);
+		unsigned int getGrade(void) const;
+		unsigned int incrementGrade(void);
+		unsigned int decrementGrade(void);
 };
 
 // ============================================================================
