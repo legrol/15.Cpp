@@ -25,7 +25,7 @@ Bureaucrat::Bureaucrat(void): _name(NM_ANON), _grade(0)
 
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy): 
+Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 {
 	*this = copy;
 }
