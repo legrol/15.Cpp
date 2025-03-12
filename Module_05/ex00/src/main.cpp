@@ -24,4 +24,16 @@ int main()
 {
 	print_banner();
 	
+	try
+	{
+		/* code */
+		/* do some stuff with bureaucrats */
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+		/* handle exception */
+	}
+	
+	return (EXIT_SUCCESS);
 }
