@@ -13,6 +13,9 @@
 #ifndef MACROS_HPP
 # define	MACROS_HPP
 
+# define GR_MAX		1
+# define GR_MIN		150
+
 # define MSG_EXC	", bureaucrat grade "
 # define NM_ANON	"anonymus"
 

@@ -25,15 +25,16 @@ Bureaucrat::Bureaucrat(void): _name(NM_ANON), _grade(0)
 
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy): 
 {
 	*this = copy;
 }
 
 Bureaucrat & Bureaucrat::operator=(const Bureaucrat &origin)
 {
-	this->_name = origin._name;
+
 	this->_grade = origin._grade;
+	std::cout << XXXXX << std::endl;
 	return (*this);
 }
 
