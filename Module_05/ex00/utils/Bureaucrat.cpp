@@ -32,10 +32,13 @@ Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 
 Bureaucrat & Bureaucrat::operator=(const Bureaucrat &origin)
 {
-
-	this->_grade = origin._grade;
-	std::cout << XXXXX << std::endl;
-	return (*this);
+	if (this != &origin)
+        {
+            const_cast<std::string&>(this->_name) = origin._name;  
+			std::cout << XXXXX 🔥 << std::endl;
+            this->_grade = origin._grade;
+        }
+        return *this;
 }
 
 Bureaucrat::~Bureaucrat(void)
