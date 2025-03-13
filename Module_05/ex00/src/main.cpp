@@ -34,6 +34,12 @@ int main()
 		std::cerr << e.what() << '\n';
 		/* handle exception */
 	}
+
+
+
+
+
+	Bureaucrat officer1("Konrad", 42);
 	
 	return (EXIT_SUCCESS);
 }

@@ -22,11 +22,23 @@
 
 Bureaucrat::Bureaucrat(void): _name(NM_ANON), _grade(0)
 {
+	std::cout << RED << this->getName() << RESET CYAN OB_CR_DFD RESET \
+	<< std::endl;
+}
+
+Bureaucrat::Bureaucrat(std::string _name, int _grade)
+{
+	std::cout << RED << this->getName() << RESET CYAN CR_PR RESET \
+	<< std::endl;
+
+
 
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 {
+	std::cout << RED << this->getName() << RESET CYAN OBJ_CP RESET \
+	<< std::endl;
 	*this = copy;
 }
 
@@ -35,7 +47,8 @@ Bureaucrat & Bureaucrat::operator=(const Bureaucrat &origin)
 	if (this != &origin)
         {
             const_cast<std::string&>(this->_name) = origin._name;  
-			std::cout << XXXXX 🔥 << std::endl;
+			std::cout << RED << this->getName() << RESET CYAN OPR_ASG \
+			RESET << std::endl;
             this->_grade = origin._grade;
         }
         return *this;
@@ -43,8 +56,8 @@ Bureaucrat & Bureaucrat::operator=(const Bureaucrat &origin)
 
 Bureaucrat::~Bureaucrat(void)
 {
-
-
+	std::cout << RED << this->getName() << RESET CYAN OBJ_DT RESET \
+	<< std::endl;
 }
 
 std::string const Bureaucrat::getName(void) const
