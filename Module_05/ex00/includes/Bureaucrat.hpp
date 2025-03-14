@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-03-12 08:24:28 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-03-12 08:24:28 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/12 08:24:28 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/14 18:57:28 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT.HPP
-# define BUREAUCRAT.HPP
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 
 // ============================================================================
 // Libraries
@@ -19,6 +19,7 @@
 # include <iostream>			// std::cout, std::endl, ...
 # include <string>				// std::string
 # include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
+# include <stdexcept>			// std::exception
 
 // ============================================================================
 // Access to my libraries
@@ -45,12 +46,24 @@ class Bureaucrat
 		unsigned int getGrade(void) const;
 		unsigned int incrementGrade(void);
 		unsigned int decrementGrade(void);
+
+		class GradeTooLowException: public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
+
+		class GradeTooHighException: public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
 };
 
 // ============================================================================
 // Functions
 // ============================================================================
 void			print_banner();
-std::ostream	&operator<<(std::ostream &str, const Bureaucrat &bureacreat);
+std::ostream	&operator<<(std::ostream &str, const Bureaucrat &bureaucreat);
 
 #endif

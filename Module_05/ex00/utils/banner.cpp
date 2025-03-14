@@ -6,11 +6,11 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 19:04:23 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/02 01:06:07 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/14 18:59:56 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Animal.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 /**
  * The function "print_banner" generates sthe project start banner. 
