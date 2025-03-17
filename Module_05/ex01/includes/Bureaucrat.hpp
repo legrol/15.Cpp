@@ -26,9 +26,8 @@
 // ============================================================================
 #include "macros.hpp"
 #include "colors.hpp"
-#include "Form.hpp"
 
-// class Form;
+class Form;
 
 class Bureaucrat
 {
