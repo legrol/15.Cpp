@@ -126,15 +126,14 @@ Bureaucrat::Bureaucrat(void): _name(NM_ANON), _grade(150)
 	<< std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), \
-_grade(grade)
+Bureaucrat::Bureaucrat(std::string name, unsigned int grade): _name(name)
 {
+	this->_grade = grade;
 	if (_grade < GRD_MAX)
 		throw Bureaucrat::GradeTooHighException();
 	else if (_grade > GRD_MIN)
-		throw Bureaucrat::GradeTooLowException();	
-	else
-		this->_grade = _grade;
+		throw Bureaucrat::GradeTooLowException();
+
 	std::cout << RED << this->getName() << RESET CYAN CR_PR RESET \
 	<< std::endl;
 }

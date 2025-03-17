@@ -40,7 +40,7 @@ class Bureaucrat
 	public:
 
 		Bureaucrat(void);
-		Bureaucrat(std::string _name, int _grade);
+		Bureaucrat(std::string _name, unsigned int _grade);
 		Bureaucrat(const Bureaucrat &copy);
 		Bureaucrat & operator=(const Bureaucrat &origin);
 		~Bureaucrat(void);

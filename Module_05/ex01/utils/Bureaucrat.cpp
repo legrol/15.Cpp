@@ -139,15 +139,14 @@ Bureaucrat::Bureaucrat(void): _name(NM_ANON), _grade(150)
 	<< std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), \
-_grade(grade)
+Bureaucrat::Bureaucrat(std::string name, unsigned int grade): _name(name)
 {
+	this->_grade = grade;
 	if (_grade < GRD_MAX)
 		throw Bureaucrat::GradeTooHighException();
 	else if (_grade > GRD_MIN)
 		throw Bureaucrat::GradeTooLowException();	
-	else
-		this->_grade = _grade;
+
 	std::cout << RED << this->getName() << RESET CYAN CR_PR_BU RESET \
 	<< std::endl;
 }
@@ -228,11 +227,12 @@ void Bureaucrat::signForm(Form &form)
 	{
 		form.beSigned(*this);
 		std::cout << YELLOW << this->_name << RESET CYAN SIGN RESET \
-		<< form.getName() << std::endl;
+		<< MAGENTA << form.getName() << RESET << std::endl;
 	}
 	catch(const std::exception& e)
 	{
 		std::cout << YELLOW << this->_name << RESET CYAN NOSIGN RESET << \
-		form.getName() << CYAN RASON RESET << e.what() << std::endl;
+		MAGENTA << form.getName() << RESET CYAN RASON RESET << e.what() \
+		<< std::endl;
 	}
 }
