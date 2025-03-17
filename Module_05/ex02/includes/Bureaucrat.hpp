@@ -26,9 +26,6 @@
 // ============================================================================
 #include "macros.hpp"
 #include "colors.hpp"
-#include "Form.hpp"
-
-// class Form;
 
 class Bureaucrat
 {
@@ -50,7 +47,7 @@ class Bureaucrat
 		unsigned int incrementGrade(void);
 		unsigned int decrementGrade(void);
 
-		void signForm(Form &form);
+		// void signForm(Form &form);
 
 		class GradeTooLowException: public std::exception
 		{

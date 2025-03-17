@@ -120,16 +120,16 @@
  * @return 							The modified output stream. 
  * 
  * 
- * @brief void Bureaucrat::signForm(Form &form)
- * 
- * Attempts to sign a given `Form` object. 
- * If the bureaucrat's grade meets the form's signing requirements, the form
- * is signed successfully. 
- * Otherwise, it catches the exception and displays an error message explaining
- * why the signing failed.
- * 
- * @param form 						The `Form` object that the bureaucrat
- * 									attempts to sign.
+//  * @brief void Bureaucrat::signForm(Form &form)
+//  * 
+//  * Attempts to sign a given `Form` object. 
+//  * If the bureaucrat's grade meets the form's signing requirements, the form
+//  * is signed successfully. 
+//  * Otherwise, it catches the exception and displays an error message explaining
+//  * why the signing failed.
+//  * 
+//  * @param form 						The `Form` object that the bureaucrat
+//  * 									attempts to sign.
  * 
  */
 
@@ -222,17 +222,17 @@ std::ostream	&operator<<(std::ostream &str, const Bureaucrat &bureaucreat)
 	return (str);
 }
 
-void Bureaucrat::signForm(Form &form)
-{
-	try
-	{
-		form.beSigned(*this);
-		std::cout << YELLOW << this->_name << RESET CYAN SIGN RESET \
-		<< form.getName() << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << YELLOW << this->_name << RESET CYAN NOSIGN RESET << \
-		form.getName() << CYAN RASON RESET << e.what() << std::endl;
-	}
-}
+// void Bureaucrat::signForm(Form &form)
+// {
+// 	try
+// 	{
+// 		form.beSigned(*this);
+// 		std::cout << YELLOW << this->_name << RESET CYAN SIGN RESET \
+// 		<< form.getName() << std::endl;
+// 	}
+// 	catch(const std::exception& e)
+// 	{
+// 		std::cout << YELLOW << this->_name << RESET CYAN NOSIGN RESET << \
+// 		form.getName() << CYAN RASON RESET << e.what() << std::endl;
+// 	}
+// }

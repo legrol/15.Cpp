@@ -44,10 +44,13 @@ CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98 -Wshadow
 #    -------                                                                   #
 SRC 				= ${SRC_DIR}/main.cpp
 
-UTL 				= ${UTL_DIR}/banner.cpp \
+UTL 				= ${UTL_DIR}/AForm.cpp \
+						${UTL_DIR}/banner.cpp \
 						${UTL_DIR}/Bureaucrat.cpp \
-						${UTL_DIR}/Form.cpp
-						
+						${UTL_DIR}/PresidentialPardonForm.cpp \
+						${UTL_DIR}/RobotomyRequestForm.cpp \
+						${UTL_DIR}/ShrubberyCreationForm.cpp
+
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
 OBJ_UTL				= $(patsubst ${UTL_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})
 
