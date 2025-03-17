@@ -39,8 +39,6 @@ class Form
 		int getGradeToExec(void) const;
 		void beSigned(Bureaucrat &Bureaucrat);
 
-
-
 		class GradeTooLowException: public std::exception
 		{
 			public:

@@ -155,7 +155,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &copy): _name(copy._name),
 _grade(copy._grade)
 {
 	std::cout << RED << this->getName() << RESET CYAN OBJ_CP RESET 
-	<< std::endl;	
+	<< std::endl;
 }
 
 Bureaucrat & Bureaucrat::operator=(const Bureaucrat &origin)
