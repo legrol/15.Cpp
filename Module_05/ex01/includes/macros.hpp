@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/16 20:03:58 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/17 12:57:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ grade is not enough ·  ·  ·  "
 # define AFTDEC			" after the decrease..."
 # define SIGN			" signed "
 # define NOSIGN			" couldn’t sign "
-# define RASON			". Rason: "
+# define RASON			", because the reason: "
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
 # define FOSIGN			" form, signed: "
 # define FOGRD			", sign grade: "
