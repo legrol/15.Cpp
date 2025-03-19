@@ -236,3 +236,17 @@ void Bureaucrat::signForm(AForm &aform)
 		<< std::endl;
 	}
 }
+
+void Bureaucrat::executeForm(AForm const &form)
+{
+	try
+	{
+		form.execute(*this);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << YELLOW << this->_name << RESET CYAN NOSIGN RESET << \
+		MAGENTA << form.getName() << RESET CYAN RASON RESET << e.what() \
+		<< std::endl;
+	}
+}

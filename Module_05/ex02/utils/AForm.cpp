@@ -32,9 +32,9 @@
  * Initializes a `AForm` object with a specified name and grade requirements.
  * Throws exceptions if the grade values are out of the valid range (1-150).
  * 
- * @param name 							The name of the aform.
- * @param signgrade 					The required grade to sign the aform.
- * @param execgrade 					The required grade to execute the aform.
+ * @param name 							The name of the form.
+ * @param signgrade 					The required grade to sign the form.
+ * @param execgrade 					The required grade to execute the form.
  * 
  * @throws GradeTooHighException if any grade is less than 1.
  * @throws GradeTooLowException if any grade is greater than 150.
@@ -43,7 +43,7 @@
  * @brief AForm &AForm::operator=(const AForm &origin)
  * 
  * Assignment operator.
- * Assigns the signing status of one aform to another.
+ * Assigns the signing status of one form to another.
  *
  * @param origin 						The `AForm` object to copy values from.
  * @return 								A reference to the assigned object.
@@ -57,38 +57,38 @@
  * 
  * @brief std::string const AForm::getName(void) const
  * 
- * Retrieves the aform's name.
+ * Retrieves the form's name.
  *
- * @return 								The name of the aform.
+ * @return 								The name of the form.
  * 
  * 
  * @brief std::string const AForm::getSigned(void) const
  * 
- * Checks if the aform is signed.
+ * Checks if the form is signed.
  *
  * @return 								"YES" if signed, "NO" otherwise.
  * 
  * 
  * @brief int AForm::getGradeToSign(void) const
  * 
- * Retrieves the grade required to sign the aform.
+ * Retrieves the grade required to sign the form.
  *
  * @return 								The signing grade.
  * 
  * 
  * @brief int AForm::getGradeToExec(void) const
  * 
- * Retrieves the grade required to execute the aform.
+ * Retrieves the grade required to execute the form.
  *
  * @return 								The execution grade.
  * 
  * 
  * @brief void AForm::beSigned(Bureaucrat &Bureaucrat)
  * 
- * Allows a `Bureaucrat` to sign the aform if their grade is sufficient.
+ * Allows a `Bureaucrat` to sign the form if their grade is sufficient.
  *
  * @param Bureaucrat	 				The bureaucrat attempting to sign 
- * 										the aform.
+ * 										the form.
  * 
  * @throws GradeTooHighException if the bureaucrat's grade is too low to sign.
  * 
@@ -109,13 +109,13 @@
  * 										exception.
  * 
  * 
- * @brief std::ostream &operator<<(std::ostream &str, const AForm &aform)
+ * @brief std::ostream &operator<<(std::ostream &str, const AForm &form)
  * 
  * Overloaded output stream operator.
  * Formats the output for displaying form details.
  *
  * @param str 							The output stream.
- * @param aform 							The aform to be displayed.
+ * @param form 							The form to be displayed.
  * @return 								The modified output stream.
  * 
  */
@@ -195,10 +195,30 @@ const char *AForm::GradeTooHighException::what() const throw()
 	return (WHITE HIGHEXC RESET);
 }
 
-std::ostream	&operator<<(std::ostream &str, const AForm &aform)
+std::ostream	&operator<<(std::ostream &str, const AForm &form)
 {
-	str << GREEN << aform.getName() << RESET BLUE FOSIGN RESET << \
-	aform.getSigned() << BLUE FOGRD RESET << aform.getGradeToSign() \
-	<< BLUE FOEXEC RESET << aform.getGradeToExec();
+	str << GREEN << form.getName() << RESET BLUE FOSIGN RESET << \
+	form.getSigned() << BLUE FOGRD RESET << form.getGradeToSign() \
+	<< BLUE FOEXEC RESET << form.getGradeToExec();
 	return (str);
+}
+
+void AForm::execute(Bureaucrat const &executor) const
+{
+	if (this->_signed == false)
+		throw FormWithoutSign();
+	else if (executor.getGrade() > this->getGradeToExec())
+		throw GradeTooLowException();
+	else
+	{
+		std::cout << YELLOW << this->_name << RESET CYAN FEXEC RESET << \
+		MAGENTA << AForm::_name << std::endl;
+		//std::cout << executor.getName() << " executes form: " << this->_name << std::endl;
+		// this->beExecuted(executor);
+	}
+}
+
+const char *AForm::FormWithoutSign::what() const throw()
+{
+	return (WHITE FNOSIG RESET);
 }

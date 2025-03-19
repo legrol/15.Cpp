@@ -14,6 +14,19 @@
 
 class ShrubberyCreationForm: public AForm
 {
+	private:
 
+		std::string _target;
+
+	public:
+
+		ShrubberyCreationForm(void);
+		ShrubberyCreationForm(const AForm &copy);
+		ShrubberyCreationForm(std::string name, unsigned int const signgrade, \
+			unsigned int const execgrade);
+		ShrubberyCreationForm & operator=(const ShrubberyCreationForm &origin);
+		~ShrubberyCreationForm(void);
+
+		
 
 };

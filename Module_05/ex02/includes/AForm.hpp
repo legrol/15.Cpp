@@ -59,11 +59,18 @@ class AForm
 				virtual const char *what() const throw();
 		};
 
+		void execute(Bureaucrat const &executor) const;
+
+		class FormWithoutSign: public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
 };
 
 // ============================================================================
 // Functions
 // ============================================================================
-std::ostream	&operator<<(std::ostream &str, const AForm &aform);
+std::ostream	&operator<<(std::ostream &str, const AForm &form);
 
 #endif

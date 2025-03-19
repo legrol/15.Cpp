@@ -14,6 +14,18 @@
 
 class RobotomyRequestForm: public AForm
 {
+	private:
+
+		std::string _target;
+
+	public:
+
+		RobotomyRequestForm(void);
+		RobotomyRequestForm(const AForm &copy);
+		RobotomyRequestForm(std::string name, unsigned int const signgrade, \
+			unsigned int const execgrade);
+		RobotomyRequestForm & operator=(const RobotomyRequestForm &origin);
+		~RobotomyRequestForm(void);
 
 
 };

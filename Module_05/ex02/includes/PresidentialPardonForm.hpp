@@ -14,6 +14,19 @@
 
 class PresidentialPardonForm: public AForm
 {
+	private:
+
+		std::string _target;
+
+	public:
+
+		PresidentialPardonForm(void);
+		PresidentialPardonForm(const AForm &copy);
+		PresidentialPardonForm(std::string name, unsigned int const \
+			signgrade, unsigned int const execgrade);
+		PresidentialPardonForm & operator=(const PresidentialPardonForm \
+			&origin);
+		~PresidentialPardonForm(void);
 
 
 };

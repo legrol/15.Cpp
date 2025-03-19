@@ -182,7 +182,7 @@ void Form::beSigned(Bureaucrat &Bureaucrat)
 		this->_signed = 1;
 	}
 	else
-		throw GradeTooHighException();
+		throw GradeTooLowException();
 }
 
 const char *Form::GradeTooLowException::what() const throw()
