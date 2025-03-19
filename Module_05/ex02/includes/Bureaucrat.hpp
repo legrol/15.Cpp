@@ -27,6 +27,8 @@
 #include "macros.hpp"
 #include "colors.hpp"
 
+class Form;
+
 class Bureaucrat
 {
 	private:
@@ -37,7 +39,7 @@ class Bureaucrat
 	public:
 
 		Bureaucrat(void);
-		Bureaucrat(std::string _name, int _grade);
+		Bureaucrat(std::string _name, unsigned int _grade);
 		Bureaucrat(const Bureaucrat &copy);
 		Bureaucrat & operator=(const Bureaucrat &origin);
 		~Bureaucrat(void);
@@ -47,7 +49,7 @@ class Bureaucrat
 		unsigned int incrementGrade(void);
 		unsigned int decrementGrade(void);
 
-		// void signForm(Form &form);
+		void signForm(Form &form);
 
 		class GradeTooLowException: public std::exception
 		{
