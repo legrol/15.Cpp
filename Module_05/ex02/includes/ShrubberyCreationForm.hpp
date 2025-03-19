@@ -10,17 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "../includes/AForm.hpp" 
 
-// ============================================================================
-// Libraries
-// ============================================================================
-# include <iostream>			// std::cout, std::endl, ...
-# include <string>				// std::string
-# include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
+class ShrubberyCreationForm: public AForm
+{
 
-// ============================================================================
-// Access to my libraries
-// ============================================================================
-#include "macros.hpp"
-#include "colors.hpp"
+
+};

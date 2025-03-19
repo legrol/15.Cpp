@@ -13,9 +13,17 @@
 #ifndef AFORM_HPP
 # define AFORM_HPP
 
+// ============================================================================
+// Libraries
+// ============================================================================
+# include <iostream>			// std::cout, std::endl, ...
+# include <string>				// std::string
+# include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
+# include <stdexcept>			// std::exception
+
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
 
@@ -26,12 +34,12 @@ class Form
 
 	public:
 
-		Form(void);
-		Form(const Form &copy);
-		Form(std::string name, unsigned int const signgrade, unsigned int \
+		AForm(void);
+		AForm(const AForm &copy);
+		AForm(std::string name, unsigned int const signgrade, unsigned int \
 			const execgrade);
-		Form & operator=(const Form &origin);
-		~Form(void);
+			AForm & operator=(const AForm &origin);
+		~AForm(void);
 
 		std::string const getName(void) const;
 		std::string const getSigned(void) const;
@@ -56,6 +64,6 @@ class Form
 // ============================================================================
 // Functions
 // ============================================================================
-std::ostream	&operator<<(std::ostream &str, const Form &form);
+std::ostream	&operator<<(std::ostream &str, const AForm &aform);
 
 #endif

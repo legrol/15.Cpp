@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
-#include "../includes/Form.hpp"
+#include "../includes/AForm.hpp"
 
 /**
  *  @brief Implements the `Bureaucrat` class, handling grade constraints, 
@@ -221,18 +221,18 @@ std::ostream	&operator<<(std::ostream &str, const Bureaucrat &bureaucreat)
 	return (str);
 }
 
-void Bureaucrat::signForm(Form &form)
+void Bureaucrat::signForm(AForm &aform)
 {
 	try
 	{
-		form.beSigned(*this);
+		aform.beSigned(*this);
 		std::cout << YELLOW << this->_name << RESET CYAN SIGN RESET \
-		<< MAGENTA << form.getName() << RESET << std::endl;
+		<< MAGENTA << aform.getName() << RESET << std::endl;
 	}
 	catch(const std::exception& e)
 	{
 		std::cout << YELLOW << this->_name << RESET CYAN NOSIGN RESET << \
-		MAGENTA << form.getName() << RESET CYAN RASON RESET << e.what() \
+		MAGENTA << aform.getName() << RESET CYAN RASON RESET << e.what() \
 		<< std::endl;
 	}
 }
