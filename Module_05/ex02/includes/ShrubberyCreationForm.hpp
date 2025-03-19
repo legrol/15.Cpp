@@ -21,12 +21,12 @@ class ShrubberyCreationForm: public AForm
 	public:
 
 		ShrubberyCreationForm(void);
-		ShrubberyCreationForm(const AForm &copy);
+		ShrubberyCreationForm(const ShrubberyCreationForm &copy);
 		ShrubberyCreationForm(std::string name, unsigned int const signgrade, \
 			unsigned int const execgrade);
 		ShrubberyCreationForm & operator=(const ShrubberyCreationForm &origin);
 		~ShrubberyCreationForm(void);
 
-		
+
 
 };

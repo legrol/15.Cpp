@@ -21,7 +21,7 @@ class PresidentialPardonForm: public AForm
 	public:
 
 		PresidentialPardonForm(void);
-		PresidentialPardonForm(const AForm &copy);
+		PresidentialPardonForm(const PresidentialPardonForm &copy);
 		PresidentialPardonForm(std::string name, unsigned int const \
 			signgrade, unsigned int const execgrade);
 		PresidentialPardonForm & operator=(const PresidentialPardonForm \

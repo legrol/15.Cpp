@@ -21,7 +21,7 @@ class RobotomyRequestForm: public AForm
 	public:
 
 		RobotomyRequestForm(void);
-		RobotomyRequestForm(const AForm &copy);
+		RobotomyRequestForm(const RobotomyRequestForm &copy);
 		RobotomyRequestForm(std::string name, unsigned int const signgrade, \
 			unsigned int const execgrade);
 		RobotomyRequestForm & operator=(const RobotomyRequestForm &origin);
