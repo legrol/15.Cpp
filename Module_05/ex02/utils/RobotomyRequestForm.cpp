@@ -16,6 +16,44 @@
  * 
  * 
  * 
+ * 
+ * 
+ * 
  */
 
+
+ RobotomyRequestForm::RobotomyRequestForm(void)
+ {
+
+
+ }
+
+ RobotomyRequestForm:: RobotomyRequestForm(const RobotomyRequestForm &copy)
+{
+
+
+}
+
+RobotomyRequestForm::RobotomyRequestForm(std::string name, unsigned int \
+	const signgrade, unsigned int const execgrade)
+{
+
+
+
+}
+
+RobotomyRequestForm & RobotomyRequestForm::operator=(const \
+	RobotomyRequestForm &origin)
+{
+
+
+
+}
+
+RobotomyRequestForm::~RobotomyRequestForm(void)
+{
+
+
+
+}
  

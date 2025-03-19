@@ -16,6 +16,44 @@
  * 
  * 
  * 
+ * 
+ * 
+ * 
  */
 
  
+ PresidentialPardonForm::PresidentialPardonForm(void)
+ {
+
+
+ }
+
+ PresidentialPardonForm:: PresidentialPardonForm(const PresidentialPardonForm \
+	&copy)
+{
+
+
+}
+
+PresidentialPardonForm::PresidentialPardonForm(std::string name, unsigned int \
+	const signgrade, unsigned int const execgrade)
+{
+
+
+
+}
+
+PresidentialPardonForm & PresidentialPardonForm::operator=(const \
+	PresidentialPardonForm &origin)
+{
+
+
+
+}
+
+PresidentialPardonForm::~PresidentialPardonForm(void)
+{
+
+
+
+}
