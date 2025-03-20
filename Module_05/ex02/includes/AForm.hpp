@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-03-17 17:40:36 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-03-17 17:40:36 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/17 17:40:36 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/20 14:22:34 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@
 # include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
 # include <stdexcept>			// std::exception
 
+// ============================================================================
+// Access to my libraries
+// ============================================================================
+#include "macros.hpp"
+#include "colors.hpp"
+
 class Bureaucrat;
 
 class AForm
@@ -34,11 +40,11 @@ class AForm
 
 	public:
 
-		AForm(void);
-		AForm(const AForm &copy);
+		AForm(void);		
 		AForm(std::string name, unsigned int const signgrade, unsigned int \
 			const execgrade);
-			AForm & operator=(const AForm &origin);
+		AForm(const AForm &copy);
+		AForm & operator=(const AForm &origin);
 		~AForm(void);
 
 		std::string const getName(void) const;

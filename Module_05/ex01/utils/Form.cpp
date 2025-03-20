@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:24:22 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/16 20:12:06 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/20 12:00:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,18 @@
  * 
  * @throws GradeTooHighException if any grade is less than 1.
  * @throws GradeTooLowException if any grade is greater than 150.
+ * 
+ * 
+ * @brief Form::Form(const Form &copy)
+ * 
+ * Copy constructor for the `Form` class. It creates a new `Form` object as a 
+ * copy of an existing one, preserving its attributes.
+ * 
+ * @param copy A reference to the `Form` object being copied.
+ * 
+ * The copy constructor ensures that the new instance has the same name, 
+ * signing status, signing grade requirement, and execution grade requirement 
+ * as the original.
  * 
  * 
  * @brief Form &Form::operator=(const Form &origin)
@@ -140,6 +152,13 @@ Form::Form(std::string name, unsigned int const signgrade, unsigned int \
 		throw GradeTooLowException();
 	std::cout << RED << this->getName() << RESET CYAN CR_PR_FR RESET \
 		<< std::endl;
+}
+
+Form::Form(const Form &copy): _name(copy._name), _signed(copy._signed), \
+_gradeToSign(copy._gradeToSign), _gradeToExec(copy._gradeToExec)
+{
+	std::cout << RED << this->getName() << RESET CYAN OBJ_CP RESET 
+	<< std::endl;
 }
 
 Form & Form::operator=(const Form &origin)

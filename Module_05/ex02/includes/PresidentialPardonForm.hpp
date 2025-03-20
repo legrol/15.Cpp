@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-03-17 17:44:43 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-03-17 17:44:43 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/17 17:44:43 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/20 12:34:51 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@ class PresidentialPardonForm: public AForm
 	public:
 
 		PresidentialPardonForm(void);
-		PresidentialPardonForm(const PresidentialPardonForm &copy);
-		PresidentialPardonForm(std::string name, unsigned int const \
-			signgrade, unsigned int const execgrade);
+		PresidentialPardonForm(std::string target);
+		PresidentialPardonForm(const PresidentialPardonForm &copy);		
 		PresidentialPardonForm & operator=(const PresidentialPardonForm \
 			&origin);
 		~PresidentialPardonForm(void);
 
-
+		void beExecuted(const Bureaucrat &Bureaucrat) const;		
 };

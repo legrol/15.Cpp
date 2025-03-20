@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-03-17 17:40:50 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-03-17 17:40:50 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/17 17:40:50 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/20 12:01:10 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,18 @@
  * 
  * @throws GradeTooHighException if any grade is less than 1.
  * @throws GradeTooLowException if any grade is greater than 150.
+ * 
+ * 
+ * @brief Form::Form(const Form &copy)
+ * 
+ * Copy constructor for the `Form` class. It creates a new `Form` object as a 
+ * copy of an existing one, preserving its attributes.
+ * 
+ * @param copy A reference to the `Form` object being copied.
+ * 
+ * The copy constructor ensures that the new instance has the same name, 
+ * signing status, signing grade requirement, and execution grade requirement 
+ * as the original.
  * 
  * 
  * @brief AForm &AForm::operator=(const AForm &origin)
@@ -142,6 +154,13 @@ AForm::AForm(std::string name, unsigned int const signgrade, unsigned int \
 		<< std::endl;
 }
 
+AForm::AForm(const AForm &copy): _name(copy._name), _signed(copy._signed), \
+_gradeToSign(copy._gradeToSign), _gradeToExec(copy._gradeToExec)
+{
+	std::cout << RED << this->getName() << RESET CYAN OBJ_CP RESET 
+	<< std::endl;
+}
+
 AForm & AForm::operator=(const AForm &origin)
 {
 	this->_signed = origin._signed;
@@ -180,6 +199,7 @@ void AForm::beSigned(Bureaucrat &Bureaucrat)
 	if (Bureaucrat.getGrade() <= this->_gradeToSign)
 	{
 		this->_signed = 1;
+		//std::cout << this->_name << " be signed by " << Bureaucrat.getName() << std::endl;
 	}
 	else
 		throw GradeTooHighException();
@@ -213,7 +233,7 @@ void AForm::execute(Bureaucrat const &executor) const
 	{
 		std::cout << YELLOW << this->_name << RESET CYAN FEXEC RESET << \
 		MAGENTA << AForm::_name << std::endl;
-		//std::cout << executor.getName() << " executes form: " << this->_name << std::endl;
+		
 		// this->beExecuted(executor);
 	}
 }

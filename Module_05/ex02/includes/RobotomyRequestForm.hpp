@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-03-17 17:42:58 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-03-17 17:42:58 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/03/17 17:42:58 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/03/20 14:28:49 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ class RobotomyRequestForm: public AForm
 	public:
 
 		RobotomyRequestForm(void);
-		RobotomyRequestForm(const RobotomyRequestForm &copy);
-		RobotomyRequestForm(std::string name, unsigned int const signgrade, \
-			unsigned int const execgrade);
+		RobotomyRequestForm(std::string target);
+		RobotomyRequestForm(const RobotomyRequestForm &copy);		
 		RobotomyRequestForm & operator=(const RobotomyRequestForm &origin);
 		~RobotomyRequestForm(void);
 
-
+		void beExecuted(const Bureaucrat &bureaucrat) const;
 };

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/16 20:03:58 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/20 14:46:00 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,8 @@ grade is not enough ·  ·  ·  "
 # define FOEXEC			", exec grade: "
 # define FNOSIG			"Form isn't signed."
 # define FEXEC			" has executed the form "
+# define PRPAFR			" has been pardoned by Zaphod Beeblebrox."
+# define RORENF			" has been robotomized successfully!!"
+# define ROREYF			"'s robotomization failed!!"
 
 # endif
