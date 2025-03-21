@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:43:34 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 14:26:02 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 17:44:09 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@
  */
  
 PresidentialPardonForm::PresidentialPardonForm(void): \
-AForm::AForm("ShrubberyCreationForm", 25, 5), _target("Anonymus")
+AForm::AForm("PresidentialPardonForm", 25, 5), _target("Anonymus")
 {
 
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target): \
-AForm::AForm("ShrubberyCreationForm", 25, 5), _target(target)
+AForm::AForm("PresidentialPardonForm", 25, 5), _target(target)
 {
 
 }

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:40:50 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 12:01:10 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 21:02:01 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,14 +227,15 @@ void AForm::execute(Bureaucrat const &executor) const
 {
 	if (this->_signed == false)
 		throw FormWithoutSign();
-	else if (executor.getGrade() > this->getGradeToExec())
+	else if (executor.getGrade() > \
+		static_cast<unsigned int>(this->getGradeToExec()))
 		throw GradeTooLowException();
 	else
 	{
 		std::cout << YELLOW << this->_name << RESET CYAN FEXEC RESET << \
 		MAGENTA << AForm::_name << std::endl;
 		
-		// this->beExecuted(executor);
+		this->beExecuted(executor);
 	}
 }
 

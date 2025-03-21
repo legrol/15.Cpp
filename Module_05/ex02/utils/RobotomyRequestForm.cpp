@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:42:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 14:45:21 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 17:43:47 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@
  */
 
 RobotomyRequestForm::RobotomyRequestForm(void): \
-AForm::AForm("ShrubberyCreationForm", 72, 45), _target("Anonymus")
+AForm::AForm("RobotomyRequestForm", 72, 45), _target("Anonymus")
 {
 
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target): \
-AForm::AForm("ShrubberyCreationForm", 72, 45), _target(target)
+AForm::AForm("RobotomyRequestForm", 72, 45), _target(target)
 {
 
 }

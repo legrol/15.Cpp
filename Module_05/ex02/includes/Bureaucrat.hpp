@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 08:24:28 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 14:47:00 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 13:40:37 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@
 // ============================================================================
 // Libraries
 // ============================================================================
-# include <iostream>			// std::cout, std::endl, ...
+# include <iostream>			// std::cout, std::cerr, std::endl, ...
 # include <string>				// std::string
-# include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS...
+# include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS ...
 # include <stdexcept>			// std::exception
-# include <ctime>				// XXXXXXXXXXXXXXX
-# include <fstream>				// XXXXXXXXXXXXXXX
-
+# include <ctime>				// time(), localtime(), difftime() ...
+# include <fstream>				// std::ofstream, std::fstream, ...
 
 // ============================================================================
 // Access to my libraries

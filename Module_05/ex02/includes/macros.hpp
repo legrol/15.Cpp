@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 14:46:00 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 21:35:04 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define OB_CP_DEE		" deep object copy."
 # define OB_CR_DFD		" object created with default constructor."
 # define CR_PR_BU		" created with parameterized constructor (Bureaucrat)."
-# define CR_PR_FR		" created with parameterized constructor (Form)."
+# define CR_PR_FR		" created with parameterized constructor (AForm)."
 # define OBJ_CP			" object copied."
 # define OBJ_DT			" object deconstructed."
 # define LOWEXC			"Error exception🚨: Grade is too low!!  👇"
@@ -62,5 +62,24 @@ grade is not enough ·  ·  ·  "
 # define PRPAFR			" has been pardoned by Zaphod Beeblebrox."
 # define RORENF			" has been robotomized successfully!!"
 # define ROREYF			"'s robotomization failed!!"
+# define NOOPENF		"Couldn't open output file"
+# define EXT			"_shrubbery"
+# define SHRU			" successfully created a shrubbery!!!"
+# define GARD			"Garden_shrubbery"
+# define SLOG			"📄 Contenido del archivo "
+# define NOFILE			"❌ Could not open file "
+# define POINTS			" :"
+# define TEST1			"Create the three forms and some Bureaucrats"
+# define TEST2			"Test for running unsigned forms"
+# define TEST3			"Signing the form and running the test without sufficient grade"
+# define TEST4			"Test sign forms and execute them"
+# define STEST41		"               ... Subtest shrubbery ..."
+# define STEST42		"               ... Subtest robotomy ..."
+# define STEST43		"               ... Subtest pardon ..."
+
+# define OTFL1		"   /\\\n  /  \\\n /    \\\n/______\\\n   ||\n   ||\n   ||"
+# define OTFL2		"   ##\n  #  #\n #    #\n########\n   ||\n   ||\n   ||"
+# define OTFL3		"  &&&&&\n &&&&&&&\n&&&&&&&&&\n  |||||\n"
+# define OTFL4		"   /\\\n  /**\\\n /****\\\n/******\\\n  ||||\n  ||||\n"
 
 # endif

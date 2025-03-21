@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:40:36 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 14:22:34 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 14:57:00 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,9 @@ class AForm
 		std::string const getSigned(void) const;
 		int getGradeToSign(void) const;
 		int getGradeToExec(void) const;
+
 		void beSigned(Bureaucrat &Bureaucrat);
+		virtual void beExecuted(Bureaucrat const &executor) const = 0;
 
 		class GradeTooLowException: public std::exception
 		{

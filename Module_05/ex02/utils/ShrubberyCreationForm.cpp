@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:41:56 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 12:27:51 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 16:06:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,17 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void)
 
 }
 
-void ShrubberyCreationForm::beExecuted(const Bureaucrat &Bureaucrat) const
+void ShrubberyCreationForm::beExecuted(const Bureaucrat &bureaucrat) const
 {
-	
+	std::ofstream outfile;
 
+	outfile.open((this->_target + EXT).c_str());
+	if (!outfile) {
+		std::cerr << CYAN NOOPENF RESET << std::endl;
+		return ;
+	}
+	outfile << OTFL4;
+	outfile.close();
 
-
+	std::cout << bureaucrat.getName() << CYAN SHRU RESET << std::endl;
 }
