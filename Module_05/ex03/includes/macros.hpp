@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/21 21:35:04 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 19:23:51 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ grade is not enough ·  ·  ·  "
 # define AFTINC			" after the increase..."
 # define AFTDEC			" after the decrease..."
 # define SIGN			" signed "
+# define BESIGN			" has been signed by "
 # define NOSIGN			" couldn't sign "
 # define RASON			". Rason: "
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
@@ -73,9 +74,19 @@ grade is not enough ·  ·  ·  "
 # define TEST2			"Test for running unsigned forms"
 # define TEST3			"Signing the form and running the test without sufficient grade"
 # define TEST4			"Test sign forms and execute them"
+# define TEST5			"Test -> Correct creation of all forms except the last one"
+# define TEST6			"Test -> Try various actions with the available form"
 # define STEST41		"               ... Subtest shrubbery ..."
 # define STEST42		"               ... Subtest robotomy ..."
 # define STEST43		"               ... Subtest pardon ..."
+# define INTCOUT		"Intern creates "
+# define INTERR			"❌ The form doesn't exist!!!"
+# define WTG			" with target: "
+# define RBDM			"Robotomy Demand"
+# define SHDSG			"Shrub Design"
+# define PREPAR			"Presidential Pardon"
+# define RNRQ			"Random request"
+# define CAEXC			"Caught exception: "
 
 # define OTFL1		"   /\\\n  /  \\\n /    \\\n/______\\\n   ||\n   ||\n   ||"
 # define OTFL2		"   ##\n  #  #\n #    #\n########\n   ||\n   ||\n   ||"

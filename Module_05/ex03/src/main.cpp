@@ -6,21 +6,43 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 00:52:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/21 21:34:19 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 19:38:50 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
 #include "../includes/AForm.hpp"
-#include "../includes/ShrubberyCreationForm.hpp"
-#include "../includes/RobotomyRequestForm.hpp"
-#include "../includes/PresidentialPardonForm.hpp"
+#include "../includes/Intern.hpp"
 
 /**
+ * @brief int main(void)
  * 
+ * This function serves as the entry point for testing the `Intern` class, 
+ * which is capable of dynamically creating various `AForm`-derived forms based
+ * on string inputs.
  * 
+ * The program initializes a banner and random seed, then proceeds to two main 
+ * test cases:
  * 
+ * TEST5:
+ * - Attempts to generate different forms via `Intern::makeForm()` including:
+ *   - RobotomyRequestForm
+ *   - ShrubberyCreationForm
+ *   - PresidentialPardonForm
+ *   - An invalid form (to trigger exception handling)
+ * - Each form is created and deleted immediately after for cleanup.
  * 
+ * TEST6:
+ * - Creates forms using the intern and executes them using a `Bureaucrat`.
+ * - Verifies correct behavior of signing and executing:
+ *   - A ShrubberyCreationForm signed and executed manually.
+ *   - A PresidentialPardonForm signed via `signForm()` and then executed.
+ * 
+ * The function demonstrates proper memory management, exception handling,
+ * and interaction between Intern, Bureaucrat, and AForm.
+ * 
+ * @return int 					Returns EXIT_SUCCESS upon successful program 
+ * 								termination.
  * 
  */
 
@@ -30,137 +52,54 @@ int main()
 
 	srand((unsigned)time(NULL));
 	
-	std::cout << std::endl << YELLOW TEST1 RESET << std::endl << std::endl;
+	Intern		student42;
+	AForm		*form;
 
-	ShrubberyCreationForm shrubbery("Garden");
-	RobotomyRequestForm robotomy("Marvin");
-	PresidentialPardonForm pardon("Tony Stark");
+	std::cout << std::endl << YELLOW SPACES RESET << std::endl;
+	std::cout << std::endl << YELLOW TEST5 RESET << std::endl << std::endl;
 
+	Bureaucrat	staff("Joachim", 50);
 	std::cout << std::endl;
 
-	Bureaucrat agentEcho("Agent Echo", 150);
-	Bureaucrat operativeV("Operative V", 120);
-	Bureaucrat chiefOmega("Chief Omega", 3);
-
-	std::cout << std::endl << YELLOW SPACES RESET << std::endl;
-
-	std::cout << std::endl << YELLOW TEST2 RESET << std::endl << std::endl;
+	try
 	{
-		try
-		{
-			std::cout << agentEcho << std::endl;
+		form = student42.makeForm(RBDM, "42A");
+		delete form;
+		std::cout << std::endl;
 
-			std::cout << shrubbery << std::endl;
-			std::cout << robotomy << std::endl;
-			std::cout << pardon << std::endl << std::endl;
+		form = student42.makeForm(SHDSG, "42B");
+		delete form;
+		std::cout << std::endl;
 
-			agentEcho.executeForm(shrubbery);
-			agentEcho.executeForm(robotomy);
-			agentEcho.executeForm(pardon);
-		}
-		catch (std::exception &e)
-		{
-			std::cout << e.what() << std::endl;
-		}
+		form = student42.makeForm(PREPAR, "42C");
+		delete form;
+		std::cout << std::endl;
+
+		form = student42.makeForm(RNRQ, "42D");
+		delete form;
+		std::cout << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << BLUE CAEXC RESET << e.what() << std::endl;
 	}
 
 	std::cout << std::endl << YELLOW SPACES RESET << std::endl;
+	std::cout << std::endl << YELLOW TEST6 RESET << std::endl << std::endl;
 	
-	std::cout << std::endl << YELLOW TEST3 RESET << std::endl << std::endl;
-	{
-		try
-		{
-			std::cout << agentEcho;
-			std::cout << operativeV << std::endl;
-			
-			std::cout << shrubbery << std::endl;
-			std::cout << robotomy << std::endl;
-			std::cout << pardon << std::endl << std::endl;
-			
-			shrubbery.beSigned(operativeV);
-			agentEcho.executeForm(shrubbery);
-		}
-		catch (std::exception &e)
-		{
-			std::cout << e.what() << std::endl;
-		}
-	}
+	std::cout << WHITE STEST41 RESET << std::endl << std::endl;
+	form = student42.makeForm(SHDSG, "42E");
+	form->beSigned(staff);
+	staff.executeForm(*form);
+	delete form;
+	std::cout << std::endl;
 
-	std::cout << std::endl << YELLOW SPACES RESET << std::endl;
-		
-	std::cout << std::endl << YELLOW TEST4 RESET << std::endl << std::endl;
-	{
-		try
-		{
-			shrubbery.beSigned(chiefOmega);
-			robotomy.beSigned(chiefOmega);
-			pardon.beSigned(chiefOmega);
-
-			std::cout << shrubbery << std::endl;
-			std::cout << robotomy << std::endl;
-			std::cout << pardon << std::endl;
-			
-			std::cout << std::endl << RED STEST41 RESET << std::endl << \
-			std::endl;
-			chiefOmega.executeForm(shrubbery);
-
-			std::ifstream infile(GARD);
-			if (!infile)
-				std::cerr << YELLOW NOFILE RESET BLUE GARD RESET << std::endl;
-			else
-			{
-				std::cout << std::endl << YELLOW SLOG RESET RED GARD RESET \
-				YELLOW POINTS RESET << std::endl << std::endl;
-				std::string line;
-				while (std::getline(infile, line))
-					std::cout << WHITE << line << RESET << std::endl;
-				infile.close();
-			}
-
-			std::cout << std::endl << RED STEST42 RESET << std::endl << \
-			std::endl;
-			chiefOmega.executeForm(robotomy);
-			
-			std::cout << std::endl << RED STEST43 RESET << std::endl << \
-			std::endl;
-			chiefOmega.executeForm(pardon);
-		}
-		catch (std::exception &e)
-		{
-			std::cout << e.what() << std::endl;
-		}
-	}
-	
-	// std::cout << std::endl << YELLOW SPACES RESET << std::endl << std::endl;
-
-	// 	/* Sign forms and execute them */
-	// {
-	// 	try
-	// 	{
-	// 		shrubbery.beSigned(chiefOmega);   // 🔥 ¡ESTA ES LA LÍNEA CLAVE!
-	// 		robotomy.beSigned(chiefOmega);
-	// 		pardon.beSigned(chiefOmega);
-
-	// 		std::cout << shrubbery << std::endl;
-	// 		std::cout << robotomy << std::endl;
-	// 		std::cout << pardon << std::endl;
-			
-	// 		std::cout << "\n --------------------- \n\n";
-	// 		chiefOmega.executeForm(shrubbery);
-	// 		std::cout << "\n --------------------- \n\n";
-	// 		chiefOmega.executeForm(robotomy);
-	// 		std::cout << "\n --------------------- \n\n";
-	// 		chiefOmega.executeForm(pardon);
-	// 	}
-	// 	catch (std::exception &e)
-	// 	{
-	// 		std::cout << e.what() << std::endl;
-	// 	}
-	// 	chiefOmega.executeForm(shrubbery);
-
-	// }
-
-	std::cout << std::endl << YELLOW SPACES RESET << std::endl << std::endl;
+	std::cout << WHITE STEST43 RESET << std::endl << std::endl;
+	form = student42.makeForm(PREPAR, "42F");
+	staff.signForm(*form);
+	staff.executeForm(*form);
+	delete form;
+	std::cout << std::endl;
 
 	return (EXIT_SUCCESS);
 }

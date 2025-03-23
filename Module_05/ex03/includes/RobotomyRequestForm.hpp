@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:42:58 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 14:28:49 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 18:07:35 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,8 @@ class RobotomyRequestForm: public AForm
 		~RobotomyRequestForm(void);
 
 		void beExecuted(const Bureaucrat &bureaucrat) const;
+
+		static AForm *makeForm(AForm *sheet, std::string const &nameForm, \
+			std::string const &targetForm);
+		std::string const &getTarget() const;
 };

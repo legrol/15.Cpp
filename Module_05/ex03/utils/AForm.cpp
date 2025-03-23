@@ -6,12 +6,15 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:40:50 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/21 21:02:01 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 19:36:40 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
 #include "../includes/AForm.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
 
 /**
  * @brief Implements the `AForm` class, managing signing and grade constraints, 
@@ -130,6 +133,55 @@
  * @param form 							The form to be displayed.
  * @return 								The modified output stream.
  * 
+ * 
+ * 
+ * @brief void AForm::execute(Bureaucrat const &executor) const
+ * 
+ * Executes the form using the given `Bureaucrat` as the executor.
+ * 
+ * @param executor 						A constant reference to the 
+ * 										`Bureaucrat` attempting to execute 
+ * 										the form.
+ * 
+ * This function checks whether the form has been signed. If not, it throws
+ * a `FormWithoutSign` exception. It also verifies that the executor has the
+ * required grade to execute the form; if the executor's grade is too low, 
+ * a `GradeTooLowException` is thrown.
+ * 
+ * If both checks pass, the form's execution message is printed, and the 
+ * `beExecuted()` method is called to perform the specific behavior of the 
+ * form.
+ * 
+ * 
+ * @brief const char* AForm::FormWithoutSign::what() const throw()
+ * 
+ * Returns a string message explaining that the form cannot be executed
+ * because it hasn't been signed yet.
+ * 
+ * @return 								A C-string indicating the error 
+ * 										reason.
+ * 
+ * @brief AForm* AForm::makeForm(const std::string& nameForm, const 
+ * std::string& targetForm)
+ * 
+ * Factory method that attempts to dynamically create a specific `AForm` object 
+ * based on the provided form name. It delegates the creation responsibility 
+ * to the static `makeForm` methods defined in each derived form class 
+ * (`PresidentialPardonForm`, `RobotomyRequestForm`, and 
+ * `ShrubberyCreationForm`).
+ * 
+ * The function tries to match the `nameForm` with a known form type, and if 
+ * successful, returns a pointer to the new form instance with the provided 
+ * `targetForm`.
+ * If no match is found, the last called `makeForm` will return `NULL`, and 
+ * so will this method.
+ * 
+ * @param nameForm    					The name/type of the form to create.
+ * @param targetForm  					The target to assign to the newly 
+ * 										created form.
+ * @return AForm*     					Pointer to the newly created form, 
+ * 										or NULL if no match was found.
+ * 
  */
 
 AForm::AForm(void): _name("default"), _signed(false), _gradeToSign(150), \
@@ -199,7 +251,8 @@ void AForm::beSigned(Bureaucrat &Bureaucrat)
 	if (Bureaucrat.getGrade() <= this->_gradeToSign)
 	{
 		this->_signed = 1;
-		//std::cout << this->_name << " be signed by " << Bureaucrat.getName() << std::endl;
+		std::cout << this->_name << CYAN BESIGN RESET YELLOW << \
+		Bureaucrat.getName() << RESET << std::endl;
 	}
 	else
 		throw GradeTooHighException();
@@ -242,4 +295,15 @@ void AForm::execute(Bureaucrat const &executor) const
 const char *AForm::FormWithoutSign::what() const throw()
 {
 	return (WHITE FNOSIG RESET);
+}
+
+AForm *AForm::makeForm(std::string const &nameForm, std::string const &targetForm)
+{
+	AForm *sheet;
+
+	sheet = NULL;
+	sheet = PresidentialPardonForm::makeForm(sheet, nameForm, targetForm);
+	sheet = RobotomyRequestForm::makeForm(sheet, nameForm, targetForm);
+	sheet = ShrubberyCreationForm::makeForm(sheet, nameForm, targetForm);
+	return (sheet);
 }

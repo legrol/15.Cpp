@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 19:04:23 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/16 20:37:04 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 13:21:52 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void    print_banner(void)
 		std::cout << (RED		"      |_|   |_|  " RESET) << std::endl;
 		std::cout << std::endl;
 		std::cout << (RED" Welcome to " RESET BDBLUE"CPP Module 05 " RESET \
-		CYAN "ex02 " RESET RED"project by " GREEN "rdel-olm") << std::endl;
+		CYAN "ex03 " RESET RED"project by " GREEN "rdel-olm") << std::endl;
 		std::cout << std::endl;
 }

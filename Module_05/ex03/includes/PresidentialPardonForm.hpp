@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:44:43 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/20 12:34:51 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 18:07:56 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,9 @@ class PresidentialPardonForm: public AForm
 			&origin);
 		~PresidentialPardonForm(void);
 
-		void beExecuted(const Bureaucrat &Bureaucrat) const;		
+		void beExecuted(const Bureaucrat &Bureaucrat) const;
+		
+		static AForm *makeForm(AForm *sheet, std::string const &nameForm, \
+			std::string const &targetForm);
+		std::string const &getTarget() const;
 };

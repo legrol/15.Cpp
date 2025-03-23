@@ -47,6 +47,7 @@ SRC 				= ${SRC_DIR}/main.cpp
 UTL 				= ${UTL_DIR}/AForm.cpp \
 						${UTL_DIR}/banner.cpp \
 						${UTL_DIR}/Bureaucrat.cpp \
+						${UTL_DIR}/Intern.cpp \
 						${UTL_DIR}/PresidentialPardonForm.cpp \
 						${UTL_DIR}/RobotomyRequestForm.cpp \
 						${UTL_DIR}/ShrubberyCreationForm.cpp

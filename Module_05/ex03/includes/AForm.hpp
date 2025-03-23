@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:40:36 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/21 14:57:00 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 18:26:12 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ class AForm
 			const execgrade);
 		AForm(const AForm &copy);
 		AForm & operator=(const AForm &origin);
-		~AForm(void);
+		virtual ~AForm(void);
 
 		std::string const getName(void) const;
 		std::string const getSigned(void) const;
@@ -54,6 +54,9 @@ class AForm
 
 		void beSigned(Bureaucrat &Bureaucrat);
 		virtual void beExecuted(Bureaucrat const &executor) const = 0;
+
+		static AForm *makeForm(std::string const &nameForm, std::string const &targetForm);
+		virtual std::string const	&getTarget() const = 0;
 
 		class GradeTooLowException: public std::exception
 		{
