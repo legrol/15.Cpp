@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 00:52:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/23 19:38:50 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 20:40:29 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,19 +63,19 @@ int main()
 
 	try
 	{
-		form = student42.makeForm(RBDM, "42A");
+		form = student42.makeForm(RBDM, "Bender");
 		delete form;
 		std::cout << std::endl;
 
-		form = student42.makeForm(SHDSG, "42B");
+		form = student42.makeForm(SHDSG, "Climber");
 		delete form;
 		std::cout << std::endl;
 
-		form = student42.makeForm(PREPAR, "42C");
+		form = student42.makeForm(PREPAR, "Zaphod");
 		delete form;
 		std::cout << std::endl;
 
-		form = student42.makeForm(RNRQ, "42D");
+		form = student42.makeForm(RNRQ, "Anyone");
 		delete form;
 		std::cout << std::endl;
 	}
@@ -88,14 +88,14 @@ int main()
 	std::cout << std::endl << YELLOW TEST6 RESET << std::endl << std::endl;
 	
 	std::cout << WHITE STEST41 RESET << std::endl << std::endl;
-	form = student42.makeForm(SHDSG, "42E");
+	form = student42.makeForm(SHDSG, "Elm");
 	form->beSigned(staff);
 	staff.executeForm(*form);
 	delete form;
 	std::cout << std::endl;
 
 	std::cout << WHITE STEST43 RESET << std::endl << std::endl;
-	form = student42.makeForm(PREPAR, "42F");
+	form = student42.makeForm(PREPAR, "Ford");
 	staff.signForm(*form);
 	staff.executeForm(*form);
 	delete form;

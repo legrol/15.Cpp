@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/23 19:23:51 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 20:36:39 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ grade is not enough ·  ·  ·  "
 # define INTCOUT		"Intern creates "
 # define INTERR			"❌ The form doesn't exist!!!"
 # define WTG			" with target: "
-# define RBDM			"Robotomy Demand"
+# define RBDM			"Robotomy Request"
 # define SHDSG			"Shrub Design"
 # define PREPAR			"Presidential Pardon"
 # define RNRQ			"Random request"
