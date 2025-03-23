@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:40:36 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/23 18:26:12 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/23 21:11:33 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ class AForm
 
 		void beSigned(Bureaucrat &Bureaucrat);
 		virtual void beExecuted(Bureaucrat const &executor) const = 0;
+		void execute(Bureaucrat const &executor) const;
 
 		static AForm *makeForm(std::string const &nameForm, std::string const &targetForm);
 		virtual std::string const	&getTarget() const = 0;
@@ -69,8 +70,6 @@ class AForm
 			public:
 				virtual const char *what() const throw();
 		};
-
-		void execute(Bureaucrat const &executor) const;
 
 		class FormWithoutSign: public std::exception
 		{
