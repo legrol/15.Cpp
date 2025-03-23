@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 01:21:44 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/23 13:17:54 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 21:35:04 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ grade is not enough ·  ·  ·  "
 # define AFTINC			" after the increase..."
 # define AFTDEC			" after the decrease..."
 # define SIGN			" signed "
-# define BESIGN			" has been signed by "
 # define NOSIGN			" couldn't sign "
 # define RASON			". Rason: "
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "

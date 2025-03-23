@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 00:52:31 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/23 13:16:56 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 21:34:19 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,10 @@
 #include "../includes/PresidentialPardonForm.hpp"
 
 /**
- * @brief int main()
  * 
- * Entry point of the program. Demonstrates the behavior of various concrete 
- * AForm subclasses (`ShrubberyCreationForm`, `RobotomyRequestForm`, 
- * `PresidentialPardonForm`) and how they interact with `Bureaucrat` objects.
  * 
- * It includes multiple test cases:
- * - TEST1: Instantiates forms and bureaucrats.
- * - TEST2: Attempts execution of forms by a bureaucrat without enough grade.
- * - TEST3: A form is signed, and a bureaucrat with insufficient grade attempts 
- * 			execution.
- * - TEST4: All forms are signed and executed by a highly ranked bureaucrat.
  * 
- *   Also validates that a file was created for the `ShrubberyCreationForm`.
  * 
- * @return int 					Returns EXIT_SUCCESS upon successful execution.
  * 
  */
 
@@ -108,7 +96,7 @@ int main()
 			robotomy.beSigned(chiefOmega);
 			pardon.beSigned(chiefOmega);
 
-			std::cout << std::endl << shrubbery << std::endl;
+			std::cout << shrubbery << std::endl;
 			std::cout << robotomy << std::endl;
 			std::cout << pardon << std::endl;
 			
@@ -142,6 +130,35 @@ int main()
 			std::cout << e.what() << std::endl;
 		}
 	}
+	
+	// std::cout << std::endl << YELLOW SPACES RESET << std::endl << std::endl;
+
+	// 	/* Sign forms and execute them */
+	// {
+	// 	try
+	// 	{
+	// 		shrubbery.beSigned(chiefOmega);   // 🔥 ¡ESTA ES LA LÍNEA CLAVE!
+	// 		robotomy.beSigned(chiefOmega);
+	// 		pardon.beSigned(chiefOmega);
+
+	// 		std::cout << shrubbery << std::endl;
+	// 		std::cout << robotomy << std::endl;
+	// 		std::cout << pardon << std::endl;
+			
+	// 		std::cout << "\n --------------------- \n\n";
+	// 		chiefOmega.executeForm(shrubbery);
+	// 		std::cout << "\n --------------------- \n\n";
+	// 		chiefOmega.executeForm(robotomy);
+	// 		std::cout << "\n --------------------- \n\n";
+	// 		chiefOmega.executeForm(pardon);
+	// 	}
+	// 	catch (std::exception &e)
+	// 	{
+	// 		std::cout << e.what() << std::endl;
+	// 	}
+	// 	chiefOmega.executeForm(shrubbery);
+
+	// }
 
 	std::cout << std::endl << YELLOW SPACES RESET << std::endl << std::endl;
 

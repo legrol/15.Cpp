@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:40:50 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/23 13:15:13 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/21 21:02:01 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,34 +130,6 @@
  * @param form 							The form to be displayed.
  * @return 								The modified output stream.
  * 
- * 
- * 
- * @brief void AForm::execute(Bureaucrat const &executor) const
- * 
- * Executes the form using the given `Bureaucrat` as the executor.
- * 
- * @param executor 						A constant reference to the 
- * 										`Bureaucrat` attempting to execute 
- * 										the form.
- * 
- * This function checks whether the form has been signed. If not, it throws
- * a `FormWithoutSign` exception. It also verifies that the executor has the
- * required grade to execute the form; if the executor's grade is too low, 
- * a `GradeTooLowException` is thrown.
- * 
- * If both checks pass, the form's execution message is printed, and the 
- * `beExecuted()` method is called to perform the specific behavior of the 
- * form.
- * 
- * 
- * @brief const char* AForm::FormWithoutSign::what() const throw()
- * 
- * Returns a string message explaining that the form cannot be executed
- * because it hasn't been signed yet.
- * 
- * @return 								A C-string indicating the error 
- * 										reason.
- * 
  */
 
 AForm::AForm(void): _name("default"), _signed(false), _gradeToSign(150), \
@@ -227,8 +199,7 @@ void AForm::beSigned(Bureaucrat &Bureaucrat)
 	if (Bureaucrat.getGrade() <= this->_gradeToSign)
 	{
 		this->_signed = 1;
-		std::cout << this->_name << CYAN BESIGN RESET YELLOW << \
-		Bureaucrat.getName() << RESET << std::endl;
+		//std::cout << this->_name << " be signed by " << Bureaucrat.getName() << std::endl;
 	}
 	else
 		throw GradeTooHighException();

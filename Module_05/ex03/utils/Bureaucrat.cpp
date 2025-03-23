@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 08:27:50 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/23 12:53:30 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/16 20:16:11 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,20 +130,6 @@
  * 
  * @param form 						The `Form` object that the bureaucrat
  * 									attempts to sign.
- * 
- * 
- * @brief void Bureaucrat::executeForm(AForm const &form)
- * 
- * Attempts to execute a form using the current `Bureaucrat` instance.
- * 
- * @param form 						A constant reference to the `AForm` that 
- * 									the bureaucrat attempts to execute.
- * 
- * This method wraps the call to `form.execute(*this)` in a try-catch block 
- * to handle any exceptions that may occur during execution. If an exception 
- * is thrown (e.g., due to insufficient grade or unsigned form), it catches 
- * the exception and prints an error message explaining why the execution 
- * failed.
  * 
  */
 
