@@ -120,23 +120,23 @@
  * @return 							The modified output stream. 
  * 
  * 
- * @brief void Bureaucrat::signForm(Form &form)
+ * @brief void Bureaucrat::signForm(Form &aform)
  * 
- * Attempts to sign a given `Form` object. 
+ * Attempts to sign a given `AForm` object. 
  * If the bureaucrat's grade meets the form's signing requirements, the form
  * is signed successfully. 
  * Otherwise, it catches the exception and displays an error message explaining
  * why the signing failed.
  * 
- * @param form 						The `Form` object that the bureaucrat
+ * @param aform 					The `Form` object that the bureaucrat
  * 									attempts to sign.
  * 
  * 
- * @brief void Bureaucrat::executeForm(AForm const &form)
+ * @brief void Bureaucrat::executeForm(AForm const &aform)
  * 
  * Attempts to execute a form using the current `Bureaucrat` instance.
  * 
- * @param form 						A constant reference to the `AForm` that 
+ * @param aform 					A constant reference to the `AForm` that 
  * 									the bureaucrat attempts to execute.
  * 
  * This method wraps the call to `form.execute(*this)` in a try-catch block 
@@ -251,16 +251,16 @@ void Bureaucrat::signForm(AForm &aform)
 	}
 }
 
-void Bureaucrat::executeForm(AForm const &form)
+void Bureaucrat::executeForm(AForm const &aform)
 {
 	try
 	{
-		form.execute(*this);
+		aform.execute(*this);
 	}
 	catch(const std::exception& e)
 	{
 		std::cout << YELLOW << this->_name << RESET CYAN NOSIGN RESET << \
-		MAGENTA << form.getName() << RESET CYAN RASON RESET << e.what() \
+		MAGENTA << aform.getName() << RESET CYAN RASON RESET << e.what() \
 		<< std::endl;
 	}
 }
