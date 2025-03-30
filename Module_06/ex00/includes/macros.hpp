@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 16:45:05 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/30 19:38:53 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/30 21:23:41 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@
 # define CHRPLUS		'+'
 # define CHRDOT			'.'
 # define LF				'\0'
-# define CHNP			"char: impossible"
-# define INNP			"int: impossible"
+# define CHNP			"char: no possible"
+# define INNP			"int: no possible"
 
 #endif
