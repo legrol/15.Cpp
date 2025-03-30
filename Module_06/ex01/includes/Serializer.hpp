@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 21:32:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/30 21:34:11 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/30 21:38:10 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ class Serializer
 {
 	private:
 
-
-
-
+		Serializer();
+		Serializer(const Serializer &copy);
+		Serializer & operator=(const Serializer &origin);
+		~Serializer();
 
 	public:
 
