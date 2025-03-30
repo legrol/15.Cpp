@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 16:33:59 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/30 20:38:33 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/30 21:04:30 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,13 +105,13 @@
  * @param nbr 						The double value to print.
  * 
  * 
- * @brief double ft_atod(const std::string &str)
+ * @brief double ft_atod(const std::string &inputString)
  *
  * Converts a string to a `double` using `strtod`.
  * If the conversion fails due to invalid characters or out-of-range values, 
  * an error is printed and the macro RETURN_ERR_0D() is called.
  *
- * @param str 						The input string to convert.
+ * @param inputString				The input string to convert.
  * @return 							The converted double value.
  * 
  * 
@@ -138,7 +138,7 @@
  * @param nbr 						The float value to convert and display. 
  * 
  * 
- * @brief static float ft_atof(const std::string &str)
+ * @brief static float ft_atof(const std::string &inputString)
  *
  * Converts a string to a float value.
  *
@@ -146,7 +146,7 @@
  * that the conversion is valid, checking for out-of-range values or
  * invalid characters. On error, it prints an error message and returns 0.
  *
- * @param str 						The input string representing a float 
+ * @param inputString				The input string representing a float 
  * 									number.
  * @return 							The converted float value.
  * 
@@ -270,7 +270,7 @@ static void pseudo(Type destType, const std::string &pseudoInput)
 	std::cout << CYAN CHNP RESET << std::endl;
 	std::cout << CYAN INNP RESET << std::endl;
 	if (destType == FLOAT)
-	{			
+	{
 		std::cout << WHITE PRFLT RESET << pseudoInput << std::endl;
 		std::cout << WHITE PRDBL RESET << pseudoInput.substr(0, \
 			pseudoInput.length() - 1) << std::endl;
@@ -334,12 +334,12 @@ static void printDouble(double nbr)
 	}
 }
 
-static double ft_atod(const std::string &str)
+static double ft_atod(const std::string &inputString)
 {
 	char *invalidCharacter;
 
 	errno = 0;
-	double result = std::strtod(str.c_str(), &invalidCharacter);
+	double result = std::strtod(inputString.c_str(), &invalidCharacter);
 	if (*invalidCharacter != LF || errno == ERANGE )
 	{
 		std::cerr << RED ERR RESET YELLOW OUTRNG RESET << std::endl;
@@ -397,12 +397,12 @@ static void printFloat(float nbr)
 	}
 }
 
-static float ft_atof(const std::string &str)
+static float ft_atof(const std::string &inputString)
 {
 	char *invalidCharacter;
 
 	errno = 0;
-	float result = std::strtof(str.c_str(), &invalidCharacter);
+	float result = std::strtof(inputString.c_str(), &invalidCharacter);
 	if (*invalidCharacter != CHARF || errno == ERANGE)
 	{
 		std::cerr << RED ERR RESET YELLOW OUTRNG RESET << std::endl;
