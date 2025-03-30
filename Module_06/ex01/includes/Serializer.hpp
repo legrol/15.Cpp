@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 21:32:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/30 21:38:10 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/30 21:45:11 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,18 @@
 # include <iostream>			// std::cout, std::cerr, std::endl, ...
 # include <string>				// std::string
 # include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS ...
-// # include <limits>				// fort numeric_limits
-// # include <cctype>				// for isdigit ...
-// # include <iomanip>				// std::setprecision
-// # include <cerrno>				// for errno and ERANGE...
+# include <stdint.h>			// for uintptr_t ...
 
 // ============================================================================
 // Access to my libraries
 // ============================================================================
 #include "macros.hpp"
 #include "colors.hpp"
+
+struct Data
+{
+	int other;
+};
 
 class Serializer
 {
@@ -40,8 +42,8 @@ class Serializer
 
 	public:
 
-
-
+		uintptr_t serialize(Data* ptr);
+		Data* deserialize(uintptr_t raw);
 };
 
 // ============================================================================

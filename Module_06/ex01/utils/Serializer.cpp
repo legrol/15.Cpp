@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 21:31:51 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/03/30 21:38:35 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/03/30 21:46:07 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,18 @@ Serializer & Serializer::operator=(const Serializer &origin)
 Serializer::~Serializer()
 {
 
+}
+
+// ============================================================================
+// Functions
+// ============================================================================
+
+uintptr_t Serializer::serialize(Data* ptr)
+{
+	return (reinterpret_cast<uintptr_t>(ptr));
+}
+
+Data* Serializer::deserialize(uintptr_t raw)
+{
+	return (reinterpret_cast<Data *>(raw));
 }
