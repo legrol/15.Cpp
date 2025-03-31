@@ -28,7 +28,7 @@
 
 struct Data
 {
-	int other;
+	int number;
 };
 
 class Serializer
@@ -42,8 +42,8 @@ class Serializer
 
 	public:
 
-		uintptr_t serialize(Data* ptr);
-		Data* deserialize(uintptr_t raw);
+		static uintptr_t serialize(Data* ptr);
+		static Data* deserialize(uintptr_t raw);
 };
 
 // ============================================================================
