@@ -16,13 +16,44 @@
 #include "../includes/C.hpp"
 
 /**
+ * @brief Base* generate(void)
+ *
+ * Creates a new instance of a class derived from Base (A, B, or C) randomly.
+ * Uses `rand()` to select which derived class to instantiate.
+ *
+ * @return 								A pointer to a new object of type A, B,
+ * 										or C.
  * 
  * 
+ * @brief void identify(Base* p)
+ *
+ * Identifies the dynamic type of the object pointed to by `p` using 
+ * `dynamic_cast`.
+ * Prints the class name (A, B, or C) to standard output.
+ *
+ * @param p 							Pointer to an instance of Base or a 
+ * 										derived class.
  * 
  * 
+ * @brief void identify(Base& p)
+ *
+ * Identifies the dynamic type of the object referenced by `p` using 
+ * `dynamic_cast` with references.
+ * Uses nested try-catch blocks to handle failed casts and prints the class 
+ * name accordingly.
+ *
+ * @param p 							Reference to an instance of Base or a 
+ * 										derived class.
  * 
  * 
- * 
+ * @brief int main(void)
+ *
+ * Entry point of the program.
+ * Calls `generate()` multiple times to create random objects and identify 
+ * their type using both pointer and reference.
+ * Demonstrates polymorphism and `dynamic_cast` usage.
+ *
+ * @return 								EXIT_SUCCESS on successful execution.
  * 
  */
 

@@ -13,11 +13,16 @@
 #include "../includes/Base.hpp"
 
 /**
+ * @brief Base::~Base()
+ *
+ * Virtual destructor for the Base class.
+ *
+ * Ensures proper cleanup of derived class objects when deleted via a `Base*` 
+ * pointer.
  * 
- * 
- * 
- * 
- * 
+ * Being virtual allows dynamic dispatch of destructors in polymorphic 
+ * contexts.
+ *  
  */
 
  Base::~Base()

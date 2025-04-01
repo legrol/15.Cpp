@@ -13,8 +13,7 @@
 #ifndef	MACROS_HPP
 
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
-# define NMSC			"            *   *   Serialize Test  *   *  "
-# define INIT_ERR       "Serializer say: "
+# define INIT_ERR       "Base say: "
 # define ARROW          "==> "
 # define OBTYP			"The object is of type "
 # define UNKTYP			"Unknown type"
