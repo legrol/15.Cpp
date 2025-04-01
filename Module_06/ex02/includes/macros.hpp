@@ -21,6 +21,7 @@
 # define CHB			"B"
 # define CHC			"C"
 # define DOUDOT			":"
+# define TEST			"Test "
 
 
 #endif
