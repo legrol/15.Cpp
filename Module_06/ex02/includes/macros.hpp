@@ -22,6 +22,8 @@
 # define CHC			"C"
 # define DOUDOT			":"
 # define TEST			"Test "
+# define TYPPOI			" (Pointer)"
+# define TYPREF			" (Reference)"
 
 
 #endif

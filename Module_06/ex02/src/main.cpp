@@ -75,11 +75,20 @@ Base* generate(void)
 void identify(Base* p)
 {
 	if (dynamic_cast<A*>(p))
-		std::cout << WHITE OBTYP RESET << YELLOW CHA RESET << std::endl;
+	{
+		std::cout << WHITE OBTYP RESET << CYAN CHA RESET GREEN TYPPOI \
+		RESET << std::endl;
+	}
 	else if (dynamic_cast<B*>(p))
-		std::cout << WHITE OBTYP RESET << YELLOW CHB RESET << std::endl;
+	{
+		std::cout << WHITE OBTYP RESET << CYAN CHB RESET GREEN TYPPOI \
+		RESET << std::endl;
+	}
 	else if (dynamic_cast<C*>(p))
-		std::cout << WHITE OBTYP RESET << YELLOW CHC RESET << std::endl;
+	{
+		std::cout << WHITE OBTYP RESET << CYAN CHC RESET GREEN TYPPOI \
+		RESET << std::endl;
+	}
 	else
 		std::cout << RED UNKTYP RESET << std::endl;
 }
@@ -89,21 +98,24 @@ void identify(Base& p)
 	try
 	{
 		(void) dynamic_cast<A&>(p);
-		std::cout << WHITE OBTYP RESET << BLUE CHA RESET << std::endl;
+		std::cout << WHITE OBTYP RESET << BLUE CHA RESET GREEN TYPREF RESET \
+		<< std::endl;
 	}
 	catch (std::exception &e)
 	{
 		try
 		{
 			(void) dynamic_cast<B&>(p);
-			std::cout << WHITE OBTYP RESET << BLUE CHB RESET << std::endl;
+			std::cout << WHITE OBTYP RESET << BLUE CHB RESET GREEN TYPREF \
+			RESET << std::endl;
 		}
 		catch (std::exception &e)
 		{
 			try
 			{
 				(void) dynamic_cast<C&>(p);
-				std::cout << WHITE OBTYP RESET << BLUE CHC RESET << std::endl;
+				std::cout << WHITE OBTYP RESET << BLUE CHC RESET GREEN \
+				TYPREF RESET << std::endl;
 			}
 			catch (std::exception &e)
 			{
