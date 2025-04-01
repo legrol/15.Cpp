@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "../includes/Base.hpp"
+#include "../includes/A.hpp"
+#include "../includes/B.hpp"
+#include "../includes/C.hpp"
 
 /**
  * 
@@ -25,30 +28,79 @@
 
 Base* generate(void)
 {
-
-
+	srand((unsigned)time(NULL));
+	switch (int success = rand() % 3)
+	{
+		case 0: 
+			return (new A());
+		case 1: 
+			return (new B());
+		case 2: 
+			return (new C());
+		default:
+			return (NULL);
+	}
 }
 
 void identify(Base* p)
 {
-
-
+	if (dynamic_cast<A*>(p))
+		std::cout << RESET << OBTYP << YELLOW << CHA << std::endl;
+	else if (dynamic_cast<B*>(p))
+		std::cout << RESET << OBTYP << YELLOW << CHB << std::endl;
+	else if (dynamic_cast<C*>(p))
+		std::cout << RESET << OBTYP << YELLOW << CHC << std::endl;
+	else
+		std::cout << RED << UNKTYP << std::endl;
 }
 
 void identify(Base& p)
 {
-
-
+	try
+	{
+		(void) dynamic_cast<A&>(p);
+		std::cout << RESET << OBTYP << BLUE << CHA << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		try
+		{
+			(void) dynamic_cast<B&>(p);
+			std::cout << RESET << OBTYP << BLUE << CHB << std::endl;
+		}
+		catch (std::exception &e)
+		{
+			try
+			{
+				(void) dynamic_cast<C&>(p);
+				std::cout << RESET << OBTYP << BLUE << CHC << std::endl;
+			}
+			catch (std::exception &e)
+			{
+				std::cout << CYAN << UNKTYP << std::endl;
+			}
+			
+		}	
+	}
 }
 
 int main(void)
 {
 	print_banner();
 
-	
-	
-
-
+	Base *p;
+	for (int i = 0; i < 5; i++) {
+		std::cout << ORANGE << i + 1 << ":" << std::endl;
+		p = generate(); identify(p); identify(*p);
+		delete p; std::cout << std::endl;
+		sleep(1);
+	}
+	Base *c = NULL;
+	identify(c);
+	if (c)
+		identify(*c);
+	else
+		std::cout << CYAN << UNKTYP << std::endl;
 
 	return (EXIT_SUCCESS);
 }

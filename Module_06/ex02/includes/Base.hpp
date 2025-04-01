@@ -20,6 +20,11 @@
 # include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS ...
 # include <stdint.h>			// for uintptr_t ...
 
+# include <unistd.h>			// 
+# include <stdlib.h>			//
+# include <ctime>				//
+# include <fstream>				//
+
 // ============================================================================
 // Access to my libraries
 // ============================================================================
@@ -34,7 +39,7 @@ class Base
 
 	public:
 
-		~Base();
+		virtual ~Base();
 
 };
 

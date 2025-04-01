@@ -16,6 +16,11 @@
 # define NMSC			"            *   *   Serialize Test  *   *  "
 # define INIT_ERR       "Serializer say: "
 # define ARROW          "==> "
+# define OBTYP			"The object is of type "
+# define UNKTYP			"Unknown type"
+# define CHA			"A"
+# define CHB			"B"
+# define CHC			"C"
 
 
 #endif

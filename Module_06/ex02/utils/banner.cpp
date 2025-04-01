@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Serializer.hpp"
+#include "../includes/Base.hpp"
 
 /**
  * The function "print_banner" generates sthe project start banner. 
