@@ -59,7 +59,6 @@
 
 Base* generate(void)
 {
-	srand((unsigned)time(NULL));
 	switch (int success = rand() % 3)
 	{
 		case 0: 
@@ -118,6 +117,8 @@ void identify(Base& p)
 int main(void)
 {
 	print_banner();
+
+	srand((unsigned)time(NULL));
 
 	Base *p;
 	for (int i = 0; i < 5; i++)
