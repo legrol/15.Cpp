@@ -20,6 +20,7 @@
 # define CHA			"A"
 # define CHB			"B"
 # define CHC			"C"
+# define DOUDOT			":"
 
 
 #endif

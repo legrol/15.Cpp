@@ -76,13 +76,13 @@ Base* generate(void)
 void identify(Base* p)
 {
 	if (dynamic_cast<A*>(p))
-		std::cout << RESET << OBTYP << YELLOW << CHA << std::endl;
+		std::cout << WHITE OBTYP RESET << YELLOW CHA RESET << std::endl;
 	else if (dynamic_cast<B*>(p))
-		std::cout << RESET << OBTYP << YELLOW << CHB << std::endl;
+		std::cout << WHITE OBTYP RESET << YELLOW CHB RESET << std::endl;
 	else if (dynamic_cast<C*>(p))
-		std::cout << RESET << OBTYP << YELLOW << CHC << std::endl;
+		std::cout << WHITE OBTYP RESET << YELLOW CHC RESET << std::endl;
 	else
-		std::cout << RED << UNKTYP << std::endl;
+		std::cout << RED UNKTYP RESET << std::endl;
 }
 
 void identify(Base& p)
@@ -90,25 +90,25 @@ void identify(Base& p)
 	try
 	{
 		(void) dynamic_cast<A&>(p);
-		std::cout << RESET << OBTYP << BLUE << CHA << std::endl;
+		std::cout << WHITE OBTYP RESET << BLUE CHA RESET << std::endl;
 	}
 	catch (std::exception &e)
 	{
 		try
 		{
 			(void) dynamic_cast<B&>(p);
-			std::cout << RESET << OBTYP << BLUE << CHB << std::endl;
+			std::cout << WHITE OBTYP RESET << BLUE CHB RESET << std::endl;
 		}
 		catch (std::exception &e)
 		{
 			try
 			{
 				(void) dynamic_cast<C&>(p);
-				std::cout << RESET << OBTYP << BLUE << CHC << std::endl;
+				std::cout << WHITE OBTYP RESET << BLUE CHC RESET << std::endl;
 			}
 			catch (std::exception &e)
 			{
-				std::cout << CYAN << UNKTYP << std::endl;
+				std::cout << RED UNKTYP RESET << std::endl;
 			}
 			
 		}	
@@ -120,18 +120,23 @@ int main(void)
 	print_banner();
 
 	Base *p;
-	for (int i = 0; i < 5; i++) {
-		std::cout << ORANGE << i + 1 << ":" << std::endl;
-		p = generate(); identify(p); identify(*p);
-		delete p; std::cout << std::endl;
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << ORANGE << i + 1 << DOUDOT RESET << std::endl;
+		p = generate(); 
+		identify(p); 
+		identify(*p);
+		delete p; 
+		std::cout << std::endl;
 		sleep(1);
 	}
+
 	Base *c = NULL;
 	identify(c);
 	if (c)
 		identify(*c);
 	else
-		std::cout << CYAN << UNKTYP << std::endl;
+		std::cout << RED UNKTYP RESET << std::endl;
 
 	return (EXIT_SUCCESS);
 }
