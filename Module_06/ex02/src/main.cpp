@@ -133,7 +133,7 @@ int main(void)
 	srand((unsigned)time(NULL));
 
 	Base *p;
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 7; i++)
 	{
 		std::cout << ORANGE TEST << i + 1 << DOUDOT RESET << std::endl;
 		p = generate(); 
@@ -151,5 +151,6 @@ int main(void)
 	else
 		std::cout << RED UNKTYP RESET << std::endl;
 
+	std::cout << std::endl;
 	return (EXIT_SUCCESS);
 }
