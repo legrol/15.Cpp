@@ -135,7 +135,7 @@ int main(void)
 	Base *p;
 	for (int i = 0; i < 7; i++)
 	{
-		std::cout << ORANGE TEST << i + 1 << DOUDOT RESET << std::endl;
+		std::cout << YELLOW TEST << i + 1 << DOUDOT RESET << std::endl;
 		p = generate(); 
 		identify(p); 
 		identify(*p);
