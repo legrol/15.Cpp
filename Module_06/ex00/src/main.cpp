@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
 	{
 		std::cerr << RED INIT_ERR ARROW RESET YELLOW NUM_ARGV_ERR RESET \
 		<< std::endl;
-		std::cerr << WHITE SQOK RESET GREEN PATHOK RESET << std::endl;
+		std::cerr << WHITE SQOK RESET GREEN PATHOK RESET << std::endl \
+		<< std::endl;
 		return (EXIT_FAILURE);
 	}
 	
