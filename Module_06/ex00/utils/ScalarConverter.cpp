@@ -255,7 +255,7 @@ enum Type
 };
 
 // ============================================================================
-// Managment Pseudo
+// Management Pseudo
 // ============================================================================
 
 static bool isPseudo(const std::string &inputString)
@@ -283,7 +283,7 @@ static void pseudo(Type destType, const std::string &pseudoInput)
 }
 
 // ============================================================================
-// Managment Char
+// Management Char
 // ============================================================================
 
 static void printChar(char c)
@@ -308,7 +308,7 @@ static bool isChar(const std::string &inputString)
 }
 
 // ============================================================================
-// Managment Double
+// Management Double
 // ============================================================================
 
 static void printDouble(double nbr)
@@ -371,7 +371,7 @@ static bool isDouble(const std::string &inputString)
 }
 
 // ============================================================================
-// Managment Float
+// Management Float
 // ============================================================================
 
 static void printFloat(float nbr)
@@ -435,7 +435,7 @@ static bool isFloat(const std::string &inputString)
 }
 
 // ============================================================================
-// Managment Integer
+// Management Integer
 // ============================================================================
 
 static void printInt(int nbr)
