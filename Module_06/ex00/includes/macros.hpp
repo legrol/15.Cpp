@@ -46,7 +46,7 @@
 # define CHRPLUS		'+'
 # define CHRDOT			'.'
 # define LF				'\0'
-# define CHNP			"char: no possible"
-# define INNP			"int: no possible"
+# define CHNP			"char: impossible"
+# define INNP			"int: impossible"
 
 #endif
