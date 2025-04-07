@@ -13,17 +13,9 @@
 #ifndef	MACROS_HPP
 
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
-# define INIT_ERR       "Base say: "
+# define INIT_ERR       "Whatever say: "
 # define ARROW          "==> "
-# define OBTYP			"The object is of type "
-# define UNKTYP			"Unknown type"
-# define CHA			"A"
-# define CHB			"B"
-# define CHC			"C"
-# define DOUDOT			":"
-# define TEST			"Test "
-# define TYPPOI			" (Pointer)"
-# define TYPREF			" (Reference)"
+
 
 
 #endif

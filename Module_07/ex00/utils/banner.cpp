@@ -27,7 +27,7 @@ void    print_banner(void)
 		std::cout << (RED		"  \\___|  _ /|  _ /   " RESET) << std::endl;
 		std::cout << (RED		"      |_|   |_|  " RESET) << std::endl;
 		std::cout << std::endl;
-		std::cout << (RED" Welcome to " RESET BDBLUE"CPP Module 06 " RESET \
-		CYAN "ex02 " RESET RED"project by " GREEN "rdel-olm") << std::endl;
+		std::cout << (RED" Welcome to " RESET BDBLUE"CPP Module 07 " RESET \
+		CYAN "ex00 " RESET RED"project by " GREEN "rdel-olm") << std::endl;
 		std::cout << std::endl;
 }

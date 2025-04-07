@@ -1,6 +1,6 @@
 # ══ Names ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
-NAME 				= base
+NAME 				= whatever
 
 # ══ Colors ══════════════════════════════════════════════════════════════════ #
 #    ------                                                                    #
@@ -44,8 +44,7 @@ CXXFLAGS 			= -Wall -Werror -Wextra -std=c++98 -Wshadow
 #    -------                                                                   #
 SRC 				= ${SRC_DIR}/main.cpp
 
-UTL 				= ${UTL_DIR}/banner.cpp \
-						${UTL_DIR}/Base.cpp
+UTL 				= ${UTL_DIR}/banner.cpp
 
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${SRC})
 OBJ_UTL				= $(patsubst ${UTL_DIR}/%.cpp, ${OBJ_DIR}/%.o, ${UTL})
