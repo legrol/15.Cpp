@@ -28,7 +28,37 @@
 #include "macros.hpp"
 #include "colors.hpp"
 
+// ============================================================================
+// Templates functions
+// ============================================================================
 
+template <typename T>
+T max(T &one, T &two)
+{
+	if (one > two)
+		return one;
+	else
+		return two;
+}
+
+template <typename T>
+T min(T &one, T &two)
+{
+	if (one < two)
+		return one;
+	else
+		return two;
+}
+
+template <typename T>
+void swap(T &one, T &two)
+{
+	T three;
+	
+	three = one;
+	one = two;
+	two = three;
+}
 
 // ============================================================================
 // Functions

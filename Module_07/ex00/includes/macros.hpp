@@ -15,6 +15,17 @@
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
 # define INIT_ERR       "Whatever say: "
 # define ARROW          "==> "
+# define LETT_A			"a = "
+# define LETT_B			"b = "
+# define LETT_C			"c = "
+# define LETT_D			"d = "
+# define CMM			", "
+# define MIN1			"min( a, b ) = "
+# define MAX1			"max( a, b ) = "
+# define MIN2			"min( c, d ) = "
+# define MAX2			"max( c, d ) = "
+# define CH1			"chaine1"
+# define CH2			"chaine2"
 
 
 

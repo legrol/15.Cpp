@@ -15,6 +15,11 @@
 /**
  * 
  * 
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 
 int main(void)
@@ -25,17 +30,21 @@ int main(void)
 	int b = 3;
 
 	::swap( a, b );
-	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+	std::cout << YELLOW LETT_A RESET CYAN << a << RESET YELLOW CMM LETT_B \
+	RESET CYAN << b << RESET << std::endl;
+	std::cout << YELLOW MIN1 RESET CYAN << ::min( a, b ) << RESET << std::endl;
+	std::cout << YELLOW MAX1 RESET CYAN << ::max( a, b ) << RESET << std::endl;
 
-	std::string c = "chaine1";
-	std::string d = "chaine2";
+	std::string c = CH1;
+	std::string d = CH2;
 
 	::swap(c, d);
-	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+	std::cout << std::endl;
+	std::cout << YELLOW LETT_C RESET CYAN << c << RESET YELLOW CMM LETT_D \
+	RESET CYAN << d << RESET << std::endl;
+	std::cout << YELLOW MIN2 RESET CYAN << ::min( c, d ) << RESET << std::endl;
+	std::cout << YELLOW MAX2 RESET CYAN << ::max( c, d ) << RESET << std::endl;
 
+	std::cout << std::endl;
 	return (EXIT_SUCCESS);
 }
