@@ -355,15 +355,15 @@ static bool isDouble(const std::string &inputString)
 		return (true);
 	for (size_t i = 0; i < inputString.length(); i++)
 	{
-		if (inputString.at(i) == '.' && point)
+		if (inputString.at(i) == CHRDOT && point)
 			return (false);
-		else if (inputString.at(i) == '.')
+		else if (inputString.at(i) == CHRDOT)
 		{
 			point = true;
 			continue;
 		}
-		if (!isdigit(inputString.at(i)) && inputString.at(i) != '-' && \
-		inputString.at(i) != '+')
+		if (!isdigit(inputString.at(i)) && inputString.at(i) != CHRMINUS && \
+		inputString.at(i) != CHRPLUS)
 			return (false);
 	}
 	return (true);
