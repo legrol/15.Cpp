@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-07 08:20:38 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-04-07 08:20:38 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025-04-09 07:53:59 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025-04-09 07:53:59 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,32 +31,13 @@
 // Templates functions
 // ============================================================================
 
-template <typename T>
-T max(T &one, T &two)
+template <typename T, typename F>
+void iter(T *array, int lenght, F function)
 {
-	if (one > two)
-		return one;
-	else
-		return two;
-}
-
-template <typename T>
-T min(T &one, T &two)
-{
-	if (one < two)
-		return one;
-	else
-		return two;
-}
-
-template <typename T>
-void swap(T &one, T &two)
-{
-	T three;
-	
-	three = one;
-	one = two;
-	two = three;
+	for (int = 0; i < lenght; i++)
+	{
+		function(array[i]);
+	}
 }
 
 // ============================================================================
