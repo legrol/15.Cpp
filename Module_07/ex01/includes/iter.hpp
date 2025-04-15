@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-09 07:53:59 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-04-09 07:53:59 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/04/09 07:53:59 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/04/14 18:23:27 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@
 template <typename T, typename F>
 void iter(T *array, int lenght, F function)
 {
-	for (int = 0; i < lenght; i++)
+	for (int i = 0; i < lenght; i++)
 	{
 		function(array[i]);
 	}
