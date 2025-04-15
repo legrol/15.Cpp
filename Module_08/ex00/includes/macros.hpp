@@ -6,15 +6,35 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 16:45:05 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/15 19:54:02 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:06:42 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef	MACROS_HPP
 
-# define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
-# define INIT_ERR       "xxx say: "
-# define ARROW          "==> "
+# define VALINIT		0
+# define VALEND			15
 
+# define VAL1			7
+# define VAL2			42
+# define VAL3			69
+# define VAL4			95
+# define VAL5			666
+
+# define VALSRC1		42
+# define VALSRC2		100
+# define VALSRC3		545
+# define VALSRC4		69
+
+# define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
+# define INIT_ERR       "easyfind say: "
+# define ARROW          "==> "
+# define ERR			" Error: "
+# define ERRFIND		"The searched value is not present in the container!!!"
+# define TSTVCT			"                      Test: Vector           "
+# define TSTLST			"                      Test: List           "
+# define VAL			"Value: "
+# define VLOKVC			" found in vector."
+# define VLOKLS			" found in list."
 
 #endif

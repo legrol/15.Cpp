@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   easyfind.tpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 07:59:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/15 19:53:34 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/04/15 20:31:47 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/04/16 00:38:17 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/xxx.hpp"
+#include "../includes/easyfind.hpp"
 
-/**
- *
- * 
- * 
- *  
- * 
- */
-
-int main()
+template <typename T>
+bool easyfind(T &containerInt, int value)
 {
-	print_banner();
-	
-	return 0;
+	if ((std::find(containerInt.begin(), containerInt.end(), value)) == \
+	containerInt.end())
+		throw FindException();
+	return (true);
 }

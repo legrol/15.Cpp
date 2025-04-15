@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Array.hpp                                          :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/14 19:56:23 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/15 19:37:38 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/04/15 20:23:32 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/04/16 01:00:44 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@
 # include <cstdlib>				// use to EXIT_FAILURE, EXIT_SUCCESS ...
 # include <unistd.h>			// for sleep, ...
 # include <stdlib.h>			// for srand, ...
+# include <algorithm>			// to access various algorithms ...
+# include <vector>				// for container vector
+# include <list>				// for container list
+# include <map>					// for container map
 
 // ============================================================================
 // Access to my libraries
@@ -28,62 +32,27 @@
 #include "colors.hpp"
 
 // ============================================================================
+// Exception Management 
+// ============================================================================
+class FindException: public std::exception
+		{
+			public:
+				const char *what() const throw()
+				{
+					return (RED ERR RESET WHITE ERRFIND RESET);
+				}
+		};
+
+// ============================================================================
 // Templates functions
 // ============================================================================
+template <typename T>
+bool easyfind(T &containerInt, int i);
 
-template <typename T> 
-class Array
-{
-
-	private:
-
-		T*_array;
-		size_t length;
-		
-	public:
-
-		Array(): _array(NULL), length(0) {}
-		Array(unsigned int n): _array(NULL), length(n)	
-		{
-			if (this->length == 0)
-				throw std::out_of_range(OURG);
-			this->_array = new T[length]();
-		}
-		Array(const Array &copy): _array(NULL), length(0)
-		{
-			*this = copy;
-		}
-		Array &operator=(const Array &origin)
-		{
-			if (this->_array != NULL)
-				delete[] this->_array;
-			if (origin.length != 0)
-			{
-				this->_array = new T[origin.length]();
-				for (unsigned int index = 0; index < this->size(); index++)
-					this->_array[index] = origin._array[index];
-				this->length = origin.length;
-			}
-			return (*this);
-		}
-		~Array()
-		{
-			if (this->_array != NULL)
-				delete[] _array;
-		}
-
-		T &operator[](size_t index)
-		{
-			if (index >= this->length)
-				throw std::out_of_range(OURG);
-			return (this->_array[index]);
-		}
-		
-		size_t size()
-		{
-			return (length);
-		}	
-};
+// ============================================================================
+// Access to my templates libraries
+// ============================================================================
+#include "easyfind.tpp"
 
 // ============================================================================
 // Functions
