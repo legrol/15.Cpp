@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 07:59:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/15 19:39:16 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/15 19:53:02 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@
 
 int main(int, char**)
 {
+	print_banner();
+	
 	Array<int> numbers(MAX_VAL);
 	int* mirror = new int[MAX_VAL];
 	srand(time(NULL));
