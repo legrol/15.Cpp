@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 19:56:23 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/15 14:24:04 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/15 19:37:38 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ class Array
 			if (this->_array != NULL)
 				delete[] _array;
 		}
-
 
 		T &operator[](size_t index)
 		{
