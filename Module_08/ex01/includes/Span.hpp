@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 13:05:20 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/18 16:44:04 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/18 17:03:13 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ class Span
 		
 		~Span();
 
-
 		void addNumber(int nbr);
 
 		size_t shortestSpan();
@@ -81,7 +80,6 @@ class Span
 				}
 		};
 
-
 		class VctrTooFewElements: public std::exception {
 			public:
 				const char* what() const throw() {
@@ -89,7 +87,6 @@ class Span
 				}
 		};
 };
-
 
 // ============================================================================
 // Functions
