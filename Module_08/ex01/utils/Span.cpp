@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 13:09:29 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/18 14:20:00 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:09:06 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,9 +117,8 @@ size_t Span::shortestSpan()
 	size_t shortest = std::numeric_limits<int>::max();
 	for (std::vector<int>::size_type i = 1; i < sortedArray.size(); i++)
 	{
-		size_t diff = sortedArray[i] - sortedArray[i - 1];
-		if (diff < shortest)
-			shortest = diff;
+		shortest = std::min(shortest, static_cast<size_t>(sortedArray[i] \
+			- sortedArray[i - 1]));
 	}
 	return (shortest);
 }
