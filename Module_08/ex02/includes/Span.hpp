@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 13:05:20 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/18 16:44:04 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/17 19:56:08 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ class Span
 		size_t shortestSpan();
 		size_t longestSpan();
 
-		template <typename InputIterator>
-		void addRange(InputIterator first, InputIterator last);
 
 		class VctrFull: public std::exception {
 			public:
@@ -95,14 +93,3 @@ class Span
 // Functions
 // ============================================================================
 void			print_banner();
-
-template <typename InputIterator>
-void Span::addRange(InputIterator first, InputIterator last)
-{
-    for (; first != last; ++first)
-    {
-        if (_vctr.size() >= _size)
-            throw VctrFull();
-        _vctr.push_back(*first);
-    }
-}

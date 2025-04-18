@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 16:45:05 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/18 14:13:15 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:51:01 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,12 @@
 # define OPT2			"Optional Case 2: "
 # define OPT3			"Optional Case 3: "
 # define OPT4			"Optional Case 4: "
+# define CS				"Case 5: "
 # define FEWEL			"Very few elements ... "
 # define CGEXC			"  Caught Exception: "
 # define MORCPC			"When trying to add more capacity ... "
 # define LRGNBR			"Large number of numbers ... "
+# define LSCS			"Last case propose in subject ..."
 
 
 #endif

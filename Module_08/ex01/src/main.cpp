@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 01:08:18 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/18 14:15:29 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:55:13 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,24 @@ int main()
 			sp.addNumber(2);
 			sp.addNumber(3);
 			sp.addNumber(4);
+		}
+		catch (const std::exception &e) {
+			std::cerr << RED CGEXC RESET << e.what() << std::endl;
+		}
+
+		std::cout << std::endl << CYAN CS RESET MAGENTA LSCS RESET \
+		<< std::endl << std::endl;
+		try {
+			std::vector<int> manyNumbers;
+			for (int i = 0; i < 65000; ++i)
+				manyNumbers.push_back(i);
+
+			Span sp(65000);
+			sp.addRange(manyNumbers.begin(), manyNumbers.end());
+
+			std::cout << YELLOW SHSP RESET << sp.shortestSpan() << std::endl;
+			std::cout << YELLOW LNGSP RESET << sp.longestSpan() << std::endl;
+			std::cout << std::endl;
 		}
 		catch (const std::exception &e) {
 			std::cerr << RED CGEXC RESET << e.what() << std::endl << std::endl;

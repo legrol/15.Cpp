@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 13:09:29 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/18 16:44:12 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:09:06 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,3 +135,4 @@ size_t Span::longestSpan()
 	
 	return static_cast<size_t>(max - min);
 }
+ 
