@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 16:31:21 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/19 16:20:27 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/19 22:55:58 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define MACROS_HPP
 
 # define MAXINT			"2147483647"
+# define MINYRDB		2009
+# define MINPURCH		0
+# define MAXPURCH		1000
 
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
 # define INIT_ERR		"BitcoinExchange say: "
@@ -33,23 +36,13 @@ possible.!!!"
 # define NDTAVAL		"No data available before "
 # define DATE_ERR 		"Incorrect data!!!"
 # define QT				"\""
-#define YEAR_ERR		"Year isn't at the database => "
-#define MONTH_ERR		"Incorrect month => "
-#define DAY_ERR			"Incorrect day => "
+# define YEAR_ERR		"Year isn't at the database => "
+# define MONTH_ERR		"Incorrect month => "
+# define DAY_ERR		"Incorrect day => "
+# define CHNFND			"0123456789.-"
+# define PURCHAM_ERR	"Invalid purchase amount => "
 
-#define DB_FILENAME		"input/data.csv"
-
-
-
-
-
-
-
-
-
-#define BUYS_ERR		"Invalid acquisition => "
-
-
+# define DB_FILENAME	"input/data.csv"
 
 
 #endif

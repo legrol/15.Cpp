@@ -6,19 +6,34 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 12:29:28 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/19 16:01:21 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/19 22:56:11 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/BitcoinExchange.hpp"
 
 /**
+ * @brief int main(int argc, char **argv)
  * 
+ * Entry point of the BitcoinExchange program.
  * 
+ * This function takes a single argument: the path to an input file.
+ * It validates the input, opens both the input and the internal CSV database,
+ * loads the Bitcoin price history, and then processes each transaction from 
+ * the file.
+ * It prints the conversion of Bitcoin based on date and amount if all 
+ * validations pass.
  * 
+ * Error cases are handled gracefully, including:
+ * - Invalid number of arguments
+ * - Failure to open the input or database file
+ * - Invalid line format in the input file
+ * - Invalid date formats or out-of-bound values
  * 
- * 
- * 
+ * @param argc 					Argument count (should be 2).
+ * @param argv 					Argument vector (expects path to input file at 
+ * 								argv[1]).
+ * @return int 					EXIT_SUCCESS on success, EXIT_FAILURE on error.
  * 
  */
 
@@ -34,7 +49,6 @@ int main(int argc, char **argv)
 
 	print_banner();
 	
-	// 2) Abrimos el fichero de input que nos pasan (fecha | valor)
 	std::ifstream inputFile(argv[1]);
 	if (!inputFile.is_open())
 	{
@@ -42,7 +56,6 @@ int main(int argc, char **argv)
 		return (EXIT_FAILURE);
 	}
 	
-	// 3) Abrimos la base de datos histórica
 	std::ifstream dbFile(DB_FILENAME);
 	if (!dbFile.is_open())
 	{
@@ -50,11 +63,9 @@ int main(int argc, char **argv)
 		return EXIT_FAILURE;
 	}
 
-	// 4) Parseamos la base de datos
 	BitcoinExchange btc;
 	btc.parseCsvData(dbFile);
 
-	// 5) Leemos línea a línea (saltamos cabecera)
 	std::string line;
 	std::getline(inputFile, line);
 
@@ -65,7 +76,7 @@ int main(int argc, char **argv)
 		{
 			std::cerr << RED ERR RESET YELLOW INPUT_ERR RESET << line \
 			<< std::endl;
-			continue;
+			continue ;
 		}
 
 		std::string date    = line.substr(0, pos - 1);
@@ -74,24 +85,23 @@ int main(int argc, char **argv)
 		if (!btc.hasValidDateFormat(date) ||
 			!btc.verifyExistingDate(date)     ||
 			!btc.validateRateBounds(amount))
-		{
-			// los propios métodos ya imprimen el error adecuado
-			continue;
-		}
+			continue ;
 
-		float buys = BitcoinExchange::ft_stof(amount);
-		if (buys < 0 || buys > 1000)
+		float purchaseAmount = BitcoinExchange::ft_stof(amount);
+		if (purchaseAmount < MINPURCH || purchaseAmount > MAXPURCH)
 		{
-			std::cerr << RED << BUYS_ERR << buys << RESET << std::endl;
-			continue;
+			std::cerr << RED ERR RESET YELLOW PURCHAM_ERR RESET << \
+			purchaseAmount << std::endl;
+			continue ;
 		}
 
 		float price = btc.fetchBitcoinPriceByDate(date);
 		if (price < 0)
-			continue;
+			continue ;
 
-		std::cout << GREEN	<< date	<< ARROW << buys << EQ << std::fixed \
-		<< std::setprecision(2)	<< (buys * price) << RESET << std::endl;
+		std::cout << GREEN << date << ARROW RESET CYAN << purchaseAmount << \
+		RESET YELLOW EQ RESET << std::fixed << std::setprecision(2) << WHITE \
+		<< (purchaseAmount * price) << RESET << std::endl;
 	}
 
 	std::cout << std::endl;
