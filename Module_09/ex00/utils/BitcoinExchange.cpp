@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 12:26:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/19 14:27:04 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/19 16:20:10 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,22 +59,25 @@ void BitcoinExchange::parseCsvData(std::ifstream &file)
         std::string::size_type pos = line.find(',');
         if (pos == std::string::npos)
         {
-            std::cerr << INPUT_ERR << line << std::endl;
-            continue;
+            std::cerr << RED ERR RESET YELLOW INPUT_ERR RESET << line \
+			<< std::endl;
+            continue ;
         }
         std::string date = line.substr(0, pos);
         std::string val  = line.substr(pos + 1);
         if (!verifyExistingDate(date))
         {
-            std::cerr << "Invalid date in data: " << date << std::endl;
-            continue;
+            std::cerr << RED ERR RESET YELLOW INVDATDT RESET << date \
+			<< std::endl;
+            continue ;
         }
         std::stringstream ss(val);
         float v;
         if (!(ss >> v))
         {
-            std::cerr << "Invalid value in data: " << val << std::endl;
-            continue;
+			std::cerr << RED ERR RESET YELLOW INVVALDT RESET << val \
+			<< std::endl;
+            continue ;
         }
         bitcoinPrice[date] = v;
     }
@@ -83,13 +86,14 @@ void BitcoinExchange::parseCsvData(std::ifstream &file)
 float BitcoinExchange::fetchBitcoinPriceByDate(const std::string &date) const
 {
     if (!verifyExistingDate(date)) return -1.0f;
-    std::map<std::string, float>::const_iterator it = bitcoinPrice.find(date);
-    if (it != bitcoinPrice.end()) return it->second;
+    	std::map<std::string, float>::const_iterator it = bitcoinPrice.find(date);
+    if (it != bitcoinPrice.end()) 
+		return it->second;
 
     it = bitcoinPrice.lower_bound(date);
     if (it == bitcoinPrice.begin())
     {
-        std::cerr << RED << "No data available before " << it->first << RESET << std::endl;
+        std::cerr << RED ERR RESET YELLOW NDTAVAL RESET << it->first << std::endl;
         return -1.0f;
     }
     if (it == bitcoinPrice.end() || it->first > date) --it;
@@ -100,7 +104,8 @@ bool BitcoinExchange::hasValidDateFormat(const std::string &date) const
 {
     if (date.size() != 10 || date[4] != '-' || date[7] != '-')
     {
-        std::cerr << RED << DATE_ERR << "\"" << date << "\"" << RESET << std::endl;
+        std::cerr << RED ERR RESET YELLOW DATE_ERR RESET CYAN QT << date \
+		<< QT RESET << std::endl;
         return false;
     }
     return true;
@@ -116,19 +121,19 @@ bool BitcoinExchange::verifyExistingDate(const std::string &date) const
 
     if (year < 2009)
     {
-        std::cerr << RED << YEAR_ERR << year << RESET << std::endl;
+        std::cerr << RED ERR RESET YELLOW YEAR_ERR RESET << year << std::endl;
         return false;
     }
     if (month < 1 || month > 12)
     {
-        std::cerr << RED << MONTH_ERR << month << RESET << std::endl;
+        std::cerr << RED ERR RESET YELLOW MONTH_ERR RESET << month << std::endl;
         return false;
     }
     bool leap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
     int mdays[] = {0,31, leap?29:28,31,30,31,30,31,31,30,31,30,31};
     if (day < 1 || day > mdays[month])
     {
-        std::cerr << RED << DAY_ERR << day << RESET << std::endl;
+        std::cerr << RED ERR RESET YELLOW DAY_ERR RESET << day << std::endl;
         return false;
     }
     return true;
@@ -141,18 +146,18 @@ bool BitcoinExchange::validateRateBounds(const std::string &rate) const
         || rate[0] == '.' 
         || rate[rate.size() - 1] == '.')
     {
-        std::cerr << RED << INPUT_ERR << rate << RESET << std::endl;
+        std::cerr << RED ERR RESET YELLOW INPUT_ERR RESET << rate << std::endl;
         return false;
     }
     if (rate[0] == '-')
     {
-        std::cerr << RED << POSITIVE_ERR << RESET << std::endl;
+        std::cerr << RED ERR RESET YELLOW POSIT_ERR RESET << std::endl;
         return false;
     }
     if (rate.size() > 10 
-        || (rate.size() == 10 && rate > "2147483647"))
+        || (rate.size() == 10 && rate > MAXINT))
     {
-        std::cerr << RED << LARGE_ERR << RESET << std::endl;
+        std::cerr << RED ERR RESET YELLOW LARGE_ERR RESET << std::endl;
         return false;
     }
     return true;
