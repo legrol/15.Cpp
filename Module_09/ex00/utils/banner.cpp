@@ -6,11 +6,11 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 07:53:17 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/18 17:04:56 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/19 14:02:21 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/MutantStack.hpp"
+#include "../includes/BitcoinExchange.hpp"
 
 /**
  * The function "print_banner" generates sthe project start banner. 
@@ -27,7 +27,7 @@ void    print_banner(void)
 		std::cout << (RED		"  \\___|  _ /|  _ /   " RESET) << std::endl;
 		std::cout << (RED		"      |_|   |_|  " RESET) << std::endl;
 		std::cout << std::endl;
-		std::cout << (RED" Welcome to " RESET BDBLUE"CPP Module 08 " RESET \
-		CYAN "ex02 " RESET RED"project by " GREEN "rdel-olm") << std::endl;
+		std::cout << (RED" Welcome to " RESET BDBLUE"CPP Module 09 " RESET \
+		CYAN "ex00 " RESET RED"project by " GREEN "rdel-olm") << std::endl;
 		std::cout << std::endl;
 }
