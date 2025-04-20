@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 20:23:32 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/16 14:14:01 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/20 20:08:04 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,10 @@
 class FindException: public std::exception
 		{
 			public:
-				const char *what() const throw();
+				const char *what() const throw()
+				{
+					return ERRFIND;
+				}
 		};
 
 // ============================================================================
