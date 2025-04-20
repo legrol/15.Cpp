@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 07:59:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/15 19:53:02 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/04/20 19:26:29 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int main(int, char**)
 	{
 		if (mirror[i] != numbers[i])
 		{
-			std::cerr << "didn't save the same value!!" << std::endl;
+			std::cerr << YELLOW NOSAMVL RESET << std::endl;
 			return 1;
 		}
 	}
@@ -69,7 +69,7 @@ int main(int, char**)
 	catch(const std::exception& e)
 	{
 		std::cout << std::endl << YELLOW TEST1 RESET << std::endl;
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 
 	try
@@ -79,7 +79,7 @@ int main(int, char**)
 	catch(const std::exception& e)
 	{
 		std::cout << std::endl << YELLOW TEST2 RESET << std::endl;
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 		std::cout << std::endl;
 	}
 
