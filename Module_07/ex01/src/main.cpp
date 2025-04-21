@@ -89,15 +89,15 @@ int main(void)
 	std::string wholeint1[] = {F2, DN, PNC};
 	Amazing wholeint2[5];
 
-	std::cout << WHITE ARRINT RESET << std::endl << std::endl;
+	std::cout << CYAN ARRINT RESET << std::endl << std::endl;
 	iter(wholeint, 6, print<const int>);
 	std::cout << std::endl;
 
-	std::cout << WHITE ARRSTR RESET << std::endl << std::endl;
+	std::cout << CYAN ARRSTR RESET << std::endl << std::endl;
 	iter(wholeint1, 3, print<const std::string>);
 	std::cout << std::endl;
 
-	std::cout << WHITE ARRCLSS RESET << std::endl << std::endl;
+	std::cout << CYAN ARRCLSS RESET << std::endl << std::endl;
 	iter(wholeint2, 4, print<Amazing>);
 	std::cout << std::endl;
 

@@ -18,7 +18,7 @@
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
 # define INIT_ERR       "Array say: "
 # define ARROW          "==> "
-# define OURG			"Index exceeds the bounds of the array!!!"
+# define OURG			"  Index exceeds the bounds of the array!!!"
 # define TEST1			"Negative value: "
 # define TEST2			"Value greater than MAX_VAL: "
 # define NOSAMVL		"didn't save the same value!!"
