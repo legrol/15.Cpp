@@ -28,8 +28,8 @@
 # define VALSRC4		69
 
 # define SPACES			"           * * * * * * * * * * * * * * * * * * *  "
-# define INIT_ERR       "easyfind say: "
-# define ARROW          "==> "
+# define INIT_ERR		"easyfind say: "
+# define ARROW			"==> "
 # define ERR			" Error: "
 # define ERRFIND		" The searched value is not present in the container!!!"
 # define TSTVCT			"                       Test: Vector           "
