@@ -96,10 +96,10 @@ void			print_banner();
 template <typename InputIterator>
 void Span::addRange(InputIterator first, InputIterator last)
 {
-    for (; first != last; ++first)
-    {
-        if (_vctr.size() >= _size)
-            throw VctrFull();
-        _vctr.push_back(*first);
-    }
+	for (; first != last; ++first)
+	{
+		if (_vctr.size() >= _size)
+			throw VctrFull();
+		_vctr.push_back(*first);
+	}
 }
