@@ -72,16 +72,16 @@ int main()
 	std::cout << CYAN TSTLST RESET << std::endl;
 	std::cout << YELLOW SPACES RESET << std::endl;
 	{
-		std::list<int> vct2;
+		std::list<int> lst;
 
-		vct2.push_back(VAL1);
-		vct2.push_back(VAL2);
-		vct2.push_back(VAL3);
-		vct2.push_back(VAL4);
-		vct2.push_back(VAL5);
+		lst.push_back(VAL1);
+		lst.push_back(VAL2);
+		lst.push_back(VAL3);
+		lst.push_back(VAL4);
+		lst.push_back(VAL5);
 
 		try {
-			if (easyfind(vct2, VALSRC3))
+			if (easyfind(lst, VALSRC3))
 			std::cout << CYAN VAL RESET GREEN << VALSRC3 << RESET YELLOW \
 			VLOKLS RESET << std::endl;
 		} catch (const std::exception &e) {
@@ -90,7 +90,7 @@ int main()
 		}
 
 		try {
-			if (easyfind(vct2, VALSRC4))
+			if (easyfind(lst, VALSRC4))
 			std::cout << CYAN VAL RESET GREEN << VALSRC4 << RESET YELLOW \
 			VLOKLS RESET << std::endl;
 		} catch (const std::exception &e) {
