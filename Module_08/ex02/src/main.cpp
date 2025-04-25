@@ -46,7 +46,8 @@ int main()
 		mstack.push(3);
 		mstack.push(5);
 		mstack.push(737);
-		//[...]
+		mstack.push(42);
+		mstack.push(666);
 		mstack.push(0);
 
 		MutantStack<int>::const_iterator it = mstack.begin();
