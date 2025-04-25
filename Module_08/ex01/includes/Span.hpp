@@ -40,8 +40,7 @@ class Span
 
 		Span(unsigned int N);
 		Span (Span const &copy);
-		Span const &operator=(Span const &origin);
-		
+		Span const &operator=(Span const &origin);		
 		~Span();
 
 		void addNumber(int nbr);
