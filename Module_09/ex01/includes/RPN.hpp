@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/19 12:19:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/19 22:46:57 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025-04-28 07:53:17 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025-04-28 07:53:17 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,28 +34,7 @@
 // ============================================================================
 // Mandatory
 // ============================================================================
-class BitcoinExchange
-{
-	private:
 
-		std::map<std::string, float> bitcoinPrice;
-		
-	public:
-
-		static float ft_stof(const std::string &str);
-		
-		BitcoinExchange();
-		BitcoinExchange(BitcoinExchange const &copy);
-		BitcoinExchange const &operator=(BitcoinExchange const &origin);		
-		~BitcoinExchange();
-
-		void parseCsvData(std::ifstream &inputStream);
-		float fetchBitcoinPriceByDate(const std::string &dateStr) const;
-		bool hasValidDateFormat(const std::string &dateStr) const;
-		bool verifyExistingDate(const std::string &dateStr) const;
-		bool validateRateBounds(const std::string &rateStr) const;
-		
-};
 
 // ============================================================================
 // Other Functions
