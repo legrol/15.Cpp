@@ -43,6 +43,8 @@ int main(int argc, char **argv)
 	{
 		std::cout << std::endl;
 		std::cout << RED ERR RESET YELLOW ARGERR RESET << std::endl;
+		std::cout << RED INIT_ERR ARROW1 RESET CYAN PAMDL RESET YELLOW PATHSTR\
+		 RESET << std::endl;
 		std::cout << std::endl;
 		return (EXIT_FAILURE);
 	}
@@ -52,14 +54,16 @@ int main(int argc, char **argv)
 	std::ifstream inputFile(argv[1]);
 	if (!inputFile.is_open())
 	{
-		std::cerr << RED ERR RESET YELLOW OPENFL_ERR RESET << std::endl;
+		std::cerr << RED ERR RESET YELLOW OPENFL_ERR RESET << std::endl << \
+		std::endl;
 		return (EXIT_FAILURE);
 	}
 	
 	std::ifstream dbFile(DB_FILENAME);
 	if (!dbFile.is_open())
 	{
-		std::cerr << RED ERR RESET YELLOW OPENDB_ERR RESET << std::endl;
+		std::cerr << RED ERR RESET YELLOW OPENDB_ERR RESET << std::endl << \
+		std::endl;
 		return EXIT_FAILURE;
 	}
 

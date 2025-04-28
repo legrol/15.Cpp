@@ -19,13 +19,15 @@
 # define MAXPURCH		1000
 
 # define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
-# define INIT_ERR		"BitcoinExchange say: "
+# define INIT_ERR		" BitcoinExchange say: "
 # define ARROW			" => "
 # define ARROW1			"==> "
 # define EQ				" = "
 # define ERR			" Error: "
 # define ARGERR			"Please check the number of arguments. Only one is \
 possible.!!!"
+# define PAMDL			"Path model: "
+# define PATHSTR		"./btc ./input/NAME_FILE_TEST.EXT"
 # define OPENFL_ERR		"Couldn't open file!"
 # define OPENDB_ERR		"Couldn't open database!"
 # define INPUT_ERR		"Bad input => "
