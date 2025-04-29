@@ -20,7 +20,7 @@
  * 
  */
 
-void RPN(std::string)
+void RPN(std::string str)
 {
 	std::stack<int> factors;
 	

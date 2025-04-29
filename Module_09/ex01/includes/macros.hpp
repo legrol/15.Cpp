@@ -13,7 +13,14 @@
 #ifndef	MACROS_HPP
 #define MACROS_HPP
 
-
+# define SPACES			"          * * * * * * * * * * * * * * * * * * *  "
+# define INIT_ERR		" BitcoinExchange say: "
+# define ARROW			" => "
+# define ARROW1			"==> "
+# define EQ				" = "
+# define ERR			" Error: "
+# define VALDIV			"Div#0"
+# define NOARG			"Missing arguments. Please review!!!"
 
 
 #endif

@@ -21,11 +21,29 @@
  * 
  */
 
-int main(void)
+int main(int argc, char *argv[])
 {
+	(void) argc;
+	
 	print_banner();
 
-
+	if (argc ==1)
+	{
+		std::cout << RED ERR RESET YELLOW NOARG RESET << std::endl;
+		return (EXIT_FAILURE);
+	}
+	argv++;
+	while(*argv)
+	{
+		try
+		{
+			RPN(*argv);
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+	}
 
 	return (EXIT_SUCCESS);
 }
