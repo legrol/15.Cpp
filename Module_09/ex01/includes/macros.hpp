@@ -21,6 +21,11 @@
 # define ERR			" Error: "
 # define VALDIV			"Div#0"
 # define NOARG			"Missing arguments. Please review!!!"
-
+# define INVTK			"Invalid token"
+# define INVNBR			"Invalid number"
+# define INSOP			"Insufficient operands"
+# define INVEXP			"Invalid expression"
+# define PARNOAL		"Parentheses are not allowed"
+# define NOOPS			"No operations in expression"
 
 #endif

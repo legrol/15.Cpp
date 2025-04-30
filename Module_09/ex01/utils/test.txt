@@ -1,0 +1,65 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test.txt                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025-04-30 06:22:38 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025-04-30 06:22:38 by rdel-olm         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+// Subject cases
+
+./RPN "8 9 * 9 - 9 - 9 - 4 - 1 +"	# Result: 42
+./RPN "7 7 * 7 -"					# Result: 42
+./RPN "1 2 * 2 / 2 * 2 4 - +"		# Result: 0
+./RPN "(1 + 1)"						# Error: parentheses are not allowed
+
+
+// Valid Expressions
+
+./RPN "3 4 +"                # Expected: 7
+./RPN "5 1 2 + 4 * + 3 -"    # Expected: 14 (equivale a 5 + ((1 + 2) * 4) - 3)
+./RPN "2 3 *"                # Expected: 6
+./RPN "10 2 /"               # Expected: 5
+./RPN "3 5 + 8 2 - *"        # Expected: (3+5)*(8-2) = 8*6 = 48
+./RPN "-5 -3 *"              # Expected: 15
+./RPN "7 -2 /"               # Expected: -3 (integer division)
+
+
+// Division by Zero
+
+./RPN "10 0 /"               # Error: division by zero
+./RPN "4 2 + 0 /"            # Error: division by zero
+
+
+// Insufficient operands
+
+./RPN "+"                    # Error: no operands
+./RPN "2 +"                  # Error: missing second operand
+./RPN "5 1 +"                # Error if ends here (one value left but 
+								no operation)
+./RPN "5 1 + 2 * *"          # Error: extra operator with insufficient operands
+
+
+// Extra or Missing Spaces
+
+./RPN "5    6  +"            # Valid: multiple spaces are fine
+./RPN "  "                   # Error: empty input. Missing arguments
+./RPN "9"                    # Error: No operations in expression.
+
+
+// Invalid Numbers or Tokens
+
+./RPN "--5 4 +"              # Error: Invalid token (malformed number)
+./RPN "- 3 +"                # Error: '-' alone is not a number
+./RPN "4.5 2 +"              # Error: floating-point numbers not allowed
+
+
+// Deep Nested Expression
+
+./RPN "15 7 1 1 + - / 3 * 2 1 1 + + -" 
+							# Expected: 15 / (7 - (1 + 1)) * 3 - (2 + (1 + 1)) = 5
+
