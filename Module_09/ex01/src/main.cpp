@@ -6,17 +6,33 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 12:29:28 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/19 22:56:11 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/05/03 20:37:11 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/RPN.hpp"
 
 /**
+ * @brief static bool is_only_whitespace(const std::string& str)
  *
+ * Checks whether the given string contains only whitespace characters.
+ *
+ * @param str 							The string to check.
+ * @return true 						if the string contains only whitespace,
+ * 										false otherwise.
  * 
  * 
- * 
+ * @brief int main(int argc, char *argv[])
+ *
+ * Entry point of the RPN calculator program. Accepts RPN expressions via 
+ * command-line arguments, filters out empty or whitespace-only inputs, 
+ * evaluates valid expressions using the `RPN` function, and handles exceptions 
+ * gracefully.
+ *
+ * @param argc 							The number of command-line arguments.
+ * @param argv 							The array of command-line arguments.
+ * @return EXIT_SUCCESS 				on success, EXIT_FAILURE if no valid 
+ * 										argument is provided.
  * 
  * 
  */

@@ -6,18 +6,73 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 07:53:49 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/05/03 20:31:12 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/05/03 20:41:14 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/RPN.hpp"
 
 /**
+ * @brief static bool is_number(const std::string& str)
+ *
+ * Checks whether the given string is a valid integer number.
+ * Allows optional negative sign at the beginning.
+ *
+ * @param str 							The string to check.
+ * @return true 						if the string represents a valid 
+ * 										integer number, false otherwise.
  * 
  * 
+ * @brief static int apply_operator(int a, int b, char op)
+ *
+ * Applies a binary arithmetic operator to two integers.
+ * Supported operators: '+', '-', '*', '/'.
+ * Throws an exception if division by zero occurs or if the operator is 
+ * invalid.
+ *
+ * @param a 							The left-hand operand.
+ * @param b 							The right-hand operand.
+ * @param op 							The operator character.
+ * @return 								The result of the operation.
+ * @throws std::runtime_error 			if division by zero or invalid 
+ * 										operator.
  * 
  * 
+ * @brief static int string_to_int(const std::string& str)
+ *
+ * Converts a string to an integer using istringstream.
+ * Throws an exception if the string contains invalid characters or fails 
+ * to convert.
+ *
+ * @param str 							The string to convert.
+ * @return 								The converted integer value.
+ * @throws std::runtime_error 			if the conversion fails.
  * 
+ * 
+ * @brief static void evaluate_token(std::stack<int>& stack, const 
+ * std::string& token)
+ *
+ * Evaluates a single token in the RPN expression. If it’s a number, it 
+ * is pushed to the stack.
+ * If it’s an operator, it pops two operands and applies the operator.
+ * Throws exceptions for invalid syntax, parentheses, floats, or 
+ * insufficient operands.
+ *
+ * @param stack 						The stack used in RPN evaluation.
+ * @param token 						The current token to evaluate.
+ * @throws std::runtime_error 			for invalid input, float literals,
+ * 										or syntax errors.
+ * 
+ * 
+ * @brief void RPN(const std::string& input)
+ *
+ * Evaluates a full Reverse Polish Notation expression.
+ * Parses the expression, checks for invalid formats, processes tokens,
+ * and outputs the result. Verifies operand/operator count consistency.
+ *
+ * @param input 						The full RPN expression string.
+ * @throws std::runtime_error 			for syntax errors, invalid tokens, 
+ * 										or malformed expressions.
  * 
  * 
  */
