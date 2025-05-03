@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RPN.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-28 07:53:49 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-04-28 07:53:49 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/04/28 07:53:49 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/05/03 20:31:12 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,11 @@ static int string_to_int(const std::string& str)
 
 static void evaluate_token(std::stack<int>& stack, const std::string& token)
 {
-	if (is_number(token))
+	if (token.find('.') != std::string::npos)
+	{
+		throw std::runtime_error(RED ERR RESET CYAN FLTNOTALLOW RESET);
+	}
+	else if (is_number(token))
 	{
 		int num = string_to_int(token);
 		stack.push(num);
@@ -112,14 +116,26 @@ void RPN(const std::string& input)
 	std::stack<int> stack;
 	int operand_count = 0;
 	int operator_count = 0;
+	bool first_token = true;
 
 	while (iss >> token)
 	{
 		if (is_number(token))
 			operand_count++;
-		else
+		else if (token.length() == 1 && (token[0] == '+' || token[0] == '-' \
+			|| token[0] == '*' || token[0] == '/'))
 			operator_count++;
-			
+		
+		if (first_token)
+		{
+			first_token = false;
+			if (token.length() == 1 && (token[0] == '+' || token[0] == '-' || \
+										token[0] == '*' || token[0] == '/'))
+			{
+				throw std::runtime_error(RED ERR RESET CYAN NOFRSTOP RESET);
+			}
+		}
+
 		evaluate_token(stack, token);
 	}
 

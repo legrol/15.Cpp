@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 16:31:21 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/04/19 22:55:58 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/05/03 20:31:03 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@
 # define INVEXP			"Invalid expression"
 # define PARNOAL		"Parentheses are not allowed"
 # define NOOPS			"No operations in expression"
+# define NOFRSTOP		"Expression cannot start with an operator"
+# define FLTNOTALLOW	"Floating-point numbers are not allowed"
 
 #endif
