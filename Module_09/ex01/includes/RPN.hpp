@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-28 07:53:17 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-04-28 07:53:17 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/04/28 07:53:17 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/05/04 21:08:48 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <string>				// std::string ...
 # include <stack>				// std::stack<type> (container) ...
 # include <sstream>				// std::stringstream, ...
-// # include <fstream>				// to readfile, ifstream, ofstream, ...
 
 // ============================================================================
 // Access to my libraries
