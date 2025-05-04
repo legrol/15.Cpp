@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 09:43:00 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/05/03 23:07:15 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/05/04 23:28:56 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,7 @@ void PmergeMe::mergeInsertSort(T &container)
 	}
 
 	mergeInsertSort(runA);
-	mergeInsertSort(runB);
+	mergeInsertSort(runB);0
 
 	for (typename T::iterator i = runB.begin(); i != runB.end(); ++i)
 		binaryInsert(runA, *i);
