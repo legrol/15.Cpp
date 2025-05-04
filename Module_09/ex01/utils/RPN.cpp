@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 07:53:49 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/05/03 20:41:14 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/05/04 21:32:28 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ static int apply_operator(int a, int b, char op)
 	}
 	else
 	{
-		throw std::runtime_error(RED ERR RESET CYAN VALDIV RESET);
+		throw std::runtime_error(RED ERR RESET CYAN INVOPR RESET);
 	}
 }
 

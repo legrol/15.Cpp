@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 16:31:21 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/05/03 20:42:42 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/05/04 21:32:23 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@
 # define NOOPS			"No operations in expression"
 # define NOFRSTOP		"Expression cannot start with an operator"
 # define FLTNOTALLOW	"Floating-point numbers are not allowed"
+# define INVOPR			"Invalid operator!!!"
 
 #endif
