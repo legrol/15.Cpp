@@ -124,7 +124,9 @@ int	main(int argc, char **argv)
 	}
 	catch (const std::exception &e)
 	{
+		std::cout << std::endl;
 		std::cerr << e.what() << std::endl;
+		std::cout << std::endl;
 		return (EXIT_FAILURE);
 	}
 
