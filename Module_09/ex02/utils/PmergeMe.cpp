@@ -134,7 +134,7 @@ void PmergeMe::mergeInsertSort(T &container)
 	}
 
 	mergeInsertSort(runA);
-	mergeInsertSort(runB);0
+	mergeInsertSort(runB);
 
 	for (typename T::iterator i = runB.begin(); i != runB.end(); ++i)
 		binaryInsert(runA, *i);
