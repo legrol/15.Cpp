@@ -44,10 +44,10 @@
 
 Cada ejercicio incluye su propio Makefile. Por ejemplo, para el módulo 03, ejercicio 02:
 
-  cd Module_03/ex02
-  make            # genera el ejecutable (p. ej. ex02)
-  make clean      # elimina objetos intermedios (*.o)
-  make fclean     # además de clean, elimina el binario
+    cd Module_03/ex02
+    make            # genera el ejecutable (p. ej. ex02)
+    make clean      # elimina objetos intermedios (*.o)
+    make fclean     # además de clean, elimina el binario
 
 Ejecuta el binario dentro de su carpeta con los argumentos que marque el enunciado. Ejemplo:
 
