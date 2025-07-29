@@ -51,7 +51,7 @@ Cada ejercicio incluye su propio Makefile. Por ejemplo, para el módulo 03, ejer
 
 Ejecuta el binario dentro de su carpeta con los argumentos que marque el enunciado. Ejemplo:
 
-  ./ex00 "Hello, World!"
+    ./ex00 "Hello, World!"
 
 
 
