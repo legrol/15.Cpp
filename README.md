@@ -1,6 +1,8 @@
 ![Descripción](https://img.shields.io/badge/Descripción-blue?style=for-the-badge)
 
-- Colección de **10 módulos** (00 a 09) de la piscina de C++, con ejercicios de `ex00` a `ex0N`.  
+- Colección de **10 módulos** (00 a 09) de C++, con ejercicios de `ex00` a `ex09`.
+- Desde `ex00` a `ex04` pertenecen al `Circle 4`.
+- Desde `ex05` a `ex09` pertenecen al `Circle 5`.
 - Practica desde conceptos básicos (parsing de argumentos, clases simples) hasta avanzados (herencia, polimorfismo, excepciones, plantillas, ficheros).  
 - Refuerza:  
   - Sintaxis y semántica de C++ moderno.  
